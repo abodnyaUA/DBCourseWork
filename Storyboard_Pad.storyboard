@@ -166,12 +166,94 @@
                             <outlet property="delegate" destination="YAh-Bo-xCw" id="0kZ-Vn-A9b"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Qhq-Vv-JkB"/>
+                    <navigationItem key="navigationItem" id="Qhq-Vv-JkB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eIl-2K-r7d">
+                            <connections>
+                                <segue destination="Ibc-LY-hg4" kind="push" id="wmf-LO-bfT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzl-Zp-F1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1152" y="627"/>
+        </scene>
+        <!--Add Model View Controller-->
+        <scene sceneID="wBe-LC-Qce">
+            <objects>
+                <viewController id="Ibc-LY-hg4" customClass="DBAddModelViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mqS-jT-N9z">
+                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89s-Ae-5ZY">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Prise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFf-BB-0Z7">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Count" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3B0-QM-JXN">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lV0-8I-lof">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="eiG-cR-FvN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Da9-x0-xBW">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5v-Xs-iLJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k5v-Xs-iLJ" firstAttribute="leading" secondItem="3B0-QM-JXN" secondAttribute="leading" type="default" id="4lZ-fh-wMh"/>
+                            <constraint firstItem="Da9-x0-xBW" firstAttribute="trailing" secondItem="k5v-Xs-iLJ" secondAttribute="trailing" type="default" id="54D-Ib-yKx"/>
+                            <constraint firstItem="89s-Ae-5ZY" firstAttribute="leading" secondItem="mqS-jT-N9z" secondAttribute="leading" constant="103" id="75a-6z-aUv"/>
+                            <constraint firstItem="3B0-QM-JXN" firstAttribute="top" secondItem="Da9-x0-xBW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CMS-1j-t2P"/>
+                            <constraint firstItem="Da9-x0-xBW" firstAttribute="leading" secondItem="bFf-BB-0Z7" secondAttribute="leading" type="default" id="JaU-K4-o7f"/>
+                            <constraint firstItem="lV0-8I-lof" firstAttribute="leading" secondItem="89s-Ae-5ZY" secondAttribute="leading" type="default" id="O7y-MR-d37"/>
+                            <constraint firstItem="k5v-Xs-iLJ" firstAttribute="top" secondItem="3B0-QM-JXN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QUJ-cZ-d0C"/>
+                            <constraint firstItem="lV0-8I-lof" firstAttribute="leading" secondItem="bFf-BB-0Z7" secondAttribute="leading" type="default" id="W44-VS-Cau"/>
+                            <constraint firstItem="Da9-x0-xBW" firstAttribute="top" secondItem="bFf-BB-0Z7" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aTb-ro-fCP"/>
+                            <constraint firstItem="89s-Ae-5ZY" firstAttribute="top" secondItem="mqS-jT-N9z" secondAttribute="top" constant="60" id="aV6-Rg-TXv"/>
+                            <constraint firstItem="Da9-x0-xBW" firstAttribute="leading" secondItem="3B0-QM-JXN" secondAttribute="leading" type="default" id="bYK-jm-KWU"/>
+                            <constraint firstItem="lV0-8I-lof" firstAttribute="top" secondItem="89s-Ae-5ZY" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="bvf-TW-IGQ"/>
+                            <constraint firstItem="Da9-x0-xBW" firstAttribute="trailing" secondItem="lV0-8I-lof" secondAttribute="trailing" type="default" id="cHf-l0-Lkg"/>
+                            <constraint firstItem="bFf-BB-0Z7" firstAttribute="top" secondItem="lV0-8I-lof" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wnh-bz-4FI"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kZj-JK-W5H">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="AJL-jC-AnN">
+                            <connections>
+                                <action selector="doneClicked:" destination="Ibc-LY-hg4" id="twj-W9-TQ2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="countTextField" destination="k5v-Xs-iLJ" id="YlL-8J-Pr6"/>
+                        <outlet property="nameTextField" destination="lV0-8I-lof" id="eFS-sS-bv3"/>
+                        <outlet property="priceTextField" destination="Da9-x0-xBW" id="xOU-zm-9Qd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mga-tz-kTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1152" y="1479"/>
         </scene>
         <!--Year Plan View Controller-->
         <scene sceneID="p80-fG-TqB">
@@ -259,6 +341,15 @@
     <classes>
         <class className="DBAccountingViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAccountingViewController.h"/>
+        </class>
+        <class className="DBAddModelViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAddModelViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneClicked:"/>
+                <relationship kind="outlet" name="countTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="priceTextField" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="DBModelsListViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DBModelsListViewController.h"/>

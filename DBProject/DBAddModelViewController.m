@@ -38,7 +38,7 @@
 }
 - (IBAction)doneClicked:(id)sender
 {
-    [DBAppDelegate.sharedInstance.manager addModelWithName:self.nameTextField.text andCost:[self.priceTextField.text integerValue] count:1];
+    [DBAppDelegate.sharedInstance.manager addModelWithName:self.nameTextField.text andCost:[self.priceTextField.text integerValue] count:[self.countTextField.text integerValue]];
     [self.parent update];
     [self.navigationController popViewControllerAnimated:YES];
 }

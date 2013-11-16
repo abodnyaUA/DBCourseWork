@@ -11,5 +11,6 @@
 @interface DBAddModelViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *priceTextField;
+@property (strong, nonatomic) IBOutlet UITextField *countTextField;
 
 @end
