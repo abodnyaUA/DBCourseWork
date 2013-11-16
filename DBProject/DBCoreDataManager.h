@@ -18,7 +18,7 @@
 
 - (NSArray *)accounting;
 - (NSArray *)models;
-- (Model *)addModelWithName:(NSString *)name andCost:(NSInteger)cost;
+- (Model *)addModelWithName:(NSString *)name andCost:(NSInteger)cost count:(NSUInteger)aCount;
 - (Reciever *)addRecieverWithName:(NSString *)name adress:(NSString *)adress phone:(NSString *)phone account:(NSString *)account;
 - (void)removeObject:(NSManagedObject *)model;
 @end

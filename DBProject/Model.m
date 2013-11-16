@@ -14,5 +14,6 @@
 @dynamic name;
 @dynamic price;
 @dynamic modelId;
+@dynamic count;
 
 @end

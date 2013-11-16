@@ -103,7 +103,7 @@
     }
     return [recordsArray copy];
 }
-- (Model *)addModelWithName:(NSString *)name andCost:(NSInteger)cost
+- (Model *)addModelWithName:(NSString *)name andCost:(NSInteger)cost count:(NSUInteger)aCount
 {
     NSManagedObjectContext *context = [self managedObjectContext];
     Model *model = [NSEntityDescription
@@ -112,6 +112,7 @@
     model.price = [NSNumber numberWithInt:cost];
     model.name = name;
     model.modelId = [NSNumber numberWithLong:random()];
+    model.count = [NSNumber numberWithInt:aCount];
     [self updateSorce];
     return model;
 }

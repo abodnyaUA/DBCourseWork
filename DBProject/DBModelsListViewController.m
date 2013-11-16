@@ -74,7 +74,7 @@
     
     Model * model = [[DBAppDelegate.sharedInstance.manager models] objectAtIndex:indexPath.row];
     cell.textLabel.text = model.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ $",model.price.description];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ $ (Count: %d)",model.price.description,model.count.integerValue];
     // Configure the cell...
     
     return cell;

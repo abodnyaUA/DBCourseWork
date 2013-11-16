@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		795E7DF018380CD0006EC7C9 /* DBYearPlanSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 795E7DEF18380CD0006EC7C9 /* DBYearPlanSplitViewController.m */; };
 		798A4EDE181F07C7002F845A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A4EDD181F07C7002F845A /* UIKit.framework */; };
 		798A4EE0181F07C7002F845A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A4EDF181F07C7002F845A /* Foundation.framework */; };
 		798A4EE2181F07C7002F845A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A4EE1181F07C7002F845A /* CoreGraphics.framework */; };
@@ -51,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		795E7DEE18380CD0006EC7C9 /* DBYearPlanSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBYearPlanSplitViewController.h; sourceTree = "<group>"; };
+		795E7DEF18380CD0006EC7C9 /* DBYearPlanSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBYearPlanSplitViewController.m; sourceTree = "<group>"; };
 		798A4EDA181F07C7002F845A /* DBProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		798A4EDD181F07C7002F845A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		798A4EDF181F07C7002F845A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -242,6 +245,8 @@
 				798A4F39181F0CE2002F845A /* DBMakeOrderViewController.m */,
 				798A4F40181F16C8002F845A /* DBAddModelViewController.h */,
 				798A4F41181F16C8002F845A /* DBAddModelViewController.m */,
+				795E7DEE18380CD0006EC7C9 /* DBYearPlanSplitViewController.h */,
+				795E7DEF18380CD0006EC7C9 /* DBYearPlanSplitViewController.m */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				798A4F3A181F0CE2002F845A /* DBMakeOrderViewController.m in Sources */,
 				798A4F3F181F0F7B002F845A /* DBCoreDataManager.m in Sources */,
 				798A4F42181F16C8002F845A /* DBAddModelViewController.m in Sources */,
+				795E7DF018380CD0006EC7C9 /* DBYearPlanSplitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
