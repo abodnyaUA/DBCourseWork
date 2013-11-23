@@ -38,15 +38,17 @@
     return cell;
 }
 
-- (NSArray *)selectedModels
+- (NSDictionary *)selectedModels
 {
-    NSMutableArray *cells = [NSMutableArray array];
+    NSMutableDictionary *models = [NSMutableDictionary dictionary];
     NSUInteger cellsNumber = [DBCoreDataManager.sharedManager modelsOnWarhouse].count;
     for (int i=0; i < cellsNumber; i++)
     {
-        [cells addObject:[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]]];
+        DBChooseModelsCell *cell = (DBChooseModelsCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        Model * model = [[DBCoreDataManager.sharedManager modelsOnWarhouse] objectAtIndex:i];
+        [models setValue:[NSNumber numberWithInt:cell.selectedCount] forKey:model.modelId];
     }
-    return nil;
+    return models;
 }
 
 @end
