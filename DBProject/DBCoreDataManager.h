@@ -18,6 +18,7 @@
 extern NSString * const DBModelWasAddedNotification;
 extern NSString * const DBRecieverWasAddedNotification;
 extern NSString * const DBOrderWasAddedNotification;
+extern NSString * const DBYearPlanWasAddedNotification;
 
 @interface DBCoreDataManager : NSObject
 
@@ -34,5 +35,7 @@ extern NSString * const DBOrderWasAddedNotification;
 - (NSArray *)recievers;
 - (Reciever *)addRecieverWithName:(NSString *)name adress:(NSString *)adress phone:(NSString *)phone account:(NSString *)account;
 
+- (NSArray *)yearPlans;
+- (Plan *)addPlanForYear:(NSUInteger)aYear withModels:(NSArray *)models;
 
 @end

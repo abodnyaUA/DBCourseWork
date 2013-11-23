@@ -9,19 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Order;
+@class Model;
 
 @interface Plan : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * year;
-@property (nonatomic, retain) NSSet *orders;
+@property (nonatomic, retain) NSSet *models;
 @end
 
 @interface Plan (CoreDataGeneratedAccessors)
 
-- (void)addOrdersObject:(Order *)value;
-- (void)removeOrdersObject:(Order *)value;
-- (void)addOrders:(NSSet *)values;
-- (void)removeOrders:(NSSet *)values;
+- (void)addModelsObject:(Model *)value;
+- (void)removeModelsObject:(Model *)value;
+- (void)addModels:(NSSet *)values;
+- (void)removeModels:(NSSet *)values;
 
 @end

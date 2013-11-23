@@ -13,6 +13,6 @@
 @implementation Plan
 
 @dynamic year;
-@dynamic orders;
+@dynamic models;
 
 @end

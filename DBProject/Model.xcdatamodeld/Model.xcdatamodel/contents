@@ -14,8 +14,9 @@
         <relationship name="reciever" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="Reciever" syncable="YES"/>
     </entity>
     <entity name="Plan" representedClassName="Plan" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="year" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="orders" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Order" syncable="YES"/>
+        <relationship name="models" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Model" syncable="YES"/>
     </entity>
     <entity name="Reciever" representedClassName="Reciever" syncable="YES">
         <attribute name="account" optional="YES" attributeType="String" syncable="YES"/>
@@ -31,7 +32,7 @@
     <elements>
         <element name="Model" positionX="187" positionY="-7" width="128" height="105"/>
         <element name="Order" positionX="7" positionY="-112" width="128" height="118"/>
-        <element name="Plan" positionX="-92" positionY="-241" width="128" height="73"/>
+        <element name="Plan" positionX="223" positionY="-181" width="128" height="88"/>
         <element name="Reciever" positionX="-144" positionY="-9" width="128" height="118"/>
         <element name="Warhouse" positionX="160" positionY="192" width="128" height="73"/>
     </elements>

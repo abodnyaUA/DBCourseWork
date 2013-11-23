@@ -44,6 +44,8 @@
 		CB3D399F1840E95100965A64 /* Warhouse.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D399E1840E95100965A64 /* Warhouse.m */; };
 		CB3D39A21840F78600965A64 /* DBModelBought.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39A11840F78500965A64 /* DBModelBought.m */; };
 		CB3D39A51841021500965A64 /* DBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */; };
+		CB3D39A918410BB400965A64 /* DBAddYearPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39A818410BB400965A64 /* DBAddYearPlanViewController.m */; };
+		CB3D39AC18410BD400965A64 /* DBDetailYearPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39AB18410BD400965A64 /* DBDetailYearPlanViewController.m */; };
 		CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +122,10 @@
 		CB3D39A11840F78500965A64 /* DBModelBought.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModelBought.m; sourceTree = "<group>"; };
 		CB3D39A31841021400965A64 /* DBOrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBOrderDetailViewController.h; sourceTree = "<group>"; };
 		CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBOrderDetailViewController.m; sourceTree = "<group>"; };
+		CB3D39A718410BB400965A64 /* DBAddYearPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddYearPlanViewController.h; sourceTree = "<group>"; };
+		CB3D39A818410BB400965A64 /* DBAddYearPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddYearPlanViewController.m; sourceTree = "<group>"; };
+		CB3D39AA18410BD400965A64 /* DBDetailYearPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBDetailYearPlanViewController.h; sourceTree = "<group>"; };
+		CB3D39AB18410BD400965A64 /* DBDetailYearPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBDetailYearPlanViewController.m; sourceTree = "<group>"; };
 		CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddRecieverViewController.h; sourceTree = "<group>"; };
 		CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddRecieverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -254,8 +260,7 @@
 				CB3D39891840CB1800965A64 /* Models */,
 				CB3D39881840C8E000965A64 /* Reciever */,
 				CB3D398D1840D1DD00965A64 /* Accounting */,
-				798A4F35181F0CC4002F845A /* DBYearPlanViewController.h */,
-				798A4F36181F0CC4002F845A /* DBYearPlanViewController.m */,
+				CB3D39A618410B7A00965A64 /* Plan */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -305,6 +310,19 @@
 				CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */,
 			);
 			name = Accounting;
+			sourceTree = "<group>";
+		};
+		CB3D39A618410B7A00965A64 /* Plan */ = {
+			isa = PBXGroup;
+			children = (
+				798A4F35181F0CC4002F845A /* DBYearPlanViewController.h */,
+				798A4F36181F0CC4002F845A /* DBYearPlanViewController.m */,
+				CB3D39A718410BB400965A64 /* DBAddYearPlanViewController.h */,
+				CB3D39A818410BB400965A64 /* DBAddYearPlanViewController.m */,
+				CB3D39AA18410BD400965A64 /* DBDetailYearPlanViewController.h */,
+				CB3D39AB18410BD400965A64 /* DBDetailYearPlanViewController.m */,
+			);
+			name = Plan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +460,8 @@
 				CB3D399F1840E95100965A64 /* Warhouse.m in Sources */,
 				CB3D39A21840F78600965A64 /* DBModelBought.m in Sources */,
 				CB3D39A51841021500965A64 /* DBOrderDetailViewController.m in Sources */,
+				CB3D39A918410BB400965A64 /* DBAddYearPlanViewController.m in Sources */,
+				CB3D39AC18410BD400965A64 /* DBDetailYearPlanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

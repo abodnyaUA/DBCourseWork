@@ -14,6 +14,7 @@
 NSString * const DBModelWasAddedNotification = @"DBModelWasAddedNotification";
 NSString * const DBRecieverWasAddedNotification = @"DBRecieverWasAddedNotification";
 NSString * const DBOrderWasAddedNotification = @"DBOrderWasAddedNotification";
+NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotification";
 
 @interface DBCoreDataManager ()
 
@@ -226,6 +227,42 @@ NSString * const DBOrderWasAddedNotification = @"DBOrderWasAddedNotification";
     [self updateSorce];
     [[NSNotificationCenter defaultCenter] postNotificationName:DBRecieverWasAddedNotification object:nil];
     return reciever;
+}
+
+#pragma mark - Plan
+
+- (NSArray *)yearPlans
+{
+    NSFetchRequest *fetchRequest = [NSFetchRequest new];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Plan" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc]
+                              initWithKey:@"year" ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
+    
+    NSError * error = nil;
+    NSArray *recordsArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (nil != error)
+    {
+        NSLog(@"Error while getting items from Persistance Storage");
+    }
+    return [recordsArray copy];
+}
+
+- (Plan *)addPlanForYear:(NSUInteger)aYear withModels:(NSArray *)models
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    Plan *plan = [NSEntityDescription
+                  insertNewObjectForEntityForName:@"Plan"
+                  inManagedObjectContext:context];
+    plan.year = [NSNumber numberWithInt:aYear];
+    [plan addModels:[NSSet setWithArray:models]];
+    [self updateSorce];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DBYearPlanWasAddedNotification object:nil];
+    return plan;
 }
 
 @end
