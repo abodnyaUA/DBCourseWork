@@ -31,7 +31,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"recieverCell";
+    static NSString *CellIdentifier = @"chooseRecieverCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     Reciever *obj = [[DBCoreDataManager.sharedManager recievers] objectAtIndex:indexPath.row];

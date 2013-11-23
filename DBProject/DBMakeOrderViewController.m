@@ -43,7 +43,7 @@
 
 - (IBAction)chooseModelsButtonHandler:(id)sender
 {
-    DBChooseModelsViewController *chooseModelsVC = [[DBChooseModelsViewController alloc] initWithStyle:UITableViewStylePlain];
+    DBChooseModelsViewController *chooseModelsVC = [[UIStoryboard storyboardWithName:@"Storyboard_Pad" bundle:nil] instantiateViewControllerWithIdentifier:@"ChooseModelsViewController"];
     
     self.chooseModelsPopover = [[UIPopoverController alloc] initWithContentViewController:chooseModelsVC];
     [self.chooseModelsPopover presentPopoverFromRect:self.chooseModelsButton.frame

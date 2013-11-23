@@ -8,6 +8,10 @@
 
 #import "DBChooseModelsViewController.h"
 
+#import "DBCoreDataManager.h"
+#import "DBChooseModelsCell.h"
+
+
 @interface DBChooseModelsViewController ()
 
 @end
@@ -42,68 +46,23 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [DBCoreDataManager.sharedManager models].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"chooseModelCell";
+    DBChooseModelsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    Model * model = [[DBCoreDataManager.sharedManager models] objectAtIndex:indexPath.row];
+    cell.textLabelOutlet.text = model.name;
+    cell.detailTextLabelOutlet.text = [NSString stringWithFormat:@"%@ $ (Count: %d)",model.price.description,model.count.integerValue];
+    [cell setMaxCount:model.count.integerValue];
     
     return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 

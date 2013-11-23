@@ -11,8 +11,8 @@
 
 @interface DBChooseModelsCell ()
 
-@property (strong, nonatomic) UILabel   *countLabel;
-@property (strong, nonatomic) UIStepper *countStepper;
+@property (strong, nonatomic) IBOutlet UILabel   *countLabel;
+@property (strong, nonatomic) IBOutlet UIStepper *countStepper;
 
 @end
 
@@ -23,16 +23,16 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
-        self.countStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.frame.origin.x-115,
-                                                                        (self.frame.size.height-27)/2.0,
-                                                                        98,
-                                                                        27)];
-        [self.countStepper addTarget:self action:@selector(stepperPressed:) forControlEvents:UIControlEventValueChanged];
-        
-        self.countLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.origin.x-120-40,
-                                                                    (self.frame.size.height-27)/2.0,
-                                                                    40,
-                                                                    27)];
+//        self.countStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.frame.origin.x-115,
+//                                                                        (self.frame.size.height-27)/2.0,
+//                                                                        98,
+//                                                                        27)];
+//        [self.countStepper addTarget:self action:@selector(stepperPressed:) forControlEvents:UIControlEventValueChanged];
+//        
+//        self.countLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.origin.x-120-40,
+//                                                                    (self.frame.size.height-27)/2.0,
+//                                                                    40,
+//                                                                    27)];
     }
     return self;
 }
@@ -44,9 +44,11 @@
     // Configure the view for the selected state
 }
 
-- (void)stepperPressed:(UIStepper *)aSteper
+- (IBAction)changeCount:(id)sender
 {
-    [self.countLabel setText:[NSString stringWithFormat:@"%d", (NSUInteger)aSteper.value]];
+    [self.countLabel setText:[NSString stringWithFormat:@"%d of %d",
+                              (NSUInteger)self.countStepper.value,
+                              (NSUInteger)self.countStepper.maximumValue]];
 }
 
 - (NSUInteger)selectedCount
@@ -57,6 +59,7 @@
 - (void)setMaxCount:(NSUInteger)aMaxValue
 {
     self.countStepper.maximumValue = aMaxValue;
+    self.countLabel.text = [NSString stringWithFormat:@"%d of %d",(NSUInteger)self.countStepper.value,aMaxValue];
 }
 
 @end

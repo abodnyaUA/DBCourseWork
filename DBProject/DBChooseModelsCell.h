@@ -10,7 +10,11 @@
 
 @interface DBChooseModelsCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UILabel   *textLabelOutlet;
+@property (strong, nonatomic) IBOutlet UILabel   *detailTextLabelOutlet;
+
 - (NSUInteger)selectedCount;
 - (void)setMaxCount:(NSUInteger)aMaxValue;
+- (IBAction)changeCount:(id)sender;
 
 @end
