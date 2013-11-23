@@ -48,6 +48,7 @@
 		CB3D39AC18410BD400965A64 /* DBDetailYearPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39AB18410BD400965A64 /* DBDetailYearPlanViewController.m */; };
 		CB3D39B2184110CA00965A64 /* DBChooseModelsForPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39B1184110CA00965A64 /* DBChooseModelsForPlanViewController.m */; };
 		CB3D39B5184110E700965A64 /* DBChooseModelsForPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39B4184110E700965A64 /* DBChooseModelsForPlanCell.m */; };
+		CB3D39B71841265700965A64 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3D39B61841265600965A64 /* QuartzCore.framework */; };
 		CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,7 @@
 		CB3D39B1184110CA00965A64 /* DBChooseModelsForPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBChooseModelsForPlanViewController.m; sourceTree = "<group>"; };
 		CB3D39B3184110E700965A64 /* DBChooseModelsForPlanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBChooseModelsForPlanCell.h; sourceTree = "<group>"; };
 		CB3D39B4184110E700965A64 /* DBChooseModelsForPlanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBChooseModelsForPlanCell.m; sourceTree = "<group>"; };
+		CB3D39B61841265600965A64 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddRecieverViewController.h; sourceTree = "<group>"; };
 		CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddRecieverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB3D39B71841265700965A64 /* QuartzCore.framework in Frameworks */,
 				798A4F3C181F0E54002F845A /* CoreData.framework in Frameworks */,
 				798A4EDE181F07C7002F845A /* UIKit.framework in Frameworks */,
 				798A4EE0181F07C7002F845A /* Foundation.framework in Frameworks */,
@@ -164,7 +167,6 @@
 		798A4ED1181F07C7002F845A = {
 			isa = PBXGroup;
 			children = (
-				798A4F3B181F0E54002F845A /* CoreData.framework */,
 				798A4EE3181F07C7002F845A /* DBProject */,
 				798A4F07181F07C7002F845A /* DBProjectTests */,
 				798A4EDC181F07C7002F845A /* Frameworks */,
@@ -184,6 +186,8 @@
 		798A4EDC181F07C7002F845A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB3D39B61841265600965A64 /* QuartzCore.framework */,
+				798A4F3B181F0E54002F845A /* CoreData.framework */,
 				798A4EDD181F07C7002F845A /* UIKit.framework */,
 				798A4EDF181F07C7002F845A /* Foundation.framework */,
 				798A4EE1181F07C7002F845A /* CoreGraphics.framework */,

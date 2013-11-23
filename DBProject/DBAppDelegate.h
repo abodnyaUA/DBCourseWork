@@ -16,5 +16,7 @@
 @property (strong, nonatomic) NSDateFormatter *formatter;
 
 + (DBAppDelegate *)sharedInstance;
++ (NSString *)createPDFfromUIView:(UIView*)aView saveToDocumentsWithFileName:(NSString*)aFilename;
++ (NSData *)createPDFfromUIView:(UIView*)aView;
 
 @end

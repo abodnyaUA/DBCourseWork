@@ -49,4 +49,15 @@
     self.navigationItem.title = [NSString stringWithFormat:@"Order to %@",self.order.reciever.name];
 }
 
+- (IBAction)share:(id)sender
+{
+    NSString *fileName = [NSString stringWithFormat:@"Order_%@",self.order.orderId];
+    NSURL * url = [NSURL fileURLWithPath:[DBAppDelegate createPDFfromUIView:self.view saveToDocumentsWithFileName:fileName]];
+    
+    UIActivityViewController *activityPublisher =
+    [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:nil];
+    
+    [self presentViewController:activityPublisher animated:YES completion:nil];
+}
+
 @end

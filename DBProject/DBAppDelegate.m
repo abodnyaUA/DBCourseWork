@@ -7,6 +7,7 @@
 //
 
 #import "DBAppDelegate.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation DBAppDelegate
 
@@ -51,5 +52,40 @@
 {
     return [UIApplication sharedApplication].delegate;
 }
+
++ (NSString *)createPDFfromUIView:(UIView*)aView saveToDocumentsWithFileName:(NSString*)aFilename
+{
+    NSArray* documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
+    
+    NSString* documentDirectory = [documentDirectories objectAtIndex:0];
+    NSString* documentDirectoryFilename = [[documentDirectory stringByAppendingPathComponent:aFilename] stringByAppendingPathExtension:@"pdf"];
+    
+    // instructs the mutable data object to write its context to a file on disk
+    [[DBAppDelegate createPDFfromUIView:aView] writeToFile:documentDirectoryFilename atomically:YES];
+    NSLog(@"documentDirectoryFileName: %@",documentDirectoryFilename);
+    return documentDirectoryFilename;
+}
+
++ (NSData *)createPDFfromUIView:(UIView*)aView
+{
+    // Creates a mutable data object for updating with binary data, like a byte array
+    NSMutableData *pdfData = [NSMutableData data];
+    
+    // Points the pdf converter to the mutable data object and to the UIView to be converted
+    UIGraphicsBeginPDFContextToData(pdfData, aView.bounds, nil);
+    UIGraphicsBeginPDFPage();
+    CGContextRef pdfContext = UIGraphicsGetCurrentContext();
+    
+    
+    // draws rect to the view and thus this is captured by UIGraphicsBeginPDFContextToData
+    
+    [aView.layer renderInContext:pdfContext];
+    
+    // remove PDF rendering context
+    UIGraphicsEndPDFContext();
+    
+    return [pdfData copy];
+}
+
 
 @end
