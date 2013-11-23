@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DBMakeOrderViewController : UIViewController
+@interface DBMakeOrderViewController : UIViewController <UIPopoverControllerDelegate>
 
 @end

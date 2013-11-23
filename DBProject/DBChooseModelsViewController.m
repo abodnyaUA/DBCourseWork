@@ -10,6 +10,7 @@
 
 #import "DBCoreDataManager.h"
 #import "DBChooseModelsCell.h"
+#import "DBModelBought.h"
 
 
 @interface DBChooseModelsViewController ()
@@ -38,17 +39,20 @@
     return cell;
 }
 
-- (NSDictionary *)selectedModels
+- (NSArray *)selectedModels
 {
-    NSMutableDictionary *models = [NSMutableDictionary dictionary];
+    NSMutableArray *models = [NSMutableArray array];
     NSUInteger cellsNumber = [DBCoreDataManager.sharedManager modelsOnWarhouse].count;
     for (int i=0; i < cellsNumber; i++)
     {
         DBChooseModelsCell *cell = (DBChooseModelsCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
-        Model * model = [[DBCoreDataManager.sharedManager modelsOnWarhouse] objectAtIndex:i];
-        [models setValue:[NSNumber numberWithInt:cell.selectedCount] forKey:model.modelId];
+        if (cell.selectedCount > 0)
+        {
+            Model * model = [[DBCoreDataManager.sharedManager modelsOnWarhouse] objectAtIndex:i];
+            [models addObject:[DBModelBought boughtWithModel:model andCount:cell.selectedCount]];
+        }
     }
-    return models;
+    return [models copy];
 }
 
 @end

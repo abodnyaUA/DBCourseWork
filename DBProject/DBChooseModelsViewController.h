@@ -10,6 +10,6 @@
 
 @interface DBChooseModelsViewController : UITableViewController
 
-- (NSDictionary *)selectedModels;
+- (NSArray *)selectedModels;
 
 @end

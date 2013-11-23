@@ -157,6 +157,20 @@ NSString * const DBOrderWasAddedNotification = @"DBOrderWasAddedNotification";
     return [self.warhouse.models allObjects];
 }
 
+- (Model *)modelOnWarhouseWithID:(NSString *)anID
+{
+    __block Model *model = nil;
+    [self.warhouse.models enumerateObjectsUsingBlock:^(Model *obj, BOOL *stop)
+    {
+        if ([obj.modelId isEqualToString:anID])
+        {
+            model = obj;
+            *stop = YES;
+        }
+    }];
+    return model;
+}
+
 - (Model *)addModelToWarhouseWithName:(NSString *)name andCost:(NSInteger)cost count:(NSUInteger)aCount
 {
     NSManagedObjectContext *context = [self managedObjectContext];

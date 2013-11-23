@@ -30,6 +30,7 @@ extern NSString * const DBOrderWasAddedNotification;
 - (NSArray *)modelsOnWarhouse;
 - (Model *)addModelToWarhouseWithName:(NSString *)name andCost:(NSInteger)cost count:(NSUInteger)aCount;
 - (Model *)retainModel:(Model *)aModel withCount:(NSUInteger)aCount;
+- (Model *)modelOnWarhouseWithID:(NSString *)anID;
 
 - (NSArray *)recievers;
 - (Reciever *)addRecieverWithName:(NSString *)name adress:(NSString *)adress phone:(NSString *)phone account:(NSString *)account;
