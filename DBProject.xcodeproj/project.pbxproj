@@ -38,6 +38,9 @@
 		79AD6CEA181F25F500B3018D /* Storyboard_Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD6CE9181F25F500B3018D /* Storyboard_Pad.storyboard */; };
 		CB3D39871840C52300965A64 /* DBRecieverDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39861840C52300965A64 /* DBRecieverDetailViewController.m */; };
 		CB3D398C1840CB3200965A64 /* DBModelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D398B1840CB3200965A64 /* DBModelDetailViewController.m */; };
+		CB3D39961840D6AE00965A64 /* DBChooseRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39951840D6AD00965A64 /* DBChooseRecieverViewController.m */; };
+		CB3D39991840D6BD00965A64 /* DBChooseModelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39981840D6BD00965A64 /* DBChooseModelsViewController.m */; };
+		CB3D399C1840D74F00965A64 /* DBChooseModelsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D399B1840D74F00965A64 /* DBChooseModelsCell.m */; };
 		CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +105,12 @@
 		CB3D39861840C52300965A64 /* DBRecieverDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBRecieverDetailViewController.m; sourceTree = "<group>"; };
 		CB3D398A1840CB3200965A64 /* DBModelDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModelDetailViewController.h; sourceTree = "<group>"; };
 		CB3D398B1840CB3200965A64 /* DBModelDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModelDetailViewController.m; sourceTree = "<group>"; };
+		CB3D39941840D6AD00965A64 /* DBChooseRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBChooseRecieverViewController.h; sourceTree = "<group>"; };
+		CB3D39951840D6AD00965A64 /* DBChooseRecieverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBChooseRecieverViewController.m; sourceTree = "<group>"; };
+		CB3D39971840D6BD00965A64 /* DBChooseModelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBChooseModelsViewController.h; sourceTree = "<group>"; };
+		CB3D39981840D6BD00965A64 /* DBChooseModelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBChooseModelsViewController.m; sourceTree = "<group>"; };
+		CB3D399A1840D74F00965A64 /* DBChooseModelsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBChooseModelsCell.h; sourceTree = "<group>"; };
+		CB3D399B1840D74F00965A64 /* DBChooseModelsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBChooseModelsCell.m; sourceTree = "<group>"; };
 		CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddRecieverViewController.h; sourceTree = "<group>"; };
 		CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddRecieverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -273,6 +282,12 @@
 				798A4F33181F0CB3002F845A /* DBAccountingViewController.m */,
 				798A4F38181F0CE2002F845A /* DBMakeOrderViewController.h */,
 				798A4F39181F0CE2002F845A /* DBMakeOrderViewController.m */,
+				CB3D39941840D6AD00965A64 /* DBChooseRecieverViewController.h */,
+				CB3D39951840D6AD00965A64 /* DBChooseRecieverViewController.m */,
+				CB3D39971840D6BD00965A64 /* DBChooseModelsViewController.h */,
+				CB3D39981840D6BD00965A64 /* DBChooseModelsViewController.m */,
+				CB3D399A1840D74F00965A64 /* DBChooseModelsCell.h */,
+				CB3D399B1840D74F00965A64 /* DBChooseModelsCell.m */,
 			);
 			name = Accounting;
 			sourceTree = "<group>";
@@ -406,6 +421,9 @@
 				CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */,
 				CB3D39871840C52300965A64 /* DBRecieverDetailViewController.m in Sources */,
 				CB3D398C1840CB3200965A64 /* DBModelDetailViewController.m in Sources */,
+				CB3D39961840D6AE00965A64 /* DBChooseRecieverViewController.m in Sources */,
+				CB3D39991840D6BD00965A64 /* DBChooseModelsViewController.m in Sources */,
+				CB3D399C1840D74F00965A64 /* DBChooseModelsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

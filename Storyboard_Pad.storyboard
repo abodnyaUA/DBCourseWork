@@ -299,6 +299,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="84z-FJ-x6s" kind="push" id="RDc-78-oi9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yek-3R-GAZ">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -635,6 +638,194 @@
             </objects>
             <point key="canvasLocation" x="2380" y="102"/>
         </scene>
+        <!--Make Order View Controller-->
+        <scene sceneID="Lod-iE-Cy8">
+            <objects>
+                <viewController id="84z-FJ-x6s" customClass="DBMakeOrderViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GhC-tf-YqB">
+                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Reciever" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwT-cy-zzc">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="voJ-yc-tr8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Models" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZG-ak-qcz">
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-1s-q4l">
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCt-y7-lbQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="0n2-Z3-hQ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Choose...">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseRecieverButtonHandler:" destination="84z-FJ-x6s" eventType="touchUpInside" id="0jG-dG-cgS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdo-9K-CqM">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Choose...">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseModelsButtonHandler:" destination="84z-FJ-x6s" eventType="touchUpInside" id="vNY-J1-D4y"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ1-gL-K5T">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Sry-CM-lwK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yfF-1s-q4l" firstAttribute="top" secondItem="GhC-tf-YqB" secondAttribute="top" constant="20" symbolic="YES" type="default" id="3TI-pA-9F3"/>
+                            <constraint firstItem="yfF-1s-q4l" firstAttribute="baseline" secondItem="zwT-cy-zzc" secondAttribute="baseline" type="default" id="DEo-69-i52"/>
+                            <constraint firstAttribute="trailing" secondItem="yfF-1s-q4l" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="FRf-Ha-8pA"/>
+                            <constraint firstAttribute="trailing" secondItem="bQ1-gL-K5T" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JmK-Ly-6tV"/>
+                            <constraint firstItem="Wdo-9K-CqM" firstAttribute="top" secondItem="YCt-y7-lbQ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KKr-FZ-POc"/>
+                            <constraint firstItem="zwT-cy-zzc" firstAttribute="top" secondItem="GhC-tf-YqB" secondAttribute="top" constant="20" symbolic="YES" type="default" id="N7h-uU-k6C"/>
+                            <constraint firstItem="bQ1-gL-K5T" firstAttribute="top" secondItem="HZG-ak-qcz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="P58-Qg-6pN"/>
+                            <constraint firstItem="YCt-y7-lbQ" firstAttribute="leading" secondItem="zwT-cy-zzc" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="QKr-V1-eqb"/>
+                            <constraint firstItem="Wdo-9K-CqM" firstAttribute="leading" secondItem="HZG-ak-qcz" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Rqd-IP-Nl2"/>
+                            <constraint firstItem="Wdo-9K-CqM" firstAttribute="top" secondItem="yfF-1s-q4l" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="T2E-SR-TQE"/>
+                            <constraint firstItem="bQ1-gL-K5T" firstAttribute="leading" secondItem="GhC-tf-YqB" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cAg-Tx-Hh1"/>
+                            <constraint firstItem="YCt-y7-lbQ" firstAttribute="top" secondItem="GhC-tf-YqB" secondAttribute="top" constant="20" symbolic="YES" type="default" id="cDB-rT-rWk"/>
+                            <constraint firstItem="yfF-1s-q4l" firstAttribute="leading" secondItem="zwT-cy-zzc" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="cyd-fG-ODh"/>
+                            <constraint firstItem="HZG-ak-qcz" firstAttribute="top" secondItem="zwT-cy-zzc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="e7c-ks-WZJ"/>
+                            <constraint firstItem="Wdo-9K-CqM" firstAttribute="trailing" secondItem="YCt-y7-lbQ" secondAttribute="trailing" type="default" id="fBX-hK-CKE"/>
+                            <constraint firstItem="HZG-ak-qcz" firstAttribute="leading" secondItem="GhC-tf-YqB" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gnh-IU-rbu"/>
+                            <constraint firstItem="zwT-cy-zzc" firstAttribute="leading" secondItem="GhC-tf-YqB" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="qA5-Ie-suk"/>
+                            <constraint firstItem="Wdo-9K-CqM" firstAttribute="leading" secondItem="YCt-y7-lbQ" secondAttribute="leading" type="default" id="sJp-Iv-8Xd"/>
+                            <constraint firstItem="bQ1-gL-K5T" firstAttribute="top" secondItem="Wdo-9K-CqM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="x85-D8-nKJ"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AEj-0e-izY"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="chooseModelsButton" destination="Wdo-9K-CqM" id="Xng-yI-f0H"/>
+                        <outlet property="chooseRecieverButton" destination="YCt-y7-lbQ" id="KVs-7R-mUQ"/>
+                        <outlet property="modelsListtextView" destination="bQ1-gL-K5T" id="UWm-no-ToH"/>
+                        <outlet property="recieverLabel" destination="yfF-1s-q4l" id="tkK-vI-tlZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUY-Oo-ez6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3432" y="102"/>
+        </scene>
+        <!--Choose Reciever View Controller-->
+        <scene sceneID="eBk-8m-i2f">
+            <objects>
+                <tableViewController storyboardIdentifier="ChooseRecieverViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KXz-Qc-hqE" customClass="DBChooseRecieverViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6f0-FJ-f2O">
+                        <rect key="frame" x="0.0" y="20" width="320" height="748"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="recieverCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="checkmark" textLabel="sil-Ji-1AH" style="IBUITableViewCellStyleDefault" id="pVr-OA-HeO">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sil-Ji-1AH">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KXz-Qc-hqE" id="35g-AQ-1k2"/>
+                            <outlet property="delegate" destination="KXz-Qc-hqE" id="cZV-ld-6lR"/>
+                        </connections>
+                    </tableView>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIi-uM-krO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4485" y="102"/>
+        </scene>
+        <!--Choose Models View Controller-->
+        <scene sceneID="sZb-Ll-tEc">
+            <objects>
+                <tableViewController storyboardIdentifier="ChooseModelsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9T4-kE-QQx" customClass="DBChooseModelsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mvK-nd-G4N">
+                        <rect key="frame" x="0.0" y="20" width="703" height="748"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="modelCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Fb0-ji-DUb" customClass="DBChooseModelsCell">
+                                <rect key="frame" x="0.0" y="22" width="703" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="703" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9T4-kE-QQx" id="Um3-xk-uk4"/>
+                            <outlet property="delegate" destination="9T4-kE-QQx" id="Ukt-Kv-iX3"/>
+                        </connections>
+                    </tableView>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cx6-s7-tbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4820" y="102"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Hgj-OX-fFZ">
+            <objects>
+                <viewController id="WIj-m5-8qo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OPX-qk-ci9">
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaS-sg-GSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3432" y="960"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="DfG-pf-vSB">
             <objects>
@@ -673,6 +864,24 @@
                 <relationship kind="outlet" name="bankAccountTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="phoneTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="DBChooseModelsCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseModelsCell.h"/>
+        </class>
+        <class className="DBChooseModelsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseModelsViewController.h"/>
+        </class>
+        <class className="DBChooseRecieverViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseRecieverViewController.h"/>
+        </class>
+        <class className="DBMakeOrderViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBMakeOrderViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="chooseModelsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="chooseRecieverButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="modelsListtextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="recieverLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="DBModelDetailViewController" superclassName="UIViewController">
