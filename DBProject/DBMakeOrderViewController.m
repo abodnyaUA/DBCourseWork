@@ -105,15 +105,49 @@
     // Accept models //
     NSMutableArray *orderModels = [NSMutableArray array];
     NSArray *modelsBought = [self.chooseModelsVC selectedModels];
+    
+    if (modelsBought.count == 0)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missed Models", nil)
+                                                        message:NSLocalizedString(@"You haven't select any model",nil)
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"Continue Fill",nil)
+                                              otherButtonTitles:NSLocalizedString(@"Cancel Order",nil), nil];
+        [alert show];
+        return;
+    }
+    
     for (DBModelBought * modelBought in modelsBought)
     {
         Model *model = modelBought.model;
         Model *orderModel = [DBCoreDataManager.sharedManager retainModel:model withCount:modelBought.count];
         [orderModels addObject:orderModel];
     }
-    Reciever *reciever = [[DBCoreDataManager.sharedManager recievers] objectAtIndex:self.chooseRecieverVC.selectedRecieverNumber];
+    
+    NSUInteger recieverNumber = self.chooseRecieverVC.selectedRecieverNumber;
+    
+    if (NSNotFound == recieverNumber)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missed Reciever", nil)
+                                                        message:NSLocalizedString(@"Reciever field is empty",nil)
+                                                       delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"Continue Fill",nil)
+                                              otherButtonTitles:NSLocalizedString(@"Cancel Order",nil), nil];
+        [alert show];
+        return;
+    }
+    
+    Reciever *reciever = [[DBCoreDataManager.sharedManager recievers] objectAtIndex:recieverNumber];
     [DBCoreDataManager.sharedManager addOrderWithReciever:reciever andModels:orderModels];
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1)
+    {
+        [self.navigationController popViewControllerAnimated:YES];        
+    }
 }
 
 @end
