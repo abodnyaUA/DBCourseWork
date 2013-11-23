@@ -645,18 +645,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Author:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLC-h4-V7F">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Author:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLC-h4-V7F">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="Dg4-Wb-0ql"/>
+                                    <constraint firstAttribute="width" constant="140" id="HB2-Pe-CXI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Author:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVs-A0-WxG">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="573" id="0UB-06-BqX"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -702,8 +699,10 @@
                             <constraint firstItem="4uW-HZ-zN7" firstAttribute="centerX" secondItem="NwZ-J2-Wep" secondAttribute="centerX" type="default" id="7KV-1I-772"/>
                             <constraint firstItem="Ppo-rV-Kpu" firstAttribute="top" secondItem="q4B-iD-mKH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7ZF-aj-RVN"/>
                             <constraint firstItem="q4B-iD-mKH" firstAttribute="trailing" secondItem="Ppo-rV-Kpu" secondAttribute="trailing" type="default" id="ATI-FU-dJz"/>
+                            <constraint firstItem="lVs-A0-WxG" firstAttribute="leading" secondItem="HLC-h4-V7F" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Dgd-Ws-U8a"/>
                             <constraint firstItem="lVs-A0-WxG" firstAttribute="top" secondItem="ikM-jH-gkP" secondAttribute="top" constant="20" symbolic="YES" type="default" id="EWY-DY-tJt"/>
                             <constraint firstItem="4uW-HZ-zN7" firstAttribute="leading" secondItem="q4B-iD-mKH" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="INh-GV-OQs"/>
+                            <constraint firstItem="HLC-h4-V7F" firstAttribute="leading" secondItem="4uW-HZ-zN7" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="J8c-Th-mJX"/>
                             <constraint firstItem="Vpb-1E-fyx" firstAttribute="top" secondItem="Ppo-rV-Kpu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KoW-Dz-r1h"/>
                             <constraint firstAttribute="bottom" secondItem="NwZ-J2-Wep" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="L9o-CO-v2J"/>
                             <constraint firstItem="NwZ-J2-Wep" firstAttribute="leading" secondItem="ikM-jH-gkP" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="La8-X0-dtJ"/>
@@ -719,7 +718,6 @@
                             <constraint firstAttribute="trailing" secondItem="AE1-JT-lNx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qsE-ue-13r"/>
                             <constraint firstItem="4uW-HZ-zN7" firstAttribute="top" secondItem="ikM-jH-gkP" secondAttribute="top" constant="20" symbolic="YES" type="default" id="rze-A5-iZ8"/>
                             <constraint firstItem="q4B-iD-mKH" firstAttribute="leading" secondItem="ikM-jH-gkP" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="s7A-Oz-x3v"/>
-                            <constraint firstItem="lVs-A0-WxG" firstAttribute="leading" secondItem="HLC-h4-V7F" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="vh1-jb-8jf"/>
                             <constraint firstItem="Vpb-1E-fyx" firstAttribute="leading" secondItem="ikM-jH-gkP" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="viG-nA-MZl"/>
                             <constraint firstAttribute="trailing" secondItem="Vpb-1E-fyx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vxB-MY-WoL"/>
                             <constraint firstAttribute="bottom" secondItem="AE1-JT-lNx" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="woy-v0-yeV"/>
@@ -1467,6 +1465,7 @@
         <class className="DBAddRecieverViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAddRecieverViewController.h"/>
             <relationships>
+                <relationship kind="action" name="doneClicked:"/>
                 <relationship kind="outlet" name="adressTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="bankAccountTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
