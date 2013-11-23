@@ -31,11 +31,10 @@
     [super viewDidLoad];
 	self.orderIDLabel.text = self.order.orderId;
 	self.totalPriceLabel.text = [NSString stringWithFormat:@"%d $", self.order.totalPrice];
-    Reciever *reciever = (Reciever *)self.order.reciever;
-    self.recieverNameLabel.text = reciever.name;
-    self.recieverPhoneLabel.text = reciever.phone;
-    self.recieverAdressLabel.text = reciever.adress;
-    self.recieverAccountLabel.text = reciever.account;
+    self.recieverNameLabel.text = self.order.reciever.name;
+    self.recieverPhoneLabel.text = self.order.reciever.phone;
+    self.recieverAdressLabel.text = self.order.reciever.adress;
+    self.recieverAccountLabel.text = self.order.reciever.account;
     NSString *modelsList = @"";
     for (Model *model in self.order.model)
     {
@@ -46,6 +45,8 @@
     self.modelsTextView.text = modelsList;
     self.modelsTextView.contentInset = UIEdgeInsetsMake(-4,-4,0,0);
     self.orderDateLabel.text = [DBAppDelegate.sharedInstance.formatter stringFromDate:self.order.orderDate];
+    
+    self.navigationItem.title = [NSString stringWithFormat:@"Order to %@",self.order.reciever.name];
 }
 
 @end

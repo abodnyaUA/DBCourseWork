@@ -39,6 +39,8 @@
     self.modelsListTextView.text = modelsList;
     self.modelsListTextView.contentInset = UIEdgeInsetsMake(-4,-4,0,0);
     self.creationDateLabel.text = [DBAppDelegate.sharedInstance.formatter stringFromDate:self.plan.creationDate];
+    
+    self.navigationItem.title = self.yearLabel.text;
 }
 
 @end

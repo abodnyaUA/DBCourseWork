@@ -26,6 +26,8 @@
 	self.countTextLabel.text = self.model.count.description;
 	self.priceTextLabel.text = self.model.price.description;
     self.modelIDTextLabel.text = self.model.modelId;
+    
+    self.navigationItem.title = self.model.name;
 }
 
 @end

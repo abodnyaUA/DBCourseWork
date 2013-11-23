@@ -28,6 +28,8 @@
 	self.phoneTextLabel.text = self.reciever.phone;
 	self.bankAccountTextLabel.text = self.reciever.account;
 	self.recieverIDTextLabel.text = self.reciever.companyID;
+    
+    self.navigationItem.title = self.reciever.name;
 }
 
 @end
