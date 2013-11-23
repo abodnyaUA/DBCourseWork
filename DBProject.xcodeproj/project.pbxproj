@@ -37,6 +37,8 @@
 		798A4F3F181F0F7B002F845A /* DBCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F3E181F0F7B002F845A /* DBCoreDataManager.m */; };
 		798A4F42181F16C8002F845A /* DBAddModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F41181F16C8002F845A /* DBAddModelViewController.m */; };
 		79AD6CEA181F25F500B3018D /* Storyboard_Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD6CE9181F25F500B3018D /* Storyboard_Pad.storyboard */; };
+		CB3D39871840C52300965A64 /* DBRecieverDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39861840C52300965A64 /* DBRecieverDetailViewController.m */; };
+		CB3D398C1840CB3200965A64 /* DBModelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D398B1840CB3200965A64 /* DBModelDetailViewController.m */; };
 		CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,10 @@
 		798A4F40181F16C8002F845A /* DBAddModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddModelViewController.h; sourceTree = "<group>"; };
 		798A4F41181F16C8002F845A /* DBAddModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddModelViewController.m; sourceTree = "<group>"; };
 		79AD6CE9181F25F500B3018D /* Storyboard_Pad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard_Pad.storyboard; path = ../Storyboard_Pad.storyboard; sourceTree = "<group>"; };
+		CB3D39851840C52300965A64 /* DBRecieverDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBRecieverDetailViewController.h; sourceTree = "<group>"; };
+		CB3D39861840C52300965A64 /* DBRecieverDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBRecieverDetailViewController.m; sourceTree = "<group>"; };
+		CB3D398A1840CB3200965A64 /* DBModelDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModelDetailViewController.h; sourceTree = "<group>"; };
+		CB3D398B1840CB3200965A64 /* DBModelDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModelDetailViewController.m; sourceTree = "<group>"; };
 		CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddRecieverViewController.h; sourceTree = "<group>"; };
 		CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddRecieverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,22 +236,42 @@
 			children = (
 				798A4EF8181F07C7002F845A /* DBViewController.h */,
 				798A4EF9181F07C7002F845A /* DBViewController.m */,
-				798A4F2C181F0C7F002F845A /* DBModelsListViewController.h */,
-				798A4F2D181F0C7F002F845A /* DBModelsListViewController.m */,
-				798A4F2F181F0C91002F845A /* DBRecieverListViewController.h */,
-				798A4F30181F0C91002F845A /* DBRecieverListViewController.m */,
+				CB3D39891840CB1800965A64 /* Models */,
+				CB3D39881840C8E000965A64 /* Reciever */,
 				798A4F32181F0CB3002F845A /* DBAccountingViewController.h */,
 				798A4F33181F0CB3002F845A /* DBAccountingViewController.m */,
 				798A4F35181F0CC4002F845A /* DBYearPlanViewController.h */,
 				798A4F36181F0CC4002F845A /* DBYearPlanViewController.m */,
 				798A4F38181F0CE2002F845A /* DBMakeOrderViewController.h */,
 				798A4F39181F0CE2002F845A /* DBMakeOrderViewController.m */,
-				798A4F40181F16C8002F845A /* DBAddModelViewController.h */,
-				798A4F41181F16C8002F845A /* DBAddModelViewController.m */,
-				CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */,
-				CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */,
 			);
 			name = VC;
+			sourceTree = "<group>";
+		};
+		CB3D39881840C8E000965A64 /* Reciever */ = {
+			isa = PBXGroup;
+			children = (
+				798A4F2F181F0C91002F845A /* DBRecieverListViewController.h */,
+				798A4F30181F0C91002F845A /* DBRecieverListViewController.m */,
+				CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */,
+				CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */,
+				CB3D39851840C52300965A64 /* DBRecieverDetailViewController.h */,
+				CB3D39861840C52300965A64 /* DBRecieverDetailViewController.m */,
+			);
+			name = Reciever;
+			sourceTree = "<group>";
+		};
+		CB3D39891840CB1800965A64 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				798A4F2C181F0C7F002F845A /* DBModelsListViewController.h */,
+				798A4F2D181F0C7F002F845A /* DBModelsListViewController.m */,
+				798A4F40181F16C8002F845A /* DBAddModelViewController.h */,
+				798A4F41181F16C8002F845A /* DBAddModelViewController.m */,
+				CB3D398A1840CB3200965A64 /* DBModelDetailViewController.h */,
+				CB3D398B1840CB3200965A64 /* DBModelDetailViewController.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +402,8 @@
 				798A4F3F181F0F7B002F845A /* DBCoreDataManager.m in Sources */,
 				798A4F42181F16C8002F845A /* DBAddModelViewController.m in Sources */,
 				CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */,
+				CB3D39871840C52300965A64 /* DBRecieverDetailViewController.m in Sources */,
+				CB3D398C1840CB3200965A64 /* DBModelDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

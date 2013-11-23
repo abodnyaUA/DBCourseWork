@@ -134,7 +134,7 @@ NSString * const DBRecieverWasAddedNotification = @"DBRecieverWasAddedNotificati
                                 inManagedObjectContext:context];
     model.price = [NSNumber numberWithInt:cost];
     model.name = name;
-    model.modelId = [[NSUUID UUID] description];
+    model.modelId = [[NSUUID UUID] UUIDString];
     model.count = [NSNumber numberWithInt:aCount];
     [self updateSorce];
     [[NSNotificationCenter defaultCenter] postNotificationName:DBModelWasAddedNotification object:nil];
@@ -170,7 +170,7 @@ NSString * const DBRecieverWasAddedNotification = @"DBRecieverWasAddedNotificati
     Reciever *reciever = [NSEntityDescription
                     insertNewObjectForEntityForName:@"Reciever"
                     inManagedObjectContext:context];
-    reciever.companyID = [[NSUUID UUID] description];
+    reciever.companyID = [[NSUUID UUID] UUIDString];
     reciever.name = name;
     reciever.adress = adress;
     reciever.phone = phone;
