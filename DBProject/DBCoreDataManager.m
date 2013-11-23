@@ -20,6 +20,7 @@ NSString * const DBOrderWasAddedNotification = @"DBOrderWasAddedNotification";
 @property (strong, nonatomic) NSManagedObjectContext       *managedObjectContext;
 @property (strong, nonatomic) NSManagedObjectModel         *managedObjectModel;
 @property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (strong, nonatomic) Warhouse                     *warhouse;
 
 @end
 
@@ -64,6 +65,35 @@ NSString * const DBOrderWasAddedNotification = @"DBOrderWasAddedNotification";
     
     self.managedObjectContext = [NSManagedObjectContext new];
     [self.managedObjectContext setPersistentStoreCoordinator:[self persistentStoreCoordinator]];
+    [self createWarhouse];
+}
+
+- (void)createWarhouse
+{
+    NSFetchRequest *fetchRequest = [NSFetchRequest new];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Warhouse" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc]
+                              initWithKey:@"name" ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
+    
+    NSError * error = nil;
+    NSArray *warhouseArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (warhouseArray.count != 0)
+    {
+        self.warhouse = [warhouseArray objectAtIndex:0];
+    }
+    else
+    {
+        NSManagedObjectContext *context = [self managedObjectContext];
+        self.warhouse = [NSEntityDescription
+                        insertNewObjectForEntityForName:@"Warhouse"
+                        inManagedObjectContext:context];
+        self.warhouse.name = @"Main warhouse";
+        [self updateSorce];
+    }
 }
 
 - (void)updateSorce
@@ -122,39 +152,39 @@ NSString * const DBOrderWasAddedNotification = @"DBOrderWasAddedNotification";
 
 #pragma mark - Models
 
-- (NSArray *)models
+- (NSArray *)modelsOnWarhouse
 {
-    NSFetchRequest *fetchRequest = [NSFetchRequest new];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"Model" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc]
-                              initWithKey:@"name" ascending:YES];
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
-    
-    NSError * error = nil;
-    NSArray *recordsArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
-    if (nil != error)
-    {
-        NSLog(@"Error while getting items from Persistance Storage");
-    }
-    return [recordsArray copy];
+    return [self.warhouse.models allObjects];
 }
 
-- (Model *)addModelWithName:(NSString *)name andCost:(NSInteger)cost count:(NSUInteger)aCount
+- (Model *)addModelToWarhouseWithName:(NSString *)name andCost:(NSInteger)cost count:(NSUInteger)aCount
 {
     NSManagedObjectContext *context = [self managedObjectContext];
     Model *model = [NSEntityDescription
-                                insertNewObjectForEntityForName:@"Model"
-                                inManagedObjectContext:context];
+                    insertNewObjectForEntityForName:@"Model"
+                    inManagedObjectContext:context];
     model.price = [NSNumber numberWithInt:cost];
     model.name = name;
     model.modelId = [[NSUUID UUID] UUIDString];
     model.count = [NSNumber numberWithInt:aCount];
+    [self.warhouse addModelsObject:model];
     [self updateSorce];
     [[NSNotificationCenter defaultCenter] postNotificationName:DBModelWasAddedNotification object:nil];
+    return model;
+}
+
+- (Model *)retainModel:(Model *)aModel withCount:(NSUInteger)aCount
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    Model *model = [NSEntityDescription
+                    insertNewObjectForEntityForName:@"Model"
+                    inManagedObjectContext:context];
+    model.price = aModel.price;
+    model.name = aModel.name;
+    model.modelId = aModel.modelId;
+    model.count = [NSNumber numberWithInt:aCount];
+    aModel.count = [NSNumber numberWithInt:(aModel.count.integerValue - aCount)];
+    [self updateSorce];
     return model;
 }
 

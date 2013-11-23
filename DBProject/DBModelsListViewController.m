@@ -46,7 +46,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [DBCoreDataManager.sharedManager models].count;
+    return [DBCoreDataManager.sharedManager modelsOnWarhouse].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -54,7 +54,7 @@
     static NSString *CellIdentifier = @"modelCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    Model * model = [[DBCoreDataManager.sharedManager models] objectAtIndex:indexPath.row];
+    Model * model = [[DBCoreDataManager.sharedManager modelsOnWarhouse] objectAtIndex:indexPath.row];
     cell.textLabel.text = model.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ $ (Count: %d)",model.price.description,model.count.integerValue];
     
@@ -81,7 +81,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DBModelDetailViewController *detailViewController = [[UIStoryboard storyboardWithName:@"Storyboard_Pad" bundle:nil] instantiateViewControllerWithIdentifier:@"ModelDetailViewController"];
-    detailViewController.model = [[DBCoreDataManager.sharedManager models] objectAtIndex:indexPath.row];
+    detailViewController.model = [[DBCoreDataManager.sharedManager modelsOnWarhouse] objectAtIndex:indexPath.row];
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 

@@ -41,6 +41,7 @@
 		CB3D39961840D6AE00965A64 /* DBChooseRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39951840D6AD00965A64 /* DBChooseRecieverViewController.m */; };
 		CB3D39991840D6BD00965A64 /* DBChooseModelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39981840D6BD00965A64 /* DBChooseModelsViewController.m */; };
 		CB3D399C1840D74F00965A64 /* DBChooseModelsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D399B1840D74F00965A64 /* DBChooseModelsCell.m */; };
+		CB3D399F1840E95100965A64 /* Warhouse.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D399E1840E95100965A64 /* Warhouse.m */; };
 		CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,8 @@
 		CB3D39981840D6BD00965A64 /* DBChooseModelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBChooseModelsViewController.m; sourceTree = "<group>"; };
 		CB3D399A1840D74F00965A64 /* DBChooseModelsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBChooseModelsCell.h; sourceTree = "<group>"; };
 		CB3D399B1840D74F00965A64 /* DBChooseModelsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBChooseModelsCell.m; sourceTree = "<group>"; };
+		CB3D399D1840E95000965A64 /* Warhouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Warhouse.h; sourceTree = "<group>"; };
+		CB3D399E1840E95100965A64 /* Warhouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Warhouse.m; sourceTree = "<group>"; };
 		CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddRecieverViewController.h; sourceTree = "<group>"; };
 		CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddRecieverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,6 +224,8 @@
 		798A4F2A181F0A51002F845A /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				CB3D399D1840E95000965A64 /* Warhouse.h */,
+				CB3D399E1840E95100965A64 /* Warhouse.m */,
 				798A4F24181F0A4B002F845A /* Plan.h */,
 				798A4F25181F0A4B002F845A /* Plan.m */,
 				798A4F21181F0A4B002F845A /* Model.h */,
@@ -424,6 +429,7 @@
 				CB3D39961840D6AE00965A64 /* DBChooseRecieverViewController.m in Sources */,
 				CB3D39991840D6BD00965A64 /* DBChooseModelsViewController.m in Sources */,
 				CB3D399C1840D74F00965A64 /* DBChooseModelsCell.m in Sources */,
+				CB3D399F1840E95100965A64 /* Warhouse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,7 @@
 
 - (IBAction)doneClicked:(id)sender
 {
-    [DBCoreDataManager.sharedManager addModelWithName:self.nameTextField.text andCost:[self.priceTextField.text integerValue] count:[self.countTextField.text integerValue]];
+    [DBCoreDataManager.sharedManager addModelToWarhouseWithName:self.nameTextField.text andCost:[self.priceTextField.text integerValue] count:[self.countTextField.text integerValue]];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
