@@ -13,6 +13,7 @@
 
 @dynamic orderId;
 @dynamic model;
+@dynamic orderDate;
 @dynamic reciever;
 
 @end

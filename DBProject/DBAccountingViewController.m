@@ -8,61 +8,59 @@
 
 #import "DBAccountingViewController.h"
 
-@interface DBAccountingViewController ()
+#import "DBCoreDataManager.h"
 
-@property (strong, nonatomic) NSMutableArray *data;
+@interface DBAccountingViewController ()
 
 @end
 
 @implementation DBAccountingViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.data = [[DBAppDelegate.sharedInstance.manager accounting] mutableCopy];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateViewWithSource)
+                                                 name:DBOrderWasAddedNotification
+                                               object:nil];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)dealloc
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DBOrderWasAddedNotification object:nil];
+}
+
+- (void)updateViewWithSource
+{
+    [self performSelector:@selector(reloadData) withObject:nil afterDelay:0.5];
+}
+
+- (void)reloadData
+{
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return self.data.count;
+    return [DBCoreDataManager.sharedManager accounting].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"orderCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    Accounting * acc = [self.data objectAtIndex:indexPath.row];
-    cell.textLabel.text = [acc.date description];
+    Order * obj = [[DBCoreDataManager.sharedManager accounting] objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"[%@] %@",obj.orderDate.description,((Reciever *)obj.reciever).name];
+    NSString *detailText = @"";
+    for (Model *model in obj.model)
+    {
+        detailText = [detailText stringByAppendingString:model.name];
+        detailText = [detailText stringByAppendingString:@", "];
+    }
+    cell.detailTextLabel.text = [detailText substringToIndex:detailText.length-2];
     
     return cell;
 }

@@ -13,6 +13,7 @@
 
 NSString * const DBModelWasAddedNotification = @"DBModelWasAddedNotification";
 NSString * const DBRecieverWasAddedNotification = @"DBRecieverWasAddedNotification";
+NSString * const DBOrderWasAddedNotification = @"DBOrderWasAddedNotification";
 
 @interface DBCoreDataManager ()
 
@@ -82,15 +83,31 @@ NSString * const DBRecieverWasAddedNotification = @"DBRecieverWasAddedNotificati
 
 #pragma mark - Accounting
 
+- (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    Order *order = [NSEntityDescription
+                                     insertNewObjectForEntityForName:@"Order"
+                                     inManagedObjectContext:context];
+    order.orderId = [[NSUUID UUID] UUIDString];
+    order.reciever = aReciever;
+    order.orderDate = [NSDate dateWithTimeIntervalSinceNow:0];
+    [order addModel:[NSSet setWithArray:models]];
+
+    [self updateSorce];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DBOrderWasAddedNotification object:nil];
+    return order;
+}
+
 - (NSArray *)accounting
 {
     NSFetchRequest *fetchRequest = [NSFetchRequest new];
     NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"Accounting" inManagedObjectContext:self.managedObjectContext];
+                                   entityForName:@"Order" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     NSSortDescriptor *sort = [[NSSortDescriptor alloc]
-                              initWithKey:@"date" ascending:YES];
+                              initWithKey:@"orderDate" ascending:YES];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
     
     NSError * error = nil;

@@ -27,7 +27,6 @@
 		798A4F20181F0A4B002F845A /* Reciever.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F1F181F0A4B002F845A /* Reciever.m */; };
 		798A4F23181F0A4B002F845A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F22181F0A4B002F845A /* Model.m */; };
 		798A4F26181F0A4B002F845A /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F25181F0A4B002F845A /* Plan.m */; };
-		798A4F29181F0A4B002F845A /* Accounting.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F28181F0A4B002F845A /* Accounting.m */; };
 		798A4F2E181F0C7F002F845A /* DBModelsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F2D181F0C7F002F845A /* DBModelsListViewController.m */; };
 		798A4F31181F0C91002F845A /* DBRecieverListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F30181F0C91002F845A /* DBRecieverListViewController.m */; };
 		798A4F34181F0CB3002F845A /* DBAccountingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F33181F0CB3002F845A /* DBAccountingViewController.m */; };
@@ -83,8 +82,6 @@
 		798A4F22181F0A4B002F845A /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		798A4F24181F0A4B002F845A /* Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plan.h; sourceTree = "<group>"; };
 		798A4F25181F0A4B002F845A /* Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plan.m; sourceTree = "<group>"; };
-		798A4F27181F0A4B002F845A /* Accounting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accounting.h; sourceTree = "<group>"; };
-		798A4F28181F0A4B002F845A /* Accounting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accounting.m; sourceTree = "<group>"; };
 		798A4F2C181F0C7F002F845A /* DBModelsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModelsListViewController.h; sourceTree = "<group>"; };
 		798A4F2D181F0C7F002F845A /* DBModelsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModelsListViewController.m; sourceTree = "<group>"; };
 		798A4F2F181F0C91002F845A /* DBRecieverListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBRecieverListViewController.h; sourceTree = "<group>"; };
@@ -215,8 +212,6 @@
 		798A4F2A181F0A51002F845A /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				798A4F27181F0A4B002F845A /* Accounting.h */,
-				798A4F28181F0A4B002F845A /* Accounting.m */,
 				798A4F24181F0A4B002F845A /* Plan.h */,
 				798A4F25181F0A4B002F845A /* Plan.m */,
 				798A4F21181F0A4B002F845A /* Model.h */,
@@ -238,12 +233,9 @@
 				798A4EF9181F07C7002F845A /* DBViewController.m */,
 				CB3D39891840CB1800965A64 /* Models */,
 				CB3D39881840C8E000965A64 /* Reciever */,
-				798A4F32181F0CB3002F845A /* DBAccountingViewController.h */,
-				798A4F33181F0CB3002F845A /* DBAccountingViewController.m */,
+				CB3D398D1840D1DD00965A64 /* Accounting */,
 				798A4F35181F0CC4002F845A /* DBYearPlanViewController.h */,
 				798A4F36181F0CC4002F845A /* DBYearPlanViewController.m */,
-				798A4F38181F0CE2002F845A /* DBMakeOrderViewController.h */,
-				798A4F39181F0CE2002F845A /* DBMakeOrderViewController.m */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -272,6 +264,17 @@
 				CB3D398B1840CB3200965A64 /* DBModelDetailViewController.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		CB3D398D1840D1DD00965A64 /* Accounting */ = {
+			isa = PBXGroup;
+			children = (
+				798A4F32181F0CB3002F845A /* DBAccountingViewController.h */,
+				798A4F33181F0CB3002F845A /* DBAccountingViewController.m */,
+				798A4F38181F0CE2002F845A /* DBMakeOrderViewController.h */,
+				798A4F39181F0CE2002F845A /* DBMakeOrderViewController.m */,
+			);
+			name = Accounting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,7 +396,6 @@
 				798A4F20181F0A4B002F845A /* Reciever.m in Sources */,
 				798A4F23181F0A4B002F845A /* Model.m in Sources */,
 				798A4F26181F0A4B002F845A /* Plan.m in Sources */,
-				798A4F29181F0A4B002F845A /* Accounting.m in Sources */,
 				798A4F2E181F0C7F002F845A /* DBModelsListViewController.m in Sources */,
 				798A4F31181F0C91002F845A /* DBRecieverListViewController.m in Sources */,
 				798A4F34181F0CB3002F845A /* DBAccountingViewController.m in Sources */,

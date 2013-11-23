@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DBAppDelegate.h"
 
 
 @interface DBAccountingViewController : UITableViewController
