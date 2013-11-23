@@ -14,7 +14,7 @@
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * price;
-@property (nonatomic, retain) NSNumber * modelId;
+@property (nonatomic, retain) NSString * modelId;
 @property (nonatomic, retain) NSNumber * count;
 
 @end

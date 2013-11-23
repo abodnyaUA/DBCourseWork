@@ -7,57 +7,23 @@
 //
 
 #import "DBAddModelViewController.h"
-#import "DBModelsListViewController.h"
+
+#import "DBCoreDataManager.h"
 
 @interface DBAddModelViewController ()
 
-@property (weak, nonatomic) DBModelsListViewController * parent;
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *priceTextField;
+@property (strong, nonatomic) IBOutlet UITextField *countTextField;
 
 @end
 
 @implementation DBAddModelViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(viewControllerChange:)
-                                                 name:@"UINavigationControllerWillShowViewControllerNotification"
-                                               object:self.navigationController];
-	// Do any additional setup after loading the view.
-}
 - (IBAction)doneClicked:(id)sender
 {
-    [DBAppDelegate.sharedInstance.manager addModelWithName:self.nameTextField.text andCost:[self.priceTextField.text integerValue] count:[self.countTextField.text integerValue]];
-    [self.parent update];
+    [DBCoreDataManager.sharedManager addModelWithName:self.nameTextField.text andCost:[self.priceTextField.text integerValue] count:[self.countTextField.text integerValue]];
     [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void)viewControllerChange:(NSNotification*)notification
-{
-    if ([[notification.userInfo objectForKey:@"UINavigationControllerLastVisibleViewController"] isKindOfClass:DBModelsListViewController.class])
-    {
-        self.parent = [notification.userInfo objectForKey:@"UINavigationControllerLastVisibleViewController"];
-    }
-    else
-    {
-    }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

@@ -12,7 +12,7 @@
 
 @interface Reciever : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * companyID;
+@property (nonatomic, retain) NSString * companyID;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * phone;
 @property (nonatomic, retain) NSString * account;

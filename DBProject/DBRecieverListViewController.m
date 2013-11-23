@@ -8,64 +8,74 @@
 
 #import "DBRecieverListViewController.h"
 
+#import "DBCoreDataManager.h"
+
+
 @interface DBRecieverListViewController ()
 
 @end
 
 @implementation DBRecieverListViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateViewWithSource)
+                                                 name:DBRecieverWasAddedNotification
+                                               object:nil];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)dealloc
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DBRecieverWasAddedNotification object:nil];
+}
+
+- (void)updateViewWithSource
+{
+    [self performSelector:@selector(reloadData) withObject:nil afterDelay:0.5];
+}
+
+- (void)reloadData
+{
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [DBCoreDataManager.sharedManager recievers].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"recieverCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    Reciever *obj = [[DBCoreDataManager.sharedManager recievers] objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = obj.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (phone: %@)",obj.adress,obj.phone];
     
     return cell;
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView  editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        NSArray * data = [[DBCoreDataManager.sharedManager recievers] copy];
+        Model * model = [data objectAtIndex:indexPath.row];
+        [DBCoreDataManager.sharedManager removeObject:model];
+        [self.tableView reloadData];
+    }
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

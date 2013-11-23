@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DBAppDelegate.h"
 
 @interface DBModelsListViewController : UITableViewController
 
-- (void)update;
 @end

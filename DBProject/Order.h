@@ -12,7 +12,7 @@
 
 @interface Order : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * orderId;
+@property (nonatomic, retain) NSString * orderId;
 @property (nonatomic, retain) NSSet *model;
 @property (nonatomic, retain) NSManagedObject *reciever;
 @end

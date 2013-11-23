@@ -8,6 +8,12 @@
 
 #import "DBCoreDataManager.h"
 
+#import "DBAppDelegate.h"
+
+
+NSString * const DBModelWasAddedNotification = @"DBModelWasAddedNotification";
+NSString * const DBRecieverWasAddedNotification = @"DBRecieverWasAddedNotification";
+
 @interface DBCoreDataManager ()
 
 @property (strong, nonatomic) NSManagedObjectContext       *managedObjectContext;
@@ -26,6 +32,11 @@
         [self setUpCoreData];
     }
     return self;
+}
+
++ (id)sharedManager
+{
+    return DBAppDelegate.sharedInstance.manager;
 }
 
 #pragma mark - Core Data stack
@@ -53,7 +64,7 @@
     self.managedObjectContext = [NSManagedObjectContext new];
     [self.managedObjectContext setPersistentStoreCoordinator:[self persistentStoreCoordinator]];
 }
-// Updating info //
+
 - (void)updateSorce
 {
     NSError *error = nil;
@@ -62,6 +73,14 @@
         NSLog( @"Error while updating Persistance Storage: %@", [error localizedDescription]);
     }
 }
+
+- (void)removeObject:(NSManagedObject *)model
+{
+    [self.managedObjectContext deleteObject:model];
+    [self updateSorce];
+}
+
+#pragma mark - Accounting
 
 - (NSArray *)accounting
 {
@@ -83,6 +102,9 @@
     }
     return [recordsArray copy];
 }
+
+#pragma mark - Models
+
 - (NSArray *)models
 {
     NSFetchRequest *fetchRequest = [NSFetchRequest new];
@@ -103,6 +125,7 @@
     }
     return [recordsArray copy];
 }
+
 - (Model *)addModelWithName:(NSString *)name andCost:(NSInteger)cost count:(NSUInteger)aCount
 {
     NSManagedObjectContext *context = [self managedObjectContext];
@@ -111,28 +134,49 @@
                                 inManagedObjectContext:context];
     model.price = [NSNumber numberWithInt:cost];
     model.name = name;
-    model.modelId = [NSNumber numberWithLong:random()];
+    model.modelId = [[NSUUID UUID] description];
     model.count = [NSNumber numberWithInt:aCount];
     [self updateSorce];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DBModelWasAddedNotification object:nil];
     return model;
 }
-- (void)removeObject:(NSManagedObject *)model
+
+#pragma mark - Recievers
+
+- (NSArray *)recievers
 {
-    [self.managedObjectContext deleteObject:model];
-    [self updateSorce];
+    NSFetchRequest *fetchRequest = [NSFetchRequest new];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Reciever" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc]
+                              initWithKey:@"name" ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
+    
+    NSError * error = nil;
+    NSArray *recordsArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (nil != error)
+    {
+        NSLog(@"Error while getting items from Persistance Storage");
+    }
+    return [recordsArray copy];
 }
+
 - (Reciever *)addRecieverWithName:(NSString *)name adress:(NSString *)adress phone:(NSString *)phone account:(NSString *)account
 {
     NSManagedObjectContext *context = [self managedObjectContext];
     Reciever *reciever = [NSEntityDescription
                     insertNewObjectForEntityForName:@"Reciever"
                     inManagedObjectContext:context];
-    reciever.companyID = [NSNumber numberWithLong:random()];
+    reciever.companyID = [[NSUUID UUID] description];
     reciever.name = name;
     reciever.adress = adress;
     reciever.phone = phone;
     reciever.account = account;
     [self updateSorce];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DBRecieverWasAddedNotification object:nil];
     return reciever;
 }
 

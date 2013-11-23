@@ -16,7 +16,6 @@
 		798A4EF0181F07C7002F845A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 798A4EEF181F07C7002F845A /* Default.png */; };
 		798A4EF2181F07C7002F845A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798A4EF1181F07C7002F845A /* Default@2x.png */; };
 		798A4EF4181F07C7002F845A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798A4EF3181F07C7002F845A /* Default-568h@2x.png */; };
-		798A4EF7181F07C7002F845A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798A4EF5181F07C7002F845A /* MainStoryboard.storyboard */; };
 		798A4EFA181F07C7002F845A /* DBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4EF9181F07C7002F845A /* DBViewController.m */; };
 		798A4F02181F07C7002F845A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A4F01181F07C7002F845A /* SenTestingKit.framework */; };
 		798A4F03181F07C7002F845A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A4EDD181F07C7002F845A /* UIKit.framework */; };
@@ -38,6 +37,7 @@
 		798A4F3F181F0F7B002F845A /* DBCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F3E181F0F7B002F845A /* DBCoreDataManager.m */; };
 		798A4F42181F16C8002F845A /* DBAddModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F41181F16C8002F845A /* DBAddModelViewController.m */; };
 		79AD6CEA181F25F500B3018D /* Storyboard_Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD6CE9181F25F500B3018D /* Storyboard_Pad.storyboard */; };
+		CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,6 @@
 		798A4EEF181F07C7002F845A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		798A4EF1181F07C7002F845A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		798A4EF3181F07C7002F845A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		798A4EF6181F07C7002F845A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		798A4EF8181F07C7002F845A /* DBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBViewController.h; sourceTree = "<group>"; };
 		798A4EF9181F07C7002F845A /* DBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBViewController.m; sourceTree = "<group>"; };
 		798A4F00181F07C7002F845A /* DBProjectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBProjectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +99,8 @@
 		798A4F40181F16C8002F845A /* DBAddModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddModelViewController.h; sourceTree = "<group>"; };
 		798A4F41181F16C8002F845A /* DBAddModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddModelViewController.m; sourceTree = "<group>"; };
 		79AD6CE9181F25F500B3018D /* Storyboard_Pad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard_Pad.storyboard; path = ../Storyboard_Pad.storyboard; sourceTree = "<group>"; };
+		CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddRecieverViewController.h; sourceTree = "<group>"; };
+		CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddRecieverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +166,6 @@
 				798A4EEC181F07C7002F845A /* DBAppDelegate.h */,
 				798A4EED181F07C7002F845A /* DBAppDelegate.m */,
 				79AD6CE9181F25F500B3018D /* Storyboard_Pad.storyboard */,
-				798A4EF5181F07C7002F845A /* MainStoryboard.storyboard */,
 				798A4EE4181F07C7002F845A /* Supporting Files */,
 				798A4F18181F0808002F845A /* Model.xcdatamodeld */,
 				798A4F2A181F0A51002F845A /* CoreData */,
@@ -242,6 +242,8 @@
 				798A4F39181F0CE2002F845A /* DBMakeOrderViewController.m */,
 				798A4F40181F16C8002F845A /* DBAddModelViewController.h */,
 				798A4F41181F16C8002F845A /* DBAddModelViewController.m */,
+				CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */,
+				CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -322,7 +324,6 @@
 				798A4EF0181F07C7002F845A /* Default.png in Resources */,
 				798A4EF2181F07C7002F845A /* Default@2x.png in Resources */,
 				798A4EF4181F07C7002F845A /* Default-568h@2x.png in Resources */,
-				798A4EF7181F07C7002F845A /* MainStoryboard.storyboard in Resources */,
 				79AD6CEA181F25F500B3018D /* Storyboard_Pad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +375,7 @@
 				798A4F3A181F0CE2002F845A /* DBMakeOrderViewController.m in Sources */,
 				798A4F3F181F0F7B002F845A /* DBCoreDataManager.m in Sources */,
 				798A4F42181F16C8002F845A /* DBAddModelViewController.m in Sources */,
+				CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,14 +404,6 @@
 				798A4EE7181F07C7002F845A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		798A4EF5181F07C7002F845A /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				798A4EF6181F07C7002F845A /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		798A4F0A181F07C7002F845A /* InfoPlist.strings */ = {

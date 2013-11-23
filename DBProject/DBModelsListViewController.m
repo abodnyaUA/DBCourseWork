@@ -8,63 +8,44 @@
 
 #import "DBModelsListViewController.h"
 
+#import "DBCoreDataManager.h"
+
+
 @interface DBModelsListViewController ()
 
-@property (strong, nonatomic) NSMutableArray *data;
 @end
 
 @implementation DBModelsListViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateViewWithSource)
+                                                 name:DBModelWasAddedNotification
+                                               object:nil];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)dealloc
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DBModelWasAddedNotification object:nil];
 }
-- (void)update
+
+- (void)updateViewWithSource
 {
-    [self performSelector:@selector(reloadData) withObject:nil afterDelay:1.0];
+    [self performSelector:@selector(reloadData) withObject:nil afterDelay:0.5];
 }
 
 - (void)reloadData
 {
     [self.tableView reloadData];
-    
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return [DBAppDelegate.sharedInstance.manager models].count;
+    return [DBCoreDataManager.sharedManager models].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -72,10 +53,9 @@
     static NSString *CellIdentifier = @"modelCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    Model * model = [[DBAppDelegate.sharedInstance.manager models] objectAtIndex:indexPath.row];
+    Model * model = [[DBCoreDataManager.sharedManager models] objectAtIndex:indexPath.row];
     cell.textLabel.text = model.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ $ (Count: %d)",model.price.description,model.count.integerValue];
-    // Configure the cell...
     
     return cell;
 }
@@ -89,9 +69,9 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        NSArray * data = [[DBAppDelegate.sharedInstance.manager models] copy];
+        NSArray * data = [[DBCoreDataManager.sharedManager models] copy];
         Model * model = [data objectAtIndex:indexPath.row];
-        [DBAppDelegate.sharedInstance.manager removeObject:model];
+        [DBCoreDataManager.sharedManager removeObject:model];
         [self.tableView reloadData];
     }
 }
