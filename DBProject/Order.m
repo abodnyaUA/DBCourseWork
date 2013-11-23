@@ -15,5 +15,6 @@
 @dynamic model;
 @dynamic orderDate;
 @dynamic reciever;
+@dynamic totalPrice;
 
 @end

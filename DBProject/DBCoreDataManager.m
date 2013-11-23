@@ -113,7 +113,7 @@ NSString * const DBOrderWasAddedNotification = @"DBOrderWasAddedNotification";
 
 #pragma mark - Accounting
 
-- (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models
+- (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models withTotalPrice:(NSUInteger)total
 {
     NSManagedObjectContext *context = [self managedObjectContext];
     Order *order = [NSEntityDescription
@@ -122,6 +122,7 @@ NSString * const DBOrderWasAddedNotification = @"DBOrderWasAddedNotification";
     order.orderId = [[NSUUID UUID] UUIDString];
     order.reciever = aReciever;
     order.orderDate = [NSDate dateWithTimeIntervalSinceNow:0];
+    order.totalPrice = [NSNumber numberWithInt:total];
     [order addModel:[NSSet setWithArray:models]];
 
     [self updateSorce];

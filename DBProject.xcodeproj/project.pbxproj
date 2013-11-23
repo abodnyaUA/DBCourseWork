@@ -43,6 +43,7 @@
 		CB3D399C1840D74F00965A64 /* DBChooseModelsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D399B1840D74F00965A64 /* DBChooseModelsCell.m */; };
 		CB3D399F1840E95100965A64 /* Warhouse.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D399E1840E95100965A64 /* Warhouse.m */; };
 		CB3D39A21840F78600965A64 /* DBModelBought.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39A11840F78500965A64 /* DBModelBought.m */; };
+		CB3D39A51841021500965A64 /* DBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */; };
 		CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +118,8 @@
 		CB3D399E1840E95100965A64 /* Warhouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Warhouse.m; sourceTree = "<group>"; };
 		CB3D39A01840F78500965A64 /* DBModelBought.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModelBought.h; sourceTree = "<group>"; };
 		CB3D39A11840F78500965A64 /* DBModelBought.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModelBought.m; sourceTree = "<group>"; };
+		CB3D39A31841021400965A64 /* DBOrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBOrderDetailViewController.h; sourceTree = "<group>"; };
+		CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBOrderDetailViewController.m; sourceTree = "<group>"; };
 		CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddRecieverViewController.h; sourceTree = "<group>"; };
 		CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddRecieverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -298,6 +301,8 @@
 				CB3D399B1840D74F00965A64 /* DBChooseModelsCell.m */,
 				CB3D39A01840F78500965A64 /* DBModelBought.h */,
 				CB3D39A11840F78500965A64 /* DBModelBought.m */,
+				CB3D39A31841021400965A64 /* DBOrderDetailViewController.h */,
+				CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */,
 			);
 			name = Accounting;
 			sourceTree = "<group>";
@@ -436,6 +441,7 @@
 				CB3D399C1840D74F00965A64 /* DBChooseModelsCell.m in Sources */,
 				CB3D399F1840E95100965A64 /* Warhouse.m in Sources */,
 				CB3D39A21840F78600965A64 /* DBModelBought.m in Sources */,
+				CB3D39A51841021500965A64 /* DBOrderDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

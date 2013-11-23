@@ -25,7 +25,7 @@ extern NSString * const DBOrderWasAddedNotification;
 - (void)removeObject:(NSManagedObject *)model;
 
 - (NSArray *)accounting;
-- (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models;
+- (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models withTotalPrice:(NSUInteger)total;
 
 - (NSArray *)modelsOnWarhouse;
 - (Model *)addModelToWarhouseWithName:(NSString *)name andCost:(NSInteger)cost count:(NSUInteger)aCount;

@@ -138,7 +138,7 @@
     }
     
     Reciever *reciever = [[DBCoreDataManager.sharedManager recievers] objectAtIndex:recieverNumber];
-    [DBCoreDataManager.sharedManager addOrderWithReciever:reciever andModels:orderModels];
+    [DBCoreDataManager.sharedManager addOrderWithReciever:reciever andModels:orderModels withTotalPrice:self.totalPrice];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

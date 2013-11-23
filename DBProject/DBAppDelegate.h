@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) DBCoreDataManager *manager;
+@property (strong, nonatomic) NSDateFormatter *formatter;
 
 + (DBAppDelegate *)sharedInstance;
 

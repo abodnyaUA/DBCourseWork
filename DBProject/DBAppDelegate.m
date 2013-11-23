@@ -14,6 +14,9 @@
 {
     // Override point for customization after application launch.
     self.manager = [DBCoreDataManager new];
+    self.formatter = [NSDateFormatter new];
+    [self.formatter setDateStyle:NSDateFormatterLongStyle];
+    [self.formatter setTimeStyle:NSDateFormatterShortStyle];
     return YES;
 }
 							
