@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSNumber * year;
 @property (nonatomic, retain) NSSet *models;
+@property (nonatomic, retain) NSString *author;
 @end
 
 @interface Plan (CoreDataGeneratedAccessors)

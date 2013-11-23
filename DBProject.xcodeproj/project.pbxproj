@@ -46,6 +46,8 @@
 		CB3D39A51841021500965A64 /* DBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */; };
 		CB3D39A918410BB400965A64 /* DBAddYearPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39A818410BB400965A64 /* DBAddYearPlanViewController.m */; };
 		CB3D39AC18410BD400965A64 /* DBDetailYearPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39AB18410BD400965A64 /* DBDetailYearPlanViewController.m */; };
+		CB3D39B2184110CA00965A64 /* DBChooseModelsForPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39B1184110CA00965A64 /* DBChooseModelsForPlanViewController.m */; };
+		CB3D39B5184110E700965A64 /* DBChooseModelsForPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39B4184110E700965A64 /* DBChooseModelsForPlanCell.m */; };
 		CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +128,10 @@
 		CB3D39A818410BB400965A64 /* DBAddYearPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddYearPlanViewController.m; sourceTree = "<group>"; };
 		CB3D39AA18410BD400965A64 /* DBDetailYearPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBDetailYearPlanViewController.h; sourceTree = "<group>"; };
 		CB3D39AB18410BD400965A64 /* DBDetailYearPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBDetailYearPlanViewController.m; sourceTree = "<group>"; };
+		CB3D39B0184110CA00965A64 /* DBChooseModelsForPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBChooseModelsForPlanViewController.h; sourceTree = "<group>"; };
+		CB3D39B1184110CA00965A64 /* DBChooseModelsForPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBChooseModelsForPlanViewController.m; sourceTree = "<group>"; };
+		CB3D39B3184110E700965A64 /* DBChooseModelsForPlanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBChooseModelsForPlanCell.h; sourceTree = "<group>"; };
+		CB3D39B4184110E700965A64 /* DBChooseModelsForPlanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBChooseModelsForPlanCell.m; sourceTree = "<group>"; };
 		CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddRecieverViewController.h; sourceTree = "<group>"; };
 		CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddRecieverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -321,6 +327,10 @@
 				CB3D39A818410BB400965A64 /* DBAddYearPlanViewController.m */,
 				CB3D39AA18410BD400965A64 /* DBDetailYearPlanViewController.h */,
 				CB3D39AB18410BD400965A64 /* DBDetailYearPlanViewController.m */,
+				CB3D39B0184110CA00965A64 /* DBChooseModelsForPlanViewController.h */,
+				CB3D39B1184110CA00965A64 /* DBChooseModelsForPlanViewController.m */,
+				CB3D39B3184110E700965A64 /* DBChooseModelsForPlanCell.h */,
+				CB3D39B4184110E700965A64 /* DBChooseModelsForPlanCell.m */,
 			);
 			name = Plan;
 			sourceTree = "<group>";
@@ -462,6 +472,8 @@
 				CB3D39A51841021500965A64 /* DBOrderDetailViewController.m in Sources */,
 				CB3D39A918410BB400965A64 /* DBAddYearPlanViewController.m in Sources */,
 				CB3D39AC18410BD400965A64 /* DBDetailYearPlanViewController.m in Sources */,
+				CB3D39B2184110CA00965A64 /* DBChooseModelsForPlanViewController.m in Sources */,
+				CB3D39B5184110E700965A64 /* DBChooseModelsForPlanCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

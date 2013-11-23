@@ -18,32 +18,6 @@
 
 @implementation DBChooseModelsCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self)
-    {
-//        self.countStepper = [[UIStepper alloc] initWithFrame:CGRectMake(self.frame.origin.x-115,
-//                                                                        (self.frame.size.height-27)/2.0,
-//                                                                        98,
-//                                                                        27)];
-//        [self.countStepper addTarget:self action:@selector(stepperPressed:) forControlEvents:UIControlEventValueChanged];
-//        
-//        self.countLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.origin.x-120-40,
-//                                                                    (self.frame.size.height-27)/2.0,
-//                                                                    40,
-//                                                                    27)];
-    }
-    return self;
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 - (IBAction)changeCount:(id)sender
 {
     [self.countLabel setText:[NSString stringWithFormat:@"%d of %d",

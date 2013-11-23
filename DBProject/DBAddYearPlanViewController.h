@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DBAddYearPlanViewController : UIViewController
+@interface DBAddYearPlanViewController : UIViewController  <UIPopoverControllerDelegate, UIAlertViewDelegate>
+
+- (IBAction)doneCreatingPlan:(id)sender;
+- (IBAction)chooseModels:(id)sender;
 
 @end

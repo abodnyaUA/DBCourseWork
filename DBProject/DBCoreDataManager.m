@@ -152,6 +152,21 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
     return [recordsArray copy];
 }
 
+- (Model *)retainModel:(Model *)aModel withCount:(NSUInteger)aCount
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    Model *model = [NSEntityDescription
+                    insertNewObjectForEntityForName:@"Model"
+                    inManagedObjectContext:context];
+    model.price = aModel.price;
+    model.name = aModel.name;
+    model.modelId = aModel.modelId;
+    model.count = [NSNumber numberWithInt:aCount];
+    aModel.count = [NSNumber numberWithInt:(aModel.count.integerValue - aCount)];
+    [self updateSorce];
+    return model;
+}
+
 #pragma mark - Models
 
 - (NSArray *)modelsOnWarhouse
@@ -172,21 +187,6 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
     [self.warhouse addModelsObject:model];
     [self updateSorce];
     [[NSNotificationCenter defaultCenter] postNotificationName:DBModelWasAddedNotification object:nil];
-    return model;
-}
-
-- (Model *)retainModel:(Model *)aModel withCount:(NSUInteger)aCount
-{
-    NSManagedObjectContext *context = [self managedObjectContext];
-    Model *model = [NSEntityDescription
-                    insertNewObjectForEntityForName:@"Model"
-                    inManagedObjectContext:context];
-    model.price = aModel.price;
-    model.name = aModel.name;
-    model.modelId = aModel.modelId;
-    model.count = [NSNumber numberWithInt:aCount];
-    aModel.count = [NSNumber numberWithInt:(aModel.count.integerValue - aCount)];
-    [self updateSorce];
     return model;
 }
 
@@ -252,17 +252,32 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
     return [recordsArray copy];
 }
 
-- (Plan *)addPlanForYear:(NSUInteger)aYear withModels:(NSArray *)models
+- (Plan *)addPlanForYear:(NSUInteger)aYear withModels:(NSArray *)models withAuthor:(NSString *)anAuthor
 {
     NSManagedObjectContext *context = [self managedObjectContext];
     Plan *plan = [NSEntityDescription
                   insertNewObjectForEntityForName:@"Plan"
                   inManagedObjectContext:context];
     plan.year = [NSNumber numberWithInt:aYear];
+    plan.author = anAuthor;
     [plan addModels:[NSSet setWithArray:models]];
     [self updateSorce];
     [[NSNotificationCenter defaultCenter] postNotificationName:DBYearPlanWasAddedNotification object:nil];
     return plan;
+}
+
+- (Model *)copyModel:(Model *)aModel withNewCount:(NSUInteger)aCount
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    Model *model = [NSEntityDescription
+                    insertNewObjectForEntityForName:@"Model"
+                    inManagedObjectContext:context];
+    model.price = aModel.price;
+    model.name = aModel.name;
+    model.modelId = aModel.modelId;
+    model.count = [NSNumber numberWithInt:aCount];
+    [self updateSorce];
+    return model;
 }
 
 @end

@@ -25,17 +25,18 @@ extern NSString * const DBYearPlanWasAddedNotification;
 + (id)sharedManager;
 - (void)removeObject:(NSManagedObject *)model;
 
-- (NSArray *)accounting;
-- (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models withTotalPrice:(NSUInteger)total;
-
 - (NSArray *)modelsOnWarhouse;
 - (Model *)addModelToWarhouseWithName:(NSString *)name andCost:(NSInteger)cost count:(NSUInteger)aCount;
-- (Model *)retainModel:(Model *)aModel withCount:(NSUInteger)aCount;
 
 - (NSArray *)recievers;
 - (Reciever *)addRecieverWithName:(NSString *)name adress:(NSString *)adress phone:(NSString *)phone account:(NSString *)account;
 
+- (NSArray *)accounting;
+- (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models withTotalPrice:(NSUInteger)total;
+- (Model *)retainModel:(Model *)aModel withCount:(NSUInteger)aCount;
+
 - (NSArray *)yearPlans;
-- (Plan *)addPlanForYear:(NSUInteger)aYear withModels:(NSArray *)models;
+- (Plan *)addPlanForYear:(NSUInteger)aYear withModels:(NSArray *)models withAuthor:(NSString *)anAuthor;
+- (Model *)copyModel:(Model *)aModel withNewCount:(NSUInteger)aCount;
 
 @end

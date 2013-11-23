@@ -14,5 +14,6 @@
 
 @dynamic year;
 @dynamic models;
+@dynamic author;
 
 @end

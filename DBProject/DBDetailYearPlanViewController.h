@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Plan.h"
 
 @interface DBDetailYearPlanViewController : UIViewController
+
+@property (strong,nonatomic) Plan *plan;
 
 @end
