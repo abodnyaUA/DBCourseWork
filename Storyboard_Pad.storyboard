@@ -739,7 +739,13 @@
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2Ll-Wy-Kix"/>
+                    <navigationItem key="navigationItem" id="2Ll-Wy-Kix">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="mf6-AU-485">
+                            <connections>
+                                <action selector="doneCreatingOrder:" destination="84z-FJ-x6s" id="MXZ-pC-CL7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="chooseModelsButton" destination="Wdo-9K-CqM" id="Xng-yI-f0H"/>
@@ -907,88 +913,6 @@
             <point key="canvasLocation" x="178" y="-248"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="DBAccountingViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAccountingViewController.h"/>
-        </class>
-        <class className="DBAddModelViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAddModelViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="countTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="priceTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="DBAddRecieverViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAddRecieverViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="adressTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="bankAccountTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="phoneTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="DBChooseModelsCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseModelsCell.h"/>
-            <relationships>
-                <relationship kind="action" name="changeCount:"/>
-                <relationship kind="outlet" name="countLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="countStepper" candidateClass="UIStepper"/>
-                <relationship kind="outlet" name="detailTextLabelOutlet" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textLabelOutlet" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DBChooseModelsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseModelsViewController.h"/>
-        </class>
-        <class className="DBChooseRecieverViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseRecieverViewController.h"/>
-        </class>
-        <class className="DBMakeOrderViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBMakeOrderViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="chooseModelsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="chooseRecieverButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="modelsListTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="orderPricelabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recieverLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DBModelDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBModelDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="countTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="modelIDTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="priceTextLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DBModelsListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBModelsListViewController.h"/>
-        </class>
-        <class className="DBRecieverDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBRecieverDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="adressTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="bankAccountTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="phoneTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recieverIDTextLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DBRecieverListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBRecieverListViewController.h"/>
-        </class>
-        <class className="DBViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBViewController.h"/>
-        </class>
-        <class className="DBYearPlanViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBYearPlanViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

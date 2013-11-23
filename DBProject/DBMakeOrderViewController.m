@@ -100,4 +100,20 @@
     }
 }
 
+- (IBAction)doneCreatingOrder:(id)sender
+{
+    // Accept models //
+    NSMutableArray *orderModels = [NSMutableArray array];
+    NSArray *modelsBought = [self.chooseModelsVC selectedModels];
+    for (DBModelBought * modelBought in modelsBought)
+    {
+        Model *model = modelBought.model;
+        Model *orderModel = [DBCoreDataManager.sharedManager retainModel:model withCount:modelBought.count];
+        [orderModels addObject:orderModel];
+    }
+    Reciever *reciever = [[DBCoreDataManager.sharedManager recievers] objectAtIndex:self.chooseRecieverVC.selectedRecieverNumber];
+    [DBCoreDataManager.sharedManager addOrderWithReciever:reciever andModels:orderModels];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end
