@@ -32,7 +32,7 @@
 
 - (IBAction)chooseRecieverButtonHandler:(id)sender
 {
-    DBChooseRecieverViewController *chooseRecieverVC = [[DBChooseRecieverViewController alloc] initWithStyle:UITableViewStylePlain];
+    DBChooseRecieverViewController *chooseRecieverVC = [[UIStoryboard storyboardWithName:@"Storyboard_Pad" bundle:nil] instantiateViewControllerWithIdentifier:@"ChooseRecieverViewController"];
     
     self.chooseRecieverPopover = [[UIPopoverController alloc] initWithContentViewController:chooseRecieverVC];
     [self.chooseRecieverPopover presentPopoverFromRect:self.chooseRecieverButton.frame

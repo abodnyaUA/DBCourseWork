@@ -10,4 +10,6 @@
 
 @interface DBChooseRecieverViewController : UITableViewController
 
+@property (assign, nonatomic) NSUInteger selectedRecieverNumber;
+
 @end
