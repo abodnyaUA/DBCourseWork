@@ -114,7 +114,7 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
 
 #pragma mark - Accounting
 
-- (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models withTotalPrice:(NSUInteger)total
+- (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models
 {
     NSManagedObjectContext *context = [self managedObjectContext];
     Order *order = [NSEntityDescription
@@ -123,7 +123,6 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
     order.orderId = [[NSUUID UUID] UUIDString];
     order.reciever = aReciever;
     order.orderDate = [NSDate dateWithTimeIntervalSinceNow:0];
-    order.totalPrice = [NSNumber numberWithInt:total];
     [order addModel:[NSSet setWithArray:models]];
 
     [self updateSorce];
@@ -260,6 +259,7 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
                   inManagedObjectContext:context];
     plan.year = [NSNumber numberWithInt:aYear];
     plan.author = anAuthor;
+    plan.creationDate = [NSDate dateWithTimeIntervalSinceNow:0];
     [plan addModels:[NSSet setWithArray:models]];
     [self updateSorce];
     [[NSNotificationCenter defaultCenter] postNotificationName:DBYearPlanWasAddedNotification object:nil];

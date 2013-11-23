@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
 	self.orderIDLabel.text = self.order.orderId;
-	self.totalPriceLabel.text = [NSString stringWithFormat:@"%d $", self.order.totalPrice.integerValue];
+	self.totalPriceLabel.text = [NSString stringWithFormat:@"%d $", self.order.totalPrice];
     Reciever *reciever = (Reciever *)self.order.reciever;
     self.recieverNameLabel.text = reciever.name;
     self.recieverPhoneLabel.text = reciever.phone;

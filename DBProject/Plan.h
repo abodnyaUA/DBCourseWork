@@ -16,6 +16,10 @@
 @property (nonatomic, retain) NSNumber * year;
 @property (nonatomic, retain) NSSet *models;
 @property (nonatomic, retain) NSString *author;
+@property (nonatomic, retain) NSDate *creationDate;
+
+- (NSUInteger)totalPrice;
+
 @end
 
 @interface Plan (CoreDataGeneratedAccessors)

@@ -33,7 +33,7 @@
     
     Model * model = [[DBCoreDataManager.sharedManager modelsOnWarhouse] objectAtIndex:indexPath.row];
     cell.textLabelOutlet.text = model.name;
-    cell.detailTextLabelOutlet.text = [NSString stringWithFormat:@"%@ $ (On Warehouse: %d)",model.price.description,model.count.integerValue];
+    cell.detailTextLabelOutlet.text = [NSString stringWithFormat:@"%@ $ (Enable %d)",model.price.description,model.count.integerValue];
     
     return cell;
 }

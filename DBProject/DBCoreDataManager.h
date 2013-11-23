@@ -32,7 +32,7 @@ extern NSString * const DBYearPlanWasAddedNotification;
 - (Reciever *)addRecieverWithName:(NSString *)name adress:(NSString *)adress phone:(NSString *)phone account:(NSString *)account;
 
 - (NSArray *)accounting;
-- (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models withTotalPrice:(NSUInteger)total;
+- (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models;
 - (Model *)retainModel:(Model *)aModel withCount:(NSUInteger)aCount;
 
 - (NSArray *)yearPlans;

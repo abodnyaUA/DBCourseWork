@@ -15,6 +15,15 @@
 @dynamic model;
 @dynamic orderDate;
 @dynamic reciever;
-@dynamic totalPrice;
+
+- (NSUInteger)totalPrice
+{
+    NSUInteger total = 0;
+    for (Model *model in self.model)
+    {
+        total += model.count.integerValue * model.price.integerValue;
+    }
+    return total;
+}
 
 @end

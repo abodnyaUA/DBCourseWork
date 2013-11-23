@@ -15,5 +15,16 @@
 @dynamic year;
 @dynamic models;
 @dynamic author;
+@dynamic creationDate;
+
+- (NSUInteger)totalPrice
+{
+    NSUInteger total = 0;
+    for (Model *model in self.models)
+    {
+        total += model.count.integerValue * model.price.integerValue;
+    }
+    return total;
+}
 
 @end
