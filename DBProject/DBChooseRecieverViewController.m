@@ -50,7 +50,7 @@
     [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (NSNotFound != self.selectedRecieverNumber)
+    if (NSNotFound != self.selectedRecieverNumber && self.selectedRecieverNumber != indexPath.row)
     {
         [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:self.selectedRecieverNumber inSection:0]].accessoryType = UITableViewCellAccessoryNone;
     }

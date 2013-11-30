@@ -10,7 +10,6 @@
 #import <CoreData/CoreData.h>
 #import "Order.h"
 #import "Reciever.h"
-#import "Plan.h"
 #import "Model.h"
 #import "Warhouse.h"
 
@@ -31,12 +30,11 @@ extern NSString * const DBYearPlanWasAddedNotification;
 - (NSArray *)recievers;
 - (Reciever *)addRecieverWithName:(NSString *)name adress:(NSString *)adress phone:(NSString *)phone account:(NSString *)account;
 
-- (NSArray *)accounting;
+- (NSArray *)ordersSortedWithKey:(NSString *)aKey
+                       ascending:(BOOL)anAscending
+             includeActiveOrders:(BOOL)anActiveFlag
+           includeArchivedOrders:(BOOL)anArchivedFlag;
 - (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models;
 - (Model *)retainModel:(Model *)aModel withCount:(NSUInteger)aCount;
-
-- (NSArray *)yearPlans;
-- (Plan *)addPlanForYear:(NSUInteger)aYear withModels:(NSArray *)models withAuthor:(NSString *)anAuthor;
-- (Model *)copyModel:(Model *)aModel withNewCount:(NSUInteger)aCount;
 
 @end

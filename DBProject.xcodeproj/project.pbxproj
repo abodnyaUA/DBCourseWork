@@ -26,11 +26,9 @@
 		798A4F1D181F0A4A002F845A /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F1C181F0A4A002F845A /* Order.m */; };
 		798A4F20181F0A4B002F845A /* Reciever.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F1F181F0A4B002F845A /* Reciever.m */; };
 		798A4F23181F0A4B002F845A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F22181F0A4B002F845A /* Model.m */; };
-		798A4F26181F0A4B002F845A /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F25181F0A4B002F845A /* Plan.m */; };
 		798A4F2E181F0C7F002F845A /* DBModelsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F2D181F0C7F002F845A /* DBModelsListViewController.m */; };
 		798A4F31181F0C91002F845A /* DBRecieverListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F30181F0C91002F845A /* DBRecieverListViewController.m */; };
 		798A4F34181F0CB3002F845A /* DBAccountingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F33181F0CB3002F845A /* DBAccountingViewController.m */; };
-		798A4F37181F0CC4002F845A /* DBYearPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F36181F0CC4002F845A /* DBYearPlanViewController.m */; };
 		798A4F3A181F0CE2002F845A /* DBMakeOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F39181F0CE2002F845A /* DBMakeOrderViewController.m */; };
 		798A4F3C181F0E54002F845A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A4F3B181F0E54002F845A /* CoreData.framework */; };
 		798A4F3F181F0F7B002F845A /* DBCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F3E181F0F7B002F845A /* DBCoreDataManager.m */; };
@@ -44,11 +42,10 @@
 		CB3D399F1840E95100965A64 /* Warhouse.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D399E1840E95100965A64 /* Warhouse.m */; };
 		CB3D39A21840F78600965A64 /* DBModelBought.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39A11840F78500965A64 /* DBModelBought.m */; };
 		CB3D39A51841021500965A64 /* DBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */; };
-		CB3D39A918410BB400965A64 /* DBAddYearPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39A818410BB400965A64 /* DBAddYearPlanViewController.m */; };
-		CB3D39AC18410BD400965A64 /* DBDetailYearPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39AB18410BD400965A64 /* DBDetailYearPlanViewController.m */; };
-		CB3D39B2184110CA00965A64 /* DBChooseModelsForPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39B1184110CA00965A64 /* DBChooseModelsForPlanViewController.m */; };
-		CB3D39B5184110E700965A64 /* DBChooseModelsForPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39B4184110E700965A64 /* DBChooseModelsForPlanCell.m */; };
 		CB3D39B71841265700965A64 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3D39B61841265600965A64 /* QuartzCore.framework */; };
+		CB95DA571849F238004A14E0 /* DBOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA561849F238004A14E0 /* DBOrderCell.m */; };
+		CB95DA5A1849F295004A14E0 /* NSUserDefaults+OrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA591849F295004A14E0 /* NSUserDefaults+OrderVC.m */; };
+		CB95DA5D1849F544004A14E0 /* DBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA5C1849F544004A14E0 /* DBConstants.m */; };
 		CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -91,16 +88,12 @@
 		798A4F1F181F0A4B002F845A /* Reciever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reciever.m; sourceTree = "<group>"; };
 		798A4F21181F0A4B002F845A /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		798A4F22181F0A4B002F845A /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
-		798A4F24181F0A4B002F845A /* Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plan.h; sourceTree = "<group>"; };
-		798A4F25181F0A4B002F845A /* Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plan.m; sourceTree = "<group>"; };
 		798A4F2C181F0C7F002F845A /* DBModelsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModelsListViewController.h; sourceTree = "<group>"; };
 		798A4F2D181F0C7F002F845A /* DBModelsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModelsListViewController.m; sourceTree = "<group>"; };
 		798A4F2F181F0C91002F845A /* DBRecieverListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBRecieverListViewController.h; sourceTree = "<group>"; };
 		798A4F30181F0C91002F845A /* DBRecieverListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBRecieverListViewController.m; sourceTree = "<group>"; };
 		798A4F32181F0CB3002F845A /* DBAccountingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAccountingViewController.h; sourceTree = "<group>"; };
 		798A4F33181F0CB3002F845A /* DBAccountingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAccountingViewController.m; sourceTree = "<group>"; };
-		798A4F35181F0CC4002F845A /* DBYearPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBYearPlanViewController.h; sourceTree = "<group>"; };
-		798A4F36181F0CC4002F845A /* DBYearPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBYearPlanViewController.m; sourceTree = "<group>"; };
 		798A4F38181F0CE2002F845A /* DBMakeOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMakeOrderViewController.h; sourceTree = "<group>"; };
 		798A4F39181F0CE2002F845A /* DBMakeOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMakeOrderViewController.m; sourceTree = "<group>"; };
 		798A4F3B181F0E54002F845A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -125,15 +118,13 @@
 		CB3D39A11840F78500965A64 /* DBModelBought.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModelBought.m; sourceTree = "<group>"; };
 		CB3D39A31841021400965A64 /* DBOrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBOrderDetailViewController.h; sourceTree = "<group>"; };
 		CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBOrderDetailViewController.m; sourceTree = "<group>"; };
-		CB3D39A718410BB400965A64 /* DBAddYearPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddYearPlanViewController.h; sourceTree = "<group>"; };
-		CB3D39A818410BB400965A64 /* DBAddYearPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddYearPlanViewController.m; sourceTree = "<group>"; };
-		CB3D39AA18410BD400965A64 /* DBDetailYearPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBDetailYearPlanViewController.h; sourceTree = "<group>"; };
-		CB3D39AB18410BD400965A64 /* DBDetailYearPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBDetailYearPlanViewController.m; sourceTree = "<group>"; };
-		CB3D39B0184110CA00965A64 /* DBChooseModelsForPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBChooseModelsForPlanViewController.h; sourceTree = "<group>"; };
-		CB3D39B1184110CA00965A64 /* DBChooseModelsForPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBChooseModelsForPlanViewController.m; sourceTree = "<group>"; };
-		CB3D39B3184110E700965A64 /* DBChooseModelsForPlanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBChooseModelsForPlanCell.h; sourceTree = "<group>"; };
-		CB3D39B4184110E700965A64 /* DBChooseModelsForPlanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBChooseModelsForPlanCell.m; sourceTree = "<group>"; };
 		CB3D39B61841265600965A64 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CB95DA551849F238004A14E0 /* DBOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBOrderCell.h; sourceTree = "<group>"; };
+		CB95DA561849F238004A14E0 /* DBOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBOrderCell.m; sourceTree = "<group>"; };
+		CB95DA581849F295004A14E0 /* NSUserDefaults+OrderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+OrderVC.h"; sourceTree = "<group>"; };
+		CB95DA591849F295004A14E0 /* NSUserDefaults+OrderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+OrderVC.m"; sourceTree = "<group>"; };
+		CB95DA5B1849F544004A14E0 /* DBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBConstants.h; sourceTree = "<group>"; };
+		CB95DA5C1849F544004A14E0 /* DBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConstants.m; sourceTree = "<group>"; };
 		CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddRecieverViewController.h; sourceTree = "<group>"; };
 		CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddRecieverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +197,8 @@
 				798A4EE4181F07C7002F845A /* Supporting Files */,
 				798A4F18181F0808002F845A /* Model.xcdatamodeld */,
 				798A4F2A181F0A51002F845A /* CoreData */,
+				CB95DA5B1849F544004A14E0 /* DBConstants.h */,
+				CB95DA5C1849F544004A14E0 /* DBConstants.m */,
 			);
 			path = DBProject;
 			sourceTree = "<group>";
@@ -248,8 +241,6 @@
 			children = (
 				CB3D399D1840E95000965A64 /* Warhouse.h */,
 				CB3D399E1840E95100965A64 /* Warhouse.m */,
-				798A4F24181F0A4B002F845A /* Plan.h */,
-				798A4F25181F0A4B002F845A /* Plan.m */,
 				798A4F21181F0A4B002F845A /* Model.h */,
 				798A4F22181F0A4B002F845A /* Model.m */,
 				798A4F1E181F0A4B002F845A /* Reciever.h */,
@@ -269,8 +260,7 @@
 				798A4EF9181F07C7002F845A /* DBViewController.m */,
 				CB3D39891840CB1800965A64 /* Models */,
 				CB3D39881840C8E000965A64 /* Reciever */,
-				CB3D398D1840D1DD00965A64 /* Accounting */,
-				CB3D39A618410B7A00965A64 /* Plan */,
+				CB3D398D1840D1DD00965A64 /* Orders */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -301,7 +291,7 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		CB3D398D1840D1DD00965A64 /* Accounting */ = {
+		CB3D398D1840D1DD00965A64 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
 				798A4F32181F0CB3002F845A /* DBAccountingViewController.h */,
@@ -318,25 +308,12 @@
 				CB3D39A11840F78500965A64 /* DBModelBought.m */,
 				CB3D39A31841021400965A64 /* DBOrderDetailViewController.h */,
 				CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */,
+				CB95DA551849F238004A14E0 /* DBOrderCell.h */,
+				CB95DA561849F238004A14E0 /* DBOrderCell.m */,
+				CB95DA581849F295004A14E0 /* NSUserDefaults+OrderVC.h */,
+				CB95DA591849F295004A14E0 /* NSUserDefaults+OrderVC.m */,
 			);
-			name = Accounting;
-			sourceTree = "<group>";
-		};
-		CB3D39A618410B7A00965A64 /* Plan */ = {
-			isa = PBXGroup;
-			children = (
-				798A4F35181F0CC4002F845A /* DBYearPlanViewController.h */,
-				798A4F36181F0CC4002F845A /* DBYearPlanViewController.m */,
-				CB3D39A718410BB400965A64 /* DBAddYearPlanViewController.h */,
-				CB3D39A818410BB400965A64 /* DBAddYearPlanViewController.m */,
-				CB3D39AA18410BD400965A64 /* DBDetailYearPlanViewController.h */,
-				CB3D39AB18410BD400965A64 /* DBDetailYearPlanViewController.m */,
-				CB3D39B0184110CA00965A64 /* DBChooseModelsForPlanViewController.h */,
-				CB3D39B1184110CA00965A64 /* DBChooseModelsForPlanViewController.m */,
-				CB3D39B3184110E700965A64 /* DBChooseModelsForPlanCell.h */,
-				CB3D39B4184110E700965A64 /* DBChooseModelsForPlanCell.m */,
-			);
-			name = Plan;
+			name = Orders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,11 +434,9 @@
 				798A4F1D181F0A4A002F845A /* Order.m in Sources */,
 				798A4F20181F0A4B002F845A /* Reciever.m in Sources */,
 				798A4F23181F0A4B002F845A /* Model.m in Sources */,
-				798A4F26181F0A4B002F845A /* Plan.m in Sources */,
 				798A4F2E181F0C7F002F845A /* DBModelsListViewController.m in Sources */,
 				798A4F31181F0C91002F845A /* DBRecieverListViewController.m in Sources */,
 				798A4F34181F0CB3002F845A /* DBAccountingViewController.m in Sources */,
-				798A4F37181F0CC4002F845A /* DBYearPlanViewController.m in Sources */,
 				798A4F3A181F0CE2002F845A /* DBMakeOrderViewController.m in Sources */,
 				798A4F3F181F0F7B002F845A /* DBCoreDataManager.m in Sources */,
 				798A4F42181F16C8002F845A /* DBAddModelViewController.m in Sources */,
@@ -474,10 +449,9 @@
 				CB3D399F1840E95100965A64 /* Warhouse.m in Sources */,
 				CB3D39A21840F78600965A64 /* DBModelBought.m in Sources */,
 				CB3D39A51841021500965A64 /* DBOrderDetailViewController.m in Sources */,
-				CB3D39A918410BB400965A64 /* DBAddYearPlanViewController.m in Sources */,
-				CB3D39AC18410BD400965A64 /* DBDetailYearPlanViewController.m in Sources */,
-				CB3D39B2184110CA00965A64 /* DBChooseModelsForPlanViewController.m in Sources */,
-				CB3D39B5184110E700965A64 /* DBChooseModelsForPlanCell.m in Sources */,
+				CB95DA571849F238004A14E0 /* DBOrderCell.m in Sources */,
+				CB95DA5A1849F295004A14E0 /* NSUserDefaults+OrderVC.m in Sources */,
+				CB95DA5D1849F544004A14E0 /* DBConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,11 +11,18 @@
 #import "Model.h"
 #import "Reciever.h"
 
+
+typedef enum {
+    OrderInArchive = 0,
+    OrderActive = 1
+} OrderState;
+
 @interface Order : NSManagedObject
 
+@property (nonatomic, retain) NSNumber *status;
 @property (nonatomic, retain) NSString * orderId;
-@property (nonatomic, retain) NSSet *model;
 @property (nonatomic, retain) NSDate *orderDate;
+@property (nonatomic, retain) NSSet *model;
 @property (nonatomic, retain) Reciever *reciever;
 
 - (NSUInteger)totalPrice;

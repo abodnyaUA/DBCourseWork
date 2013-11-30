@@ -9,11 +9,13 @@
 #import "DBCoreDataManager.h"
 
 #import "DBAppDelegate.h"
+#import "DBConstants.h"
 
 
 NSString * const DBModelWasAddedNotification = @"DBModelWasAddedNotification";
 NSString * const DBRecieverWasAddedNotification = @"DBRecieverWasAddedNotification";
 NSString * const DBOrderWasAddedNotification = @"DBOrderWasAddedNotification";
+NSString * const DBOrderWasArchivedNotification = @"DBOrderWasArchivedNotification";
 NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotification";
 
 @interface DBCoreDataManager ()
@@ -112,7 +114,7 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
     [self updateSorce];
 }
 
-#pragma mark - Accounting
+#pragma mark - Orders
 
 - (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models
 {
@@ -123,32 +125,12 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
     order.orderId = [[NSUUID UUID] UUIDString];
     order.reciever = aReciever;
     order.orderDate = [NSDate dateWithTimeIntervalSinceNow:0];
+    order.status = [NSNumber numberWithInt:OrderActive];
     [order addModel:[NSSet setWithArray:models]];
 
     [self updateSorce];
     [[NSNotificationCenter defaultCenter] postNotificationName:DBOrderWasAddedNotification object:nil];
     return order;
-}
-
-- (NSArray *)accounting
-{
-    NSFetchRequest *fetchRequest = [NSFetchRequest new];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"Order" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc]
-                              initWithKey:@"orderDate" ascending:YES];
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
-    
-    NSError * error = nil;
-    NSArray *recordsArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
-    if (nil != error)
-    {
-        NSLog(@"Error while getting items from Persistance Storage");
-    }
-    return [recordsArray copy];
 }
 
 - (Model *)retainModel:(Model *)aModel withCount:(NSUInteger)aCount
@@ -164,6 +146,107 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
     aModel.count = [NSNumber numberWithInt:(aModel.count.integerValue - aCount)];
     [self updateSorce];
     return model;
+}
+
+#pragma mark - Fetch Orders (Plan && Accounting)
+
+- (NSArray *)ordersSortedWithKey:(NSString *)aKey ascending:(BOOL)anAscending
+{
+    NSFetchRequest *fetchRequest = [NSFetchRequest new];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Order" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sortDescriptor = nil;
+    if (aKey == kSortOrderKeyDate || aKey == kSortOrderKeyStatus)
+    {
+        sortDescriptor = [[NSSortDescriptor alloc] initWithKey:aKey ascending:anAscending];        
+    }
+    else
+    {
+        sortDescriptor = [[NSSortDescriptor alloc] initWithKey:kSortOrderKeyDate ascending:anAscending];
+    }
+    
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    
+    NSError * error = nil;
+    NSArray *recordsArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (aKey == kSortOrderKeyReciever)
+    {
+        recordsArray = [recordsArray sortedArrayUsingComparator:^NSComparisonResult(Order * obj1, Order * obj2)
+        {
+            return anAscending ? [obj1.reciever.name compare:obj2.reciever.name] : [obj2.reciever.name compare:obj1.reciever.name];
+        }];
+    }
+    if (aKey == kSortOrderKeyTotalPrice)
+    {
+        recordsArray = [recordsArray sortedArrayUsingComparator:^NSComparisonResult(Order * obj1, Order * obj2)
+        {
+            return anAscending ? obj1.totalPrice - obj2.totalPrice : obj2.totalPrice - obj1.totalPrice;
+        }];
+    }
+    
+    if (nil != error)
+    {
+        NSLog(@"Error while getting items from Persistance Storage");
+        return nil;
+    }
+    return recordsArray;
+}
+
+- (NSArray *)ordersSortedWithKey:(NSString *)aKey
+                       ascending:(BOOL)anAscending
+             includeActiveOrders:(BOOL)anActiveFlag
+           includeArchivedOrders:(BOOL)anArchivedFlag
+{
+    NSArray *recordsArray = [self ordersSortedWithKey:aKey ascending:anAscending];
+
+    if (anActiveFlag && anArchivedFlag)
+    {
+        return recordsArray;
+    }
+    if (anActiveFlag)
+    {
+        return [self activeOrdersFromOrders:recordsArray];
+    }
+    if (anArchivedFlag)
+    {
+        return [self archivedOrdersFromOrders:recordsArray];
+    }
+    return [NSArray array];
+}
+
+- (NSArray *)archivedOrdersFromOrders:(NSArray *)anOrders
+{
+    NSMutableArray *accounting = [NSMutableArray array];
+    for (Order * order in anOrders)
+    {
+        if (order.status.integerValue == OrderInArchive)
+        {
+            [accounting addObject:order];
+        }
+    }
+    return [accounting copy];
+}
+
+- (NSArray *)activeOrdersFromOrders:(NSArray *)anOrders
+{
+    NSMutableArray *planOrders = [NSMutableArray array];
+    for (Order * order in anOrders)
+    {
+        if (order.status.integerValue == OrderActive)
+        {
+            [planOrders addObject:order];
+        }
+    }
+    return [planOrders copy];
+}
+
+- (void)archivateOrder:(Order *)anOrder
+{
+    anOrder.status = [NSNumber numberWithInt:OrderInArchive];
+    [self updateSorce];
 }
 
 #pragma mark - Models
@@ -228,56 +311,6 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
     return reciever;
 }
 
-#pragma mark - Plan
 
-- (NSArray *)yearPlans
-{
-    NSFetchRequest *fetchRequest = [NSFetchRequest new];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"Plan" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc]
-                              initWithKey:@"year" ascending:YES];
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
-    
-    NSError * error = nil;
-    NSArray *recordsArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
-    if (nil != error)
-    {
-        NSLog(@"Error while getting items from Persistance Storage");
-    }
-    return [recordsArray copy];
-}
-
-- (Plan *)addPlanForYear:(NSUInteger)aYear withModels:(NSArray *)models withAuthor:(NSString *)anAuthor
-{
-    NSManagedObjectContext *context = [self managedObjectContext];
-    Plan *plan = [NSEntityDescription
-                  insertNewObjectForEntityForName:@"Plan"
-                  inManagedObjectContext:context];
-    plan.year = [NSNumber numberWithInt:aYear];
-    plan.author = anAuthor;
-    plan.creationDate = [NSDate dateWithTimeIntervalSinceNow:0];
-    [plan addModels:[NSSet setWithArray:models]];
-    [self updateSorce];
-    [[NSNotificationCenter defaultCenter] postNotificationName:DBYearPlanWasAddedNotification object:nil];
-    return plan;
-}
-
-- (Model *)copyModel:(Model *)aModel withNewCount:(NSUInteger)aCount
-{
-    NSManagedObjectContext *context = [self managedObjectContext];
-    Model *model = [NSEntityDescription
-                    insertNewObjectForEntityForName:@"Model"
-                    inManagedObjectContext:context];
-    model.price = aModel.price;
-    model.name = aModel.name;
-    model.modelId = aModel.modelId;
-    model.count = [NSNumber numberWithInt:aCount];
-    [self updateSorce];
-    return model;
-}
 
 @end

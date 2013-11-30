@@ -267,7 +267,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJD-aT-oZV">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Accounting">
+                                <state key="normal" title="Orders">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -276,19 +276,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="qwf-Zo-eOm" kind="push" id="ESb-ow-aPA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4g-nU-8wt">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Plan">
-                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vF5-Bf-nbq" kind="push" id="t5e-sy-b4r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-9y-4l1">
@@ -336,13 +323,11 @@
                             <constraint firstItem="9OA-mb-U6k" firstAttribute="leading" secondItem="Yek-3R-GAZ" secondAttribute="leading" type="default" id="CI9-Aa-UdS"/>
                             <constraint firstItem="Yek-3R-GAZ" firstAttribute="leading" secondItem="H4c-9y-4l1" secondAttribute="leading" type="default" id="J0v-xf-g8v"/>
                             <constraint firstItem="H4c-9y-4l1" firstAttribute="centerY" secondItem="lZ8-bK-1W3" secondAttribute="centerY" type="default" id="JeG-9N-vjd"/>
+                            <constraint firstItem="H4c-9y-4l1" firstAttribute="leading" secondItem="aJD-aT-oZV" secondAttribute="leading" type="default" id="KBj-PL-mUa"/>
                             <constraint firstItem="aJD-aT-oZV" firstAttribute="leading" secondItem="lZ8-bK-1W3" secondAttribute="leading" constant="370" id="Yrp-6G-eaC"/>
-                            <constraint firstItem="H4c-9y-4l1" firstAttribute="top" secondItem="X4g-nU-8wt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="c1I-Ag-fq5"/>
                             <constraint firstItem="9OA-mb-U6k" firstAttribute="top" secondItem="Yek-3R-GAZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="heX-Ke-8FU"/>
-                            <constraint firstItem="X4g-nU-8wt" firstAttribute="top" secondItem="aJD-aT-oZV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="r5X-I8-dQS"/>
+                            <constraint firstItem="aJD-aT-oZV" firstAttribute="top" secondItem="lZ8-bK-1W3" secondAttribute="top" constant="229" id="mzr-iS-5uI"/>
                             <constraint firstItem="Yek-3R-GAZ" firstAttribute="top" secondItem="H4c-9y-4l1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tIl-Hs-O79"/>
-                            <constraint firstItem="X4g-nU-8wt" firstAttribute="leading" secondItem="aJD-aT-oZV" secondAttribute="leading" type="default" id="u22-Vs-ZnW"/>
-                            <constraint firstItem="H4c-9y-4l1" firstAttribute="leading" secondItem="X4g-nU-8wt" secondAttribute="leading" type="default" id="yG4-RK-dqe"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -564,314 +549,6 @@
             </objects>
             <point key="canvasLocation" x="2198" y="1479"/>
         </scene>
-        <!--Year Plan View Controller - Year Plan-->
-        <scene sceneID="p80-fG-TqB">
-            <objects>
-                <tableViewController id="vF5-Bf-nbq" customClass="DBYearPlanViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jgh-2u-Mc4">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="yearPlanCell" textLabel="HQW-qH-s7X" detailTextLabel="KZS-ds-r6Y" style="IBUITableViewCellStyleValue1" id="udD-5F-blj">
-                                <rect key="frame" x="0.0" y="22" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQW-qH-s7X">
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZS-ds-r6Y">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="vF5-Bf-nbq" id="7KM-qx-8sa"/>
-                            <outlet property="delegate" destination="vF5-Bf-nbq" id="YmD-LI-28v"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Year Plan" id="lvQ-Zx-kAv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ozL-wZ-bAE">
-                            <connections>
-                                <segue destination="RR1-LN-yaV" kind="push" id="uO2-Zd-L2O"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oCG-sZ-ZLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2380" y="-756"/>
-        </scene>
-        <!--Detail Year Plan View Controller-->
-        <scene sceneID="DD4-MF-UcM">
-            <objects>
-                <viewController storyboardIdentifier="DetailYearPlanViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4sc-qe-1Qa" customClass="DBDetailYearPlanViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ikM-jH-gkP">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Year:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4B-iD-mKH">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="0cW-MK-1xI"/>
-                                    <constraint firstAttribute="width" constant="82" id="W7u-G4-dta"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Year:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uW-HZ-zN7">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="78" id="2rk-NT-BCt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plan:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppo-rV-Kpu">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="CPI-ul-agY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Author:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLC-h4-V7F">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="HB2-Pe-CXI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Author:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVs-A0-WxG">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpb-1E-fyx">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="November 15, 2013, 09:12 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NwZ-J2-Wep">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plan's author: __________" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AE1-JT-lNx">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06b-nc-ywV">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="Ona-YE-bIH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="036424521 $ " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTp-RF-x09">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="116" id="sR6-21-HPZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="WTp-RF-x09" firstAttribute="leading" secondItem="06b-nc-ywV" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="31x-ff-KEt"/>
-                            <constraint firstItem="06b-nc-ywV" firstAttribute="leading" secondItem="AE1-JT-lNx" secondAttribute="leading" type="default" id="5Jo-R8-nnG"/>
-                            <constraint firstItem="06b-nc-ywV" firstAttribute="top" secondItem="Vpb-1E-fyx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5te-dc-pxi"/>
-                            <constraint firstItem="4uW-HZ-zN7" firstAttribute="centerX" secondItem="NwZ-J2-Wep" secondAttribute="centerX" type="default" id="7KV-1I-772"/>
-                            <constraint firstItem="Ppo-rV-Kpu" firstAttribute="top" secondItem="q4B-iD-mKH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7ZF-aj-RVN"/>
-                            <constraint firstItem="q4B-iD-mKH" firstAttribute="trailing" secondItem="Ppo-rV-Kpu" secondAttribute="trailing" type="default" id="ATI-FU-dJz"/>
-                            <constraint firstItem="lVs-A0-WxG" firstAttribute="leading" secondItem="HLC-h4-V7F" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Dgd-Ws-U8a"/>
-                            <constraint firstItem="lVs-A0-WxG" firstAttribute="top" secondItem="ikM-jH-gkP" secondAttribute="top" constant="20" symbolic="YES" type="default" id="EWY-DY-tJt"/>
-                            <constraint firstItem="4uW-HZ-zN7" firstAttribute="leading" secondItem="q4B-iD-mKH" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="INh-GV-OQs"/>
-                            <constraint firstItem="HLC-h4-V7F" firstAttribute="leading" secondItem="4uW-HZ-zN7" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="J8c-Th-mJX"/>
-                            <constraint firstItem="Vpb-1E-fyx" firstAttribute="top" secondItem="Ppo-rV-Kpu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KoW-Dz-r1h"/>
-                            <constraint firstAttribute="bottom" secondItem="NwZ-J2-Wep" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="L9o-CO-v2J"/>
-                            <constraint firstItem="NwZ-J2-Wep" firstAttribute="leading" secondItem="ikM-jH-gkP" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="La8-X0-dtJ"/>
-                            <constraint firstItem="AE1-JT-lNx" firstAttribute="top" secondItem="06b-nc-ywV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="P9s-tj-Zsf"/>
-                            <constraint firstItem="4uW-HZ-zN7" firstAttribute="baseline" secondItem="HLC-h4-V7F" secondAttribute="baseline" type="default" id="Uzs-CE-ABZ"/>
-                            <constraint firstAttribute="trailing" secondItem="lVs-A0-WxG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WX0-IQ-igF"/>
-                            <constraint firstItem="lVs-A0-WxG" firstAttribute="baseline" secondItem="HLC-h4-V7F" secondAttribute="baseline" type="default" id="YnM-DC-2a5"/>
-                            <constraint firstItem="WTp-RF-x09" firstAttribute="baseline" secondItem="06b-nc-ywV" secondAttribute="baseline" type="default" id="ZLX-2Z-Ri2"/>
-                            <constraint firstItem="4uW-HZ-zN7" firstAttribute="baseline" secondItem="q4B-iD-mKH" secondAttribute="baseline" type="default" id="msD-gW-YQh"/>
-                            <constraint firstItem="Ppo-rV-Kpu" firstAttribute="leading" secondItem="ikM-jH-gkP" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="msh-vB-8aM"/>
-                            <constraint firstAttribute="trailing" secondItem="WTp-RF-x09" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="o4R-zK-1Jd"/>
-                            <constraint firstItem="q4B-iD-mKH" firstAttribute="top" secondItem="ikM-jH-gkP" secondAttribute="top" constant="20" symbolic="YES" type="default" id="oyV-IT-IYn"/>
-                            <constraint firstAttribute="trailing" secondItem="AE1-JT-lNx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qsE-ue-13r"/>
-                            <constraint firstItem="4uW-HZ-zN7" firstAttribute="top" secondItem="ikM-jH-gkP" secondAttribute="top" constant="20" symbolic="YES" type="default" id="rze-A5-iZ8"/>
-                            <constraint firstItem="q4B-iD-mKH" firstAttribute="leading" secondItem="ikM-jH-gkP" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="s7A-Oz-x3v"/>
-                            <constraint firstItem="Vpb-1E-fyx" firstAttribute="leading" secondItem="ikM-jH-gkP" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="viG-nA-MZl"/>
-                            <constraint firstAttribute="trailing" secondItem="Vpb-1E-fyx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vxB-MY-WoL"/>
-                            <constraint firstAttribute="bottom" secondItem="AE1-JT-lNx" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="woy-v0-yeV"/>
-                            <constraint firstItem="HLC-h4-V7F" firstAttribute="top" secondItem="ikM-jH-gkP" secondAttribute="top" constant="20" symbolic="YES" type="default" id="x6T-0G-a5x"/>
-                        </constraints>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="authorLabel" destination="lVs-A0-WxG" id="ncu-pc-Etc"/>
-                        <outlet property="creationDateLabel" destination="NwZ-J2-Wep" id="Gif-1Y-7Kk"/>
-                        <outlet property="modelsListTextView" destination="Vpb-1E-fyx" id="e1L-pP-aKY"/>
-                        <outlet property="yearLabel" destination="4uW-HZ-zN7" id="U97-eI-HZW"/>
-                        <outlet property="yearsPlanPrice" destination="WTp-RF-x09" id="bab-dj-I7b"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hN3-sU-n8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3432" y="-1604"/>
-        </scene>
-        <!--Add Year Plan View Controller - New Year Plan-->
-        <scene sceneID="jll-eJ-AUh">
-            <objects>
-                <viewController id="RR1-LN-yaV" customClass="DBAddYearPlanViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="K5r-kc-uLG">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Year:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwh-YY-UxJ">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="GP1-jR-XVU"/>
-                                    <constraint firstAttribute="width" constant="125" id="tIP-9o-BJX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plan:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCX-9n-zni">
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Author:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLH-Gp-kYB">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="DhH-rd-375"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oDA-fz-GQ6">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="137" id="2jf-e1-kM4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTc-CB-8Sq">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqw-dM-OWN">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tO3-gD-hSb">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Choose...">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseModels:" destination="RR1-LN-yaV" eventType="touchUpInside" id="mhx-Ey-flw"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3s1-8y-xbR">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="36S-kV-eXm"/>
-                                    <constraint firstAttribute="width" constant="95" id="yHv-aF-boU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="10000000 $" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDX-l2-NBE">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="lNx-lj-105"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="HLH-Gp-kYB" firstAttribute="top" secondItem="K5r-kc-uLG" secondAttribute="top" constant="20" symbolic="YES" type="default" id="0Xk-jX-HBY"/>
-                            <constraint firstItem="KTc-CB-8Sq" firstAttribute="leading" secondItem="HLH-Gp-kYB" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="4la-Yj-0C5"/>
-                            <constraint firstAttribute="trailing" secondItem="KTc-CB-8Sq" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4yw-Su-7TO"/>
-                            <constraint firstItem="tO3-gD-hSb" firstAttribute="top" secondItem="oDA-fz-GQ6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6YF-Rt-1a2"/>
-                            <constraint firstItem="tO3-gD-hSb" firstAttribute="leading" secondItem="oDA-fz-GQ6" secondAttribute="leading" type="default" id="9Xe-8U-Mdn"/>
-                            <constraint firstItem="tO3-gD-hSb" firstAttribute="leading" secondItem="rCX-9n-zni" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="9yK-gY-qIh"/>
-                            <constraint firstItem="oDA-fz-GQ6" firstAttribute="leading" secondItem="pwh-YY-UxJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="BBo-3G-u3J"/>
-                            <constraint firstItem="aDX-l2-NBE" firstAttribute="top" secondItem="Aqw-dM-OWN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="DPb-4E-AYM"/>
-                            <constraint firstItem="HLH-Gp-kYB" firstAttribute="baseline" secondItem="pwh-YY-UxJ" secondAttribute="baseline" type="default" id="Dqq-2k-raW"/>
-                            <constraint firstItem="Aqw-dM-OWN" firstAttribute="top" secondItem="tO3-gD-hSb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IK7-Nf-kqT"/>
-                            <constraint firstAttribute="bottom" secondItem="3s1-8y-xbR" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="JgZ-hq-lC7"/>
-                            <constraint firstItem="KTc-CB-8Sq" firstAttribute="baseline" secondItem="oDA-fz-GQ6" secondAttribute="baseline" type="default" id="LTp-bB-Yri"/>
-                            <constraint firstItem="Aqw-dM-OWN" firstAttribute="top" secondItem="rCX-9n-zni" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ni7-2b-UgY"/>
-                            <constraint firstItem="KTc-CB-8Sq" firstAttribute="bottom" secondItem="HLH-Gp-kYB" secondAttribute="bottom" type="default" id="SAW-To-aw5"/>
-                            <constraint firstItem="rCX-9n-zni" firstAttribute="top" secondItem="oDA-fz-GQ6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Yey-mr-z2P"/>
-                            <constraint firstAttribute="trailing" secondItem="Aqw-dM-OWN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bQb-fW-Aqe"/>
-                            <constraint firstAttribute="bottom" secondItem="aDX-l2-NBE" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="cnz-Ez-a65"/>
-                            <constraint firstItem="rCX-9n-zni" firstAttribute="leading" secondItem="K5r-kc-uLG" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ezd-nM-9ph"/>
-                            <constraint firstItem="HLH-Gp-kYB" firstAttribute="leading" secondItem="oDA-fz-GQ6" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="fmQ-3b-lfL"/>
-                            <constraint firstItem="aDX-l2-NBE" firstAttribute="leading" secondItem="3s1-8y-xbR" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="kVa-9G-l2S"/>
-                            <constraint firstItem="Aqw-dM-OWN" firstAttribute="leading" secondItem="K5r-kc-uLG" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="nMi-6X-bXb"/>
-                            <constraint firstAttribute="trailing" secondItem="aDX-l2-NBE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oNy-T3-39R"/>
-                            <constraint firstItem="KTc-CB-8Sq" firstAttribute="top" secondItem="K5r-kc-uLG" secondAttribute="top" constant="20" symbolic="YES" type="default" id="osd-SU-sH3"/>
-                            <constraint firstItem="pwh-YY-UxJ" firstAttribute="top" secondItem="K5r-kc-uLG" secondAttribute="top" constant="20" symbolic="YES" type="default" id="qNO-AB-ksF"/>
-                            <constraint firstItem="pwh-YY-UxJ" firstAttribute="leading" secondItem="K5r-kc-uLG" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="t9d-WQ-erI"/>
-                            <constraint firstItem="rCX-9n-zni" firstAttribute="top" secondItem="pwh-YY-UxJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="u7y-o7-mVh"/>
-                            <constraint firstItem="tO3-gD-hSb" firstAttribute="trailing" secondItem="oDA-fz-GQ6" secondAttribute="trailing" type="default" id="uQ0-uD-7cc"/>
-                            <constraint firstItem="oDA-fz-GQ6" firstAttribute="top" secondItem="K5r-kc-uLG" secondAttribute="top" constant="20" symbolic="YES" type="default" id="vcz-Vo-BCn"/>
-                            <constraint firstItem="3s1-8y-xbR" firstAttribute="top" secondItem="Aqw-dM-OWN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vqm-A0-iga"/>
-                        </constraints>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="New Year Plan" id="DFH-qQ-9je">
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="done" id="Eo3-hf-D7x">
-                            <connections>
-                                <action selector="doneCreatingPlan:" destination="RR1-LN-yaV" id="TIM-vG-oPV"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="authorTextField" destination="KTc-CB-8Sq" id="NDR-cq-e8c"/>
-                        <outlet property="chooseModelsButton" destination="tO3-gD-hSb" id="xpt-N4-MMU"/>
-                        <outlet property="modelsListTextView" destination="Aqw-dM-OWN" id="Yw6-7J-ZeP"/>
-                        <outlet property="yearTextField" destination="oDA-fz-GQ6" id="ywx-Kc-lcz"/>
-                        <outlet property="yearsPlanPrice" destination="aDX-l2-NBE" id="WiN-3x-hsZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YPD-SN-O7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3432" y="-756"/>
-        </scene>
         <!--Choose Models For Plan View Controller-->
         <scene sceneID="sp4-zf-I4w">
             <objects>
@@ -962,7 +639,7 @@
             <objects>
                 <tableViewController id="qwf-Zo-eOm" customClass="DBAccountingViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="j8V-db-Ut9">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <rect key="frame" x="0.0" y="64" width="1024" height="660"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -994,6 +671,43 @@
                             <outlet property="delegate" destination="qwf-Zo-eOm" id="jfQ-vL-41z"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Sort with " style="plain" id="xWf-P2-C3k"/>
+                        <barButtonItem title="Status" id="Unl-mS-7Wr">
+                            <connections>
+                                <action selector="sortWithStatus:" destination="qwf-Zo-eOm" id="q0I-f4-70y"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Date" id="cXw-Hd-Nzq">
+                            <connections>
+                                <action selector="sortWithDate:" destination="qwf-Zo-eOm" id="2kX-Pi-sOH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Price" id="c47-2l-mFS">
+                            <connections>
+                                <action selector="sortWithTotalPrice:" destination="qwf-Zo-eOm" id="0mh-zn-Ker"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Reciever" id="RcX-ba-naI">
+                            <connections>
+                                <action selector="sortWithReciever:" destination="qwf-Zo-eOm" id="QR1-Mn-q49"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="g0R-QL-LKC"/>
+                        <barButtonItem title="Status" style="plain" id="P8z-JV-kCu"/>
+                        <barButtonItem title="Active" id="eXF-EJ-wOc">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showActive:" destination="qwf-Zo-eOm" id="eEc-Wk-naO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Archived" id="3MJ-7B-VWN">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showArchived:" destination="qwf-Zo-eOm" id="A5D-or-gyF"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Accounting" id="bWp-2z-k6o">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VfQ-JK-TTM">
                             <connections>
@@ -1001,7 +715,16 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="buttonShowActive" destination="eXF-EJ-wOc" id="vmI-Up-Qei"/>
+                        <outlet property="buttonShowArchived" destination="3MJ-7B-VWN" id="oTY-o1-Mdz"/>
+                        <outlet property="buttonSortDate" destination="cXw-Hd-Nzq" id="Gc8-H3-No5"/>
+                        <outlet property="buttonSortPrice" destination="c47-2l-mFS" id="Nem-HC-npi"/>
+                        <outlet property="buttonSortReciever" destination="RcX-ba-naI" id="P9t-uv-ARS"/>
+                        <outlet property="buttonSortStatus" destination="Unl-mS-7Wr" id="lYq-g4-Z7L"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yK5-5B-nMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1012,7 +735,7 @@
             <objects>
                 <viewController id="84z-FJ-x6s" customClass="DBMakeOrderViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GhC-tf-YqB">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <rect key="frame" x="0.0" y="64" width="1024" height="660"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Reciever" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwT-cy-zzc">
@@ -1463,137 +1186,6 @@
             <point key="canvasLocation" x="178" y="-248"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="DBAccountingViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAccountingViewController.h"/>
-        </class>
-        <class className="DBAddModelViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAddModelViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="countTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="priceTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="DBAddRecieverViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAddRecieverViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="adressTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="bankAccountTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="phoneTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="DBAddYearPlanViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAddYearPlanViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="chooseModels:"/>
-                <relationship kind="action" name="doneCreatingPlan:"/>
-                <relationship kind="outlet" name="authorTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="chooseModelsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="modelsListTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="yearTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="yearsPlanPrice" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DBChooseModelsCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseModelsCell.h"/>
-            <relationships>
-                <relationship kind="action" name="changeCount:"/>
-                <relationship kind="outlet" name="countLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="countStepper" candidateClass="UIStepper"/>
-                <relationship kind="outlet" name="detailTextLabelOutlet" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textLabelOutlet" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DBChooseModelsForPlanCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseModelsForPlanCell.h"/>
-            <relationships>
-                <relationship kind="action" name="changeCount:"/>
-                <relationship kind="action" name="didEditTextField:"/>
-                <relationship kind="outlet" name="countStepper" candidateClass="UIStepper"/>
-                <relationship kind="outlet" name="countTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="detailTextLabelOutlet" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textLabelOutlet" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DBChooseModelsForPlanViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseModelsForPlanViewController.h"/>
-        </class>
-        <class className="DBChooseModelsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseModelsViewController.h"/>
-        </class>
-        <class className="DBChooseRecieverViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseRecieverViewController.h"/>
-        </class>
-        <class className="DBDetailYearPlanViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBDetailYearPlanViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="authorLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="creationDateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="modelsListTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="yearLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="yearsPlanPrice" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DBMakeOrderViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBMakeOrderViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="chooseModelsButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="chooseRecieverButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="modelsListTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="orderPricelabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recieverLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DBModelDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBModelDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="countTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="modelIDTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="priceTextLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DBModelsListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBModelsListViewController.h"/>
-        </class>
-        <class className="DBOrderDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBOrderDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="modelsTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="orderDateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="orderIDLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recieverAccountLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recieverAdressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recieverNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recieverPhoneLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="totalPriceLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DBRecieverDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBRecieverDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="adressTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="bankAccountTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nameTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="phoneTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recieverIDTextLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="DBRecieverListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBRecieverListViewController.h"/>
-        </class>
-        <class className="DBViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBViewController.h"/>
-        </class>
-        <class className="DBYearPlanViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBYearPlanViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

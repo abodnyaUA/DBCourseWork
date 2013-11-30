@@ -15,6 +15,7 @@
 @dynamic model;
 @dynamic orderDate;
 @dynamic reciever;
+@dynamic status;
 
 - (NSUInteger)totalPrice
 {
