@@ -17,7 +17,6 @@
 		798A4EF2181F07C7002F845A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798A4EF1181F07C7002F845A /* Default@2x.png */; };
 		798A4EF4181F07C7002F845A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798A4EF3181F07C7002F845A /* Default-568h@2x.png */; };
 		798A4EFA181F07C7002F845A /* DBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4EF9181F07C7002F845A /* DBViewController.m */; };
-		798A4F1A181F0808002F845A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F18181F0808002F845A /* Model.xcdatamodeld */; };
 		798A4F1D181F0A4A002F845A /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F1C181F0A4A002F845A /* Order.m */; };
 		798A4F20181F0A4B002F845A /* Reciever.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F1F181F0A4B002F845A /* Reciever.m */; };
 		798A4F23181F0A4B002F845A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F22181F0A4B002F845A /* Model.m */; };
@@ -38,6 +37,7 @@
 		CB3D39A51841021500965A64 /* DBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */; };
 		CB3D39B71841265700965A64 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3D39B61841265600965A64 /* QuartzCore.framework */; };
 		CB68ACAF184A577B00D16860 /* Storyboard_Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB68ACAE184A577B00D16860 /* Storyboard_Pad.storyboard */; };
+		CB68ACB2184A602B00D16860 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB68ACB0184A602B00D16860 /* Model.xcdatamodeld */; };
 		CB95DA571849F238004A14E0 /* DBOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA561849F238004A14E0 /* DBOrderCell.m */; };
 		CB95DA5A1849F295004A14E0 /* NSUserDefaults+OrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA591849F295004A14E0 /* NSUserDefaults+OrderVC.m */; };
 		CB95DA5D1849F544004A14E0 /* DBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA5C1849F544004A14E0 /* DBConstants.m */; };
@@ -61,21 +61,16 @@
 		798A4EE1181F07C7002F845A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		798A4EE5181F07C7002F845A /* DBProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DBProject-Info.plist"; sourceTree = "<group>"; };
 		798A4EE7181F07C7002F845A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		798A4EE9181F07C7002F845A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		798A4EEB181F07C7002F845A /* DBProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DBProject-Prefix.pch"; sourceTree = "<group>"; };
-		798A4EEC181F07C7002F845A /* DBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBAppDelegate.h; sourceTree = "<group>"; };
-		798A4EED181F07C7002F845A /* DBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBAppDelegate.m; sourceTree = "<group>"; };
+		798A4EE9181F07C7002F845A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../Sources/Other/main.m; sourceTree = "<group>"; };
+		798A4EEB181F07C7002F845A /* DBProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DBProject-Prefix.pch"; path = "../Sources/Other/DBProject-Prefix.pch"; sourceTree = "<group>"; };
+		798A4EEC181F07C7002F845A /* DBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DBAppDelegate.h; path = Other/DBAppDelegate.h; sourceTree = "<group>"; };
+		798A4EED181F07C7002F845A /* DBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DBAppDelegate.m; path = Other/DBAppDelegate.m; sourceTree = "<group>"; };
 		798A4EEF181F07C7002F845A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		798A4EF1181F07C7002F845A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		798A4EF3181F07C7002F845A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		798A4EF8181F07C7002F845A /* DBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBViewController.h; sourceTree = "<group>"; };
 		798A4EF9181F07C7002F845A /* DBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBViewController.m; sourceTree = "<group>"; };
 		798A4F01181F07C7002F845A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		798A4F09181F07C7002F845A /* DBProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DBProjectTests-Info.plist"; sourceTree = "<group>"; };
-		798A4F0B181F07C7002F845A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		798A4F0D181F07C7002F845A /* DBProjectTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBProjectTests.h; sourceTree = "<group>"; };
-		798A4F0E181F07C7002F845A /* DBProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBProjectTests.m; sourceTree = "<group>"; };
-		798A4F19181F0808002F845A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		798A4F1B181F0A4A002F845A /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		798A4F1C181F0A4A002F845A /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Order.m; sourceTree = "<group>"; };
 		798A4F1E181F0A4B002F845A /* Reciever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reciever.h; sourceTree = "<group>"; };
@@ -112,13 +107,14 @@
 		CB3D39A31841021400965A64 /* DBOrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBOrderDetailViewController.h; sourceTree = "<group>"; };
 		CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBOrderDetailViewController.m; sourceTree = "<group>"; };
 		CB3D39B61841265600965A64 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		CB68ACAE184A577B00D16860 /* Storyboard_Pad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard_Pad.storyboard; path = DBProject/Storyboard_Pad.storyboard; sourceTree = SOURCE_ROOT; };
+		CB68ACAE184A577B00D16860 /* Storyboard_Pad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard_Pad.storyboard; path = Resources/Storyboard_Pad.storyboard; sourceTree = SOURCE_ROOT; };
+		CB68ACB1184A602B00D16860 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CB95DA551849F238004A14E0 /* DBOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBOrderCell.h; sourceTree = "<group>"; };
 		CB95DA561849F238004A14E0 /* DBOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBOrderCell.m; sourceTree = "<group>"; };
-		CB95DA581849F295004A14E0 /* NSUserDefaults+OrderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+OrderVC.h"; sourceTree = "<group>"; };
-		CB95DA591849F295004A14E0 /* NSUserDefaults+OrderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+OrderVC.m"; sourceTree = "<group>"; };
-		CB95DA5B1849F544004A14E0 /* DBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBConstants.h; sourceTree = "<group>"; };
-		CB95DA5C1849F544004A14E0 /* DBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConstants.m; sourceTree = "<group>"; };
+		CB95DA581849F295004A14E0 /* NSUserDefaults+OrderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+OrderVC.h"; path = "../../Other/NSUserDefaults+OrderVC.h"; sourceTree = "<group>"; };
+		CB95DA591849F295004A14E0 /* NSUserDefaults+OrderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+OrderVC.m"; path = "../../Other/NSUserDefaults+OrderVC.m"; sourceTree = "<group>"; };
+		CB95DA5B1849F544004A14E0 /* DBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBConstants.h; path = Other/DBConstants.h; sourceTree = "<group>"; };
+		CB95DA5C1849F544004A14E0 /* DBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBConstants.m; path = Other/DBConstants.m; sourceTree = "<group>"; };
 		CB95DA5E184A11F3004A14E0 /* DBModelOnOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModelOnOrderCell.h; sourceTree = "<group>"; };
 		CB95DA5F184A11F3004A14E0 /* DBModelOnOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModelOnOrderCell.m; sourceTree = "<group>"; };
 		CB95DA62184A2311004A14E0 /* warehouseBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warehouseBig.png; sourceTree = "<group>"; };
@@ -130,7 +126,6 @@
 		CB95DA6E184A2C21004A14E0 /* newOrder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newOrder.png; sourceTree = "<group>"; };
 		CB95DA6F184A2C21004A14E0 /* newOrder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newOrder@2x.png"; sourceTree = "<group>"; };
 		CB95DA72184A31C6004A14E0 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CB95DA73184A31C6004A14E0 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CB95DA80184A37D6004A14E0 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CB95DA82184A37D9004A14E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddRecieverViewController.h; sourceTree = "<group>"; };
@@ -156,8 +151,9 @@
 		798A4ED1181F07C7002F845A = {
 			isa = PBXGroup;
 			children = (
-				798A4EE3181F07C7002F845A /* DBProject */,
-				798A4F07181F07C7002F845A /* DBProjectTests */,
+				CB95DA61184A2310004A14E0 /* Resources */,
+				CBBC53D4184A39C0001C2A1C /* Sources */,
+				798A4EE4181F07C7002F845A /* Supporting Files */,
 				798A4EDC181F07C7002F845A /* Frameworks */,
 				798A4EDB181F07C7002F845A /* Products */,
 			);
@@ -184,16 +180,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		798A4EE3181F07C7002F845A /* DBProject */ = {
-			isa = PBXGroup;
-			children = (
-				CB95DA61184A2310004A14E0 /* Resources */,
-				CBBC53D4184A39C0001C2A1C /* Sources */,
-				798A4EE4181F07C7002F845A /* Supporting Files */,
-			);
-			path = DBProject;
-			sourceTree = "<group>";
-		};
 		798A4EE4181F07C7002F845A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,31 +187,10 @@
 				798A4EE6181F07C7002F845A /* InfoPlist.strings */,
 				798A4EE9181F07C7002F845A /* main.m */,
 				798A4EEB181F07C7002F845A /* DBProject-Prefix.pch */,
-				798A4EEF181F07C7002F845A /* Default.png */,
-				798A4EF1181F07C7002F845A /* Default@2x.png */,
-				798A4EF3181F07C7002F845A /* Default-568h@2x.png */,
 				CB95DA81184A37D6004A14E0 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		798A4F07181F07C7002F845A /* DBProjectTests */ = {
-			isa = PBXGroup;
-			children = (
-				798A4F0D181F07C7002F845A /* DBProjectTests.h */,
-				798A4F0E181F07C7002F845A /* DBProjectTests.m */,
-				798A4F08181F07C7002F845A /* Supporting Files */,
-			);
-			path = DBProjectTests;
-			sourceTree = "<group>";
-		};
-		798A4F08181F07C7002F845A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				798A4F09181F07C7002F845A /* DBProjectTests-Info.plist */,
-				798A4F0A181F07C7002F845A /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		798A4F2A181F0A51002F845A /* CoreData */ = {
@@ -242,7 +207,7 @@
 				798A4F3D181F0F7B002F845A /* DBCoreDataManager.h */,
 				798A4F3E181F0F7B002F845A /* DBCoreDataManager.m */,
 			);
-			name = CoreData;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		798A4F2B181F0C4A002F845A /* VC */ = {
@@ -255,6 +220,7 @@
 				CB3D398D1840D1DD00965A64 /* Orders */,
 			);
 			name = VC;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		CB3D39881840C8E000965A64 /* Reciever */ = {
@@ -267,7 +233,7 @@
 				CB3D39851840C52300965A64 /* DBRecieverDetailViewController.h */,
 				CB3D39861840C52300965A64 /* DBRecieverDetailViewController.m */,
 			);
-			name = Reciever;
+			path = Reciever;
 			sourceTree = "<group>";
 		};
 		CB3D39891840CB1800965A64 /* Models */ = {
@@ -281,6 +247,7 @@
 				CB3D398B1840CB3200965A64 /* DBModelDetailViewController.m */,
 			);
 			name = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CB3D398D1840D1DD00965A64 /* Orders */ = {
@@ -308,13 +275,14 @@
 				CB95DA5F184A11F3004A14E0 /* DBModelOnOrderCell.m */,
 			);
 			name = Orders;
+			path = Order;
 			sourceTree = "<group>";
 		};
 		CB95DA61184A2310004A14E0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB68ACB0184A602B00D16860 /* Model.xcdatamodeld */,
 				CB68ACAE184A577B00D16860 /* Storyboard_Pad.storyboard */,
-				798A4F18181F0808002F845A /* Model.xcdatamodeld */,
 				CB95DA62184A2311004A14E0 /* warehouseBig.png */,
 				CB95DA63184A2311004A14E0 /* warehouseBig@2x.png */,
 				CB95DA66184A2415004A14E0 /* people.png */,
@@ -323,6 +291,9 @@
 				CB95DA6B184A26EC004A14E0 /* cart@2x.png */,
 				CB95DA6E184A2C21004A14E0 /* newOrder.png */,
 				CB95DA6F184A2C21004A14E0 /* newOrder@2x.png */,
+				798A4EEF181F07C7002F845A /* Default.png */,
+				798A4EF1181F07C7002F845A /* Default@2x.png */,
+				798A4EF3181F07C7002F845A /* Default-568h@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -337,7 +308,7 @@
 				CB95DA5B1849F544004A14E0 /* DBConstants.h */,
 				CB95DA5C1849F544004A14E0 /* DBConstants.m */,
 			);
-			name = Sources;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,7 +392,6 @@
 				798A4EEA181F07C7002F845A /* main.m in Sources */,
 				798A4EEE181F07C7002F845A /* DBAppDelegate.m in Sources */,
 				798A4EFA181F07C7002F845A /* DBViewController.m in Sources */,
-				798A4F1A181F0808002F845A /* Model.xcdatamodeld in Sources */,
 				798A4F1D181F0A4A002F845A /* Order.m in Sources */,
 				798A4F20181F0A4B002F845A /* Reciever.m in Sources */,
 				798A4F23181F0A4B002F845A /* Model.m in Sources */,
@@ -444,6 +414,7 @@
 				CB95DA5A1849F295004A14E0 /* NSUserDefaults+OrderVC.m in Sources */,
 				CB95DA5D1849F544004A14E0 /* DBConstants.m in Sources */,
 				CB95DA60184A11F4004A14E0 /* DBModelOnOrderCell.m in Sources */,
+				CB68ACB2184A602B00D16860 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,15 +426,6 @@
 			children = (
 				798A4EE7181F07C7002F845A /* en */,
 				CB95DA72184A31C6004A14E0 /* uk */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		798A4F0A181F07C7002F845A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				798A4F0B181F07C7002F845A /* en */,
-				CB95DA73184A31C6004A14E0 /* uk */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -540,8 +502,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DBProject/DBProject-Prefix.pch";
-				INFOPLIST_FILE = "DBProject/DBProject-Info.plist";
+				GCC_PREFIX_HEADER = "Sources/Other/DBProject-Prefix.pch";
+				INFOPLIST_FILE = "Settings/DBProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -553,8 +515,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DBProject/DBProject-Prefix.pch";
-				INFOPLIST_FILE = "DBProject/DBProject-Info.plist";
+				GCC_PREFIX_HEADER = "Sources/Other/DBProject-Prefix.pch";
+				INFOPLIST_FILE = "Settings/DBProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -586,14 +548,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		798A4F18181F0808002F845A /* Model.xcdatamodeld */ = {
+		CB68ACB0184A602B00D16860 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				798A4F19181F0808002F845A /* Model.xcdatamodel */,
+				CB68ACB1184A602B00D16860 /* Model.xcdatamodel */,
 			);
-			currentVersion = 798A4F19181F0808002F845A /* Model.xcdatamodel */;
-			name = Model.xcdatamodeld;
-			path = ../Model.xcdatamodeld;
+			currentVersion = CB68ACB1184A602B00D16860 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

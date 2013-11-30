@@ -34,6 +34,15 @@ extern NSString * const DBUpdateOrdersListNotification;
 #define kOrderModelPriceTableColomn         NSLocalizedString(@"Total price",nil)
 
 // Storyboard //
+
+#define kStoryboardMainTitle                NSLocalizedString(@"kStoryboardMainTitle",nil)
+#define kStoryboardNewOrder                 NSLocalizedString(@"kStoryboardNewOrder",nil)
+#define kStoryboardOrderListTitle           NSLocalizedString(@"kStoryboardOrderListTitle",nil)
+#define kStoryboardNewReciever              NSLocalizedString(@"kStoryboardNewReciever",nil)
+#define kStoryboardRecieversListTitle       NSLocalizedString(@"kStoryboardRecieversListTitle",nil)
+#define kStoryboardNewModel                 NSLocalizedString(@"kStoryboardNewModel",nil)
+#define kStoryboardModelsListTitle          NSLocalizedString(@"kStoryboardModelsListTitle",nil)
+
 #define kStoryboardMainOrderList            NSLocalizedString(@"kStoryboardMainOrderList",nil)
 #define kStoryboardMainRecieverList         NSLocalizedString(@"kStoryboardMainRecieverList",nil)
 #define kStoryboardMainModelList            NSLocalizedString(@"kStoryboardMainModelList",nil)

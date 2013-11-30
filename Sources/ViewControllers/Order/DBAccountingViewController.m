@@ -40,6 +40,7 @@
                                                object:nil];
     
     self.navigationController.toolbarHidden = NO;
+    self.navigationController.title = kStoryboardOrderListTitle;
     BOOL showActiveFlag = NSUserDefaults.standardUserDefaults.showActiveOrders;
     self.buttonShowActive.tintColor = showActiveFlag     ? [UIColor blackColor] : [UIColor grayColor];
     BOOL showArchivedFlag = NSUserDefaults.standardUserDefaults.showArchivedOrders;

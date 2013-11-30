@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.title = kStoryboardNewModel;
     self.labelCount.text = kStoryboardAddModelCount;
     self.labelPrice.text = kStoryboardAddModelPrice;
 }

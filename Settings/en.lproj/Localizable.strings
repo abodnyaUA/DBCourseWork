@@ -21,6 +21,13 @@
 "Total price" = "Total price";
 
 // Storyboard //
+"kStoryboardMainTitle" = "Course Work of Bodnya Alexey (TV-11)";
+"kStoryboardNewOrder" = "New Order";
+"kStoryboardOrderListTitle" = "Orders";
+"kStoryboardNewReciever" = "New Reciever";
+"kStoryboardRecieversListTitle" = "Recievers";
+"kStoryboardNewModel" = "New Model";
+"kStoryboardModelsListTitle" = "Models";
 "kStoryboardMainOrderList" = "Order list!!!";
 "kStoryboardMainRecieverList" = "List of Recievers";
 "kStoryboardMainModelList" = "Models on warehouse";

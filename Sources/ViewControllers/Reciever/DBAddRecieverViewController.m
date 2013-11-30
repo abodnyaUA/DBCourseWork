@@ -29,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.title = kStoryboardNewReciever;
     self.labelBank.text = kStoryboardAddRecieverBank;
     self.labelPhone.text = kStoryboardAddRecieverPhone;
     self.labelAdress.text = kStoryboardAddRecieverAdress;

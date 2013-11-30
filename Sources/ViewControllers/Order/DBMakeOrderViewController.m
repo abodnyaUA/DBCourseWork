@@ -42,6 +42,7 @@
     [self setUpPopovers];
     self.modelsListTextView.contentInset = UIEdgeInsetsMake(-4,-4,0,0);
     
+    self.navigationController.title = kStoryboardNewOrder;
     self.labelModels.text = kStoryboardMakeOrderModels;
     self.labelReciever.text = kStoryboardMakeOrderReciever;
     self.chooseRecieverButton.titleLabel.text = kStoryboardMakeOrderChooseReciever;

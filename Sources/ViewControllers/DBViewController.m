@@ -29,6 +29,7 @@
 {
     [super viewDidLoad];
     self.navigationController.toolbarHidden = YES;
+    self.navigationController.title = kStoryboardMainTitle;
     self.labelOrderList.text = kStoryboardMainOrderList;
     self.labelNewOrder.text = kStoryboardMainRecieverList;
     self.labelRecievers.text = kStoryboardMainModelList;

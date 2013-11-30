@@ -1334,6 +1334,12 @@
         <class className="DBAccountingViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAccountingViewController.h"/>
             <relationships>
+                <relationship kind="action" name="showActive:"/>
+                <relationship kind="action" name="showArchived:"/>
+                <relationship kind="action" name="sortWithDate:"/>
+                <relationship kind="action" name="sortWithReciever:"/>
+                <relationship kind="action" name="sortWithStatus:"/>
+                <relationship kind="action" name="sortWithTotalPrice:"/>
                 <relationship kind="outlet" name="buttonShowActive" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="buttonShowArchived" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="buttonSortDate" candidateClass="UIBarButtonItem"/>
@@ -1385,6 +1391,9 @@
         <class className="DBMakeOrderViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DBMakeOrderViewController.h"/>
             <relationships>
+                <relationship kind="action" name="chooseModelsButtonHandler:"/>
+                <relationship kind="action" name="chooseRecieverButtonHandler:"/>
+                <relationship kind="action" name="doneCreatingOrder:"/>
                 <relationship kind="outlet" name="chooseModelsButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="chooseRecieverButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="labelModels" candidateClass="UILabel"/>
@@ -1489,6 +1498,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="atf-qU-jb7"/>
+        <segue reference="NAy-Q1-cEp"/>
     </inferredMetricsTieBreakers>
 </document>

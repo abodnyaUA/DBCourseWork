@@ -21,6 +21,13 @@
 "Total price" = "Сумма";
 
 // Storyboard //
+"kStoryboardMainTitle" = "Курсова робота Бодні Олексія (ТВ-11)";
+"kStoryboardNewOrder" = "Нове замовлення";
+"kStoryboardOrderListTitle" = "Замовлення";
+"kStoryboardNewReciever" = "Новий замовний";
+"kStoryboardRecieversListTitle" = "Замовники";
+"kStoryboardNewModel" = "Новий товар";
+"kStoryboardModelsListTitle" = "Товари на складі";
 "kStoryboardMainOrderList" = "Список замовлень";
 "kStoryboardMainRecieverList" = "Список замовників";
 "kStoryboardMainModelList" = "Товари на складі";
