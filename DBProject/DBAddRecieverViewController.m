@@ -9,9 +9,13 @@
 #import "DBAddRecieverViewController.h"
 
 #import "DBCoreDataManager.h"
+#import "DBConstants.h"
 
 
 @interface DBAddRecieverViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *labelBank;
+@property (strong, nonatomic) IBOutlet UILabel *labelPhone;
+@property (strong, nonatomic) IBOutlet UILabel *labelAdress;
 
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *adressTextField;
@@ -21,6 +25,14 @@
 @end
 
 @implementation DBAddRecieverViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.labelBank.text = kStoryboardAddRecieverBank;
+    self.labelPhone.text = kStoryboardAddRecieverPhone;
+    self.labelAdress.text = kStoryboardAddRecieverAdress;
+}
 
 - (IBAction)doneClicked:(id)sender
 {

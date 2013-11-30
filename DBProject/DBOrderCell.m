@@ -8,6 +8,10 @@
 
 #import "DBOrderCell.h"
 
+@interface DBOrderCell ()
+
+@end
+
 @implementation DBOrderCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier

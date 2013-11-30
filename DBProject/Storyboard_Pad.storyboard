@@ -93,6 +93,9 @@
                     <connections>
                         <outlet property="adressTextField" destination="yIT-VX-1z1" id="L3n-0C-qX3"/>
                         <outlet property="bankAccountTextField" destination="JUI-Sf-a42" id="ZLG-pb-7lA"/>
+                        <outlet property="labelAdress" destination="udS-5w-iTM" id="8JR-Jk-HaF"/>
+                        <outlet property="labelBank" destination="5tt-og-105" id="Ls0-ym-RBo"/>
+                        <outlet property="labelPhone" destination="YAf-n4-fV5" id="0GU-0f-JKI"/>
                         <outlet property="nameTextField" destination="8Vb-Mj-Nb6" id="lcc-X6-Och"/>
                         <outlet property="phoneTextField" destination="eXM-rQ-Jy9" id="4xQ-lA-aBY"/>
                     </connections>
@@ -198,6 +201,10 @@
                     <connections>
                         <outlet property="adressTextLabel" destination="5b6-DX-e0x" id="02N-8o-BQC"/>
                         <outlet property="bankAccountTextLabel" destination="Sts-wV-4bl" id="LNs-gV-xAs"/>
+                        <outlet property="labelAdress" destination="0Ia-Tx-nCU" id="MW5-aw-cRL"/>
+                        <outlet property="labelBank" destination="TNh-gi-f4f" id="KgT-Fa-lif"/>
+                        <outlet property="labelCompany" destination="MBM-d8-qDE" id="aaW-cY-qHM"/>
+                        <outlet property="labelPhone" destination="Tdd-Yb-QCz" id="aeD-Ii-fd7"/>
                         <outlet property="nameTextLabel" destination="UJn-Fp-kzp" id="S55-hY-VEn"/>
                         <outlet property="phoneTextLabel" destination="6wY-4u-w4l" id="8HO-lx-WJO"/>
                         <outlet property="recieverIDTextLabel" destination="lj4-hH-YCH" id="PUQ-WD-uGe"/>
@@ -336,17 +343,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Recievers in list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71A-DL-HRX">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="List of recievers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71A-DL-HRX">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Orders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWJ-ca-pPu">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Order List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWJ-ca-pPu">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="New Order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ry6-rb-noU">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="New order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ry6-rb-noU">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -382,6 +389,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Course Work of Bodnya Alexey (TV-11)" id="PCn-IS-y4o"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="labelModelsOnWarehouse" destination="UKf-gK-2ej" id="WNj-nL-Q03"/>
+                        <outlet property="labelNewOrder" destination="Ry6-rb-noU" id="OTx-JK-Hds"/>
+                        <outlet property="labelOrderList" destination="aWJ-ca-pPu" id="Kvg-Ly-d2N"/>
+                        <outlet property="labelRecievers" destination="71A-DL-HRX" id="Zdp-pU-UnT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lvz-gF-a1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -503,6 +516,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="countTextField" destination="EyC-Bp-Q8o" id="s2a-Cr-v1w"/>
+                        <outlet property="labelCount" destination="ddb-yD-cw8" id="Mio-aa-4jX"/>
+                        <outlet property="labelPrice" destination="ulE-bk-Vnc" id="iF7-JK-03g"/>
                         <outlet property="nameTextField" destination="Jx4-xK-gdU" id="hj1-Yq-Tdo"/>
                         <outlet property="priceTextField" destination="NAw-A1-kYW" id="NAg-7S-C8A"/>
                     </connections>
@@ -589,6 +604,9 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="countTextLabel" destination="3nX-wU-jJa" id="alO-BS-fC6"/>
+                        <outlet property="labelCount" destination="weM-cA-PLh" id="3VV-rj-fNL"/>
+                        <outlet property="labelModelID" destination="jCa-Ru-nLj" id="aW5-vc-kP7"/>
+                        <outlet property="labelPrice" destination="lZe-aG-ogU" id="yLr-rb-0uU"/>
                         <outlet property="modelIDTextLabel" destination="tjx-Yc-bUR" id="27y-bN-TKy"/>
                         <outlet property="nameTextLabel" destination="dOi-EK-jrs" id="VBg-oP-esB"/>
                         <outlet property="priceTextLabel" destination="1FR-Qg-y0h" id="8qi-sg-SIf"/>
@@ -622,6 +640,7 @@
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Reciever:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX3-xJ-qmh">
                                             <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="5Z8-vc-3iL"/>
                                                 <constraint firstAttribute="width" constant="68" id="ZJz-Zi-MFk"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -650,14 +669,14 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Active" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-KP-KGz">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="174" id="KGM-Gx-lOm"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="255 $" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhZ-OG-JLp">
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="174" id="byZ-No-hAD"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -667,27 +686,28 @@
                                 </view>
                                 <constraints>
                                     <constraint firstItem="JAz-AP-YIK" firstAttribute="baseline" secondItem="SX3-xJ-qmh" secondAttribute="baseline" type="default" id="2b9-iw-tg3"/>
+                                    <constraint firstItem="hhZ-OG-JLp" firstAttribute="top" secondItem="siq-Gv-8D4" secondAttribute="top" constant="33" id="3Wx-Nm-Y1s"/>
+                                    <constraint firstAttribute="trailing" secondItem="fn8-KP-KGz" secondAttribute="trailing" constant="20" type="default" id="8D0-Pj-UaL"/>
                                     <constraint firstItem="JAz-AP-YIK" firstAttribute="top" secondItem="g6G-Z1-Yzn" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="DEQ-6r-jk9"/>
                                     <constraint firstItem="g6G-Z1-Yzn" firstAttribute="top" secondItem="siq-Gv-8D4" secondAttribute="top" constant="9" id="DVk-yf-IoG"/>
                                     <constraint firstItem="SX3-xJ-qmh" firstAttribute="leading" secondItem="siq-Gv-8D4" secondAttribute="leading" constant="20" type="default" id="F3t-RW-E51"/>
                                     <constraint firstItem="uG8-fE-0Ug" firstAttribute="baseline" secondItem="JAz-AP-YIK" secondAttribute="baseline" type="default" id="Gsh-Nv-9yG"/>
                                     <constraint firstItem="g6G-Z1-Yzn" firstAttribute="leading" secondItem="siq-Gv-8D4" secondAttribute="leading" constant="20" type="default" id="JXb-nF-PD7"/>
-                                    <constraint firstItem="hhZ-OG-JLp" firstAttribute="top" secondItem="fn8-KP-KGz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KnC-Es-teM"/>
-                                    <constraint firstItem="fn8-KP-KGz" firstAttribute="leading" secondItem="hhZ-OG-JLp" secondAttribute="leading" type="default" id="KrC-T4-tEo"/>
                                     <constraint firstItem="sPb-yR-kkc" firstAttribute="baseline" secondItem="uG8-fE-0Ug" secondAttribute="baseline" type="default" id="LEZ-ki-TKq"/>
-                                    <constraint firstItem="hhZ-OG-JLp" firstAttribute="baseline" secondItem="sPb-yR-kkc" secondAttribute="baseline" type="default" id="VOC-yL-3Kb"/>
-                                    <constraint firstItem="hhZ-OG-JLp" firstAttribute="leading" secondItem="sPb-yR-kkc" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="aCB-cX-ov7"/>
+                                    <constraint firstItem="fn8-KP-KGz" firstAttribute="leading" secondItem="hhZ-OG-JLp" secondAttribute="leading" type="default" id="Yrh-dV-7p2"/>
                                     <constraint firstItem="g6G-Z1-Yzn" firstAttribute="trailing" secondItem="JAz-AP-YIK" secondAttribute="trailing" type="default" id="aji-Hf-PO9"/>
+                                    <constraint firstItem="sPb-yR-kkc" firstAttribute="top" secondItem="uG8-fE-0Ug" secondAttribute="top" type="default" id="bhf-H0-gz7"/>
                                     <constraint firstItem="JAz-AP-YIK" firstAttribute="leading" secondItem="SX3-xJ-qmh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="gLf-ci-Dvf"/>
-                                    <constraint firstItem="hhZ-OG-JLp" firstAttribute="centerX" secondItem="fn8-KP-KGz" secondAttribute="centerX" type="default" id="ihr-VG-gcH"/>
+                                    <constraint firstAttribute="trailing" secondItem="hhZ-OG-JLp" secondAttribute="trailing" constant="20" type="default" id="irR-2s-qKa"/>
                                     <constraint firstItem="sPb-yR-kkc" firstAttribute="leading" secondItem="uG8-fE-0Ug" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="j3N-6c-e6l"/>
                                     <constraint firstItem="uG8-fE-0Ug" firstAttribute="leading" secondItem="JAz-AP-YIK" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="jPO-i9-wHR"/>
                                     <constraint firstItem="uG8-fE-0Ug" firstAttribute="top" secondItem="JAz-AP-YIK" secondAttribute="top" type="default" id="nup-Un-vTN"/>
-                                    <constraint firstItem="g6G-Z1-Yzn" firstAttribute="baseline" secondItem="fn8-KP-KGz" secondAttribute="baseline" type="default" id="okr-zK-8vO"/>
-                                    <constraint firstItem="sPb-yR-kkc" firstAttribute="top" secondItem="fn8-KP-KGz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oxe-6l-wzA"/>
+                                    <constraint firstItem="fn8-KP-KGz" firstAttribute="top" secondItem="siq-Gv-8D4" secondAttribute="top" constant="14" id="ra7-sl-7pk"/>
                                     <constraint firstItem="SX3-xJ-qmh" firstAttribute="top" secondItem="g6G-Z1-Yzn" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="z3Q-zx-6cB"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="labelModels" destination="uG8-fE-0Ug" id="9LI-Vb-ybk"/>
+                                    <outlet property="labelReciever" destination="SX3-xJ-qmh" id="Keq-Ud-XiA"/>
                                     <outlet property="modelsListLabel" destination="sPb-yR-kkc" id="j0G-dI-6ks"/>
                                     <outlet property="orderDateLabel" destination="g6G-Z1-Yzn" id="apD-GD-vLL"/>
                                     <outlet property="orderStatusLabel" destination="fn8-KP-KGz" id="AYC-B0-vT2"/>
@@ -754,6 +774,8 @@
                         <outlet property="buttonSortPrice" destination="c47-2l-mFS" id="Nem-HC-npi"/>
                         <outlet property="buttonSortReciever" destination="RcX-ba-naI" id="P9t-uv-ARS"/>
                         <outlet property="buttonSortStatus" destination="Unl-mS-7Wr" id="lYq-g4-Z7L"/>
+                        <outlet property="labelSortWith" destination="xWf-P2-C3k" id="J4I-V8-QxL"/>
+                        <outlet property="labelStatus" destination="P8z-JV-kCu" id="rrc-wv-UjV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yK5-5B-nMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -874,6 +896,8 @@
                     <connections>
                         <outlet property="chooseModelsButton" destination="Wdo-9K-CqM" id="Xng-yI-f0H"/>
                         <outlet property="chooseRecieverButton" destination="YCt-y7-lbQ" id="KVs-7R-mUQ"/>
+                        <outlet property="labelModels" destination="HZG-ak-qcz" id="MGs-vF-Adw"/>
+                        <outlet property="labelReciever" destination="zwT-cy-zzc" id="fsS-rl-EZp"/>
                         <outlet property="modelsListTextView" destination="bQ1-gL-K5T" id="CYn-Fd-GPp"/>
                         <outlet property="orderPricelabel" destination="HS3-PE-3e6" id="Imt-Qi-jTB"/>
                         <outlet property="recieverLabel" destination="yfF-1s-q4l" id="tkK-vI-tlZ"/>
@@ -1257,6 +1281,15 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="buttonChangeStatus" destination="S6B-Ns-SWf" id="iaI-M0-iCP"/>
+                        <outlet property="labelAdress" destination="Bkx-D1-C0v" id="nZo-86-UJJ"/>
+                        <outlet property="labelBank" destination="D1h-Mm-SZR" id="a7w-E3-qKF"/>
+                        <outlet property="labelCompany__" destination="3WG-Wz-hiE" id="vq5-bH-YlT"/>
+                        <outlet property="labelModels" destination="xFB-VS-fLA" id="0c4-oN-wQw"/>
+                        <outlet property="labelOrderNumber" destination="ELd-YJ-BIt" id="9Xk-Yj-pcr"/>
+                        <outlet property="labelPhone" destination="d50-EA-wbX" id="MRL-VR-dDC"/>
+                        <outlet property="labelReciever" destination="DRD-63-7sJ" id="XXf-Wl-y0v"/>
+                        <outlet property="labelReciever__" destination="BVJ-VM-Uvd" id="qgK-Ro-GxD"/>
+                        <outlet property="labelTotal" destination="Bb3-BF-CqD" id="hkk-hH-u56"/>
                         <outlet property="modelsListTableView" destination="sjW-ax-5KS" id="Dno-Ap-by8"/>
                         <outlet property="orderDateLabel" destination="YzS-Qu-z2E" id="PnG-Ud-ufH"/>
                         <outlet property="orderIDLabel" destination="sBr-ij-TJT" id="jzA-ID-NeI"/>
@@ -1307,12 +1340,16 @@
                 <relationship kind="outlet" name="buttonSortPrice" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="buttonSortReciever" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="buttonSortStatus" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="labelSortWith" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="labelStatus" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
         <class className="DBAddModelViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAddModelViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="countTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="labelCount" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelPrice" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="priceTextField" candidateClass="UITextField"/>
             </relationships>
@@ -1322,6 +1359,9 @@
             <relationships>
                 <relationship kind="outlet" name="adressTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="bankAccountTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="labelAdress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelBank" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelPhone" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="phoneTextField" candidateClass="UITextField"/>
             </relationships>
@@ -1347,6 +1387,8 @@
             <relationships>
                 <relationship kind="outlet" name="chooseModelsButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="chooseRecieverButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="labelModels" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelReciever" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="modelsListTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="orderPricelabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="recieverLabel" candidateClass="UILabel"/>
@@ -1356,6 +1398,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DBModelDetailViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="countTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelCount" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelModelID" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelPrice" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="modelIDTextLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameTextLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="priceTextLabel" candidateClass="UILabel"/>
@@ -1375,6 +1420,8 @@
         <class className="DBOrderCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DBOrderCell.h"/>
             <relationships>
+                <relationship kind="outlet" name="labelModels" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelReciever" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="modelsListLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="orderDateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="orderStatusLabel" candidateClass="UILabel"/>
@@ -1386,6 +1433,15 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DBOrderDetailViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="buttonChangeStatus" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="labelAdress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelBank" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelCompany__" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelModels" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelOrderNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelPhone" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelReciever" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelReciever__" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelTotal" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="modelsListTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="modelsTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="orderDateLabel" candidateClass="UILabel"/>
@@ -1402,6 +1458,10 @@
             <relationships>
                 <relationship kind="outlet" name="adressTextLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="bankAccountTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelAdress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelBank" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelCompany" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelPhone" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameTextLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="phoneTextLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="recieverIDTextLabel" candidateClass="UILabel"/>
@@ -1412,6 +1472,12 @@
         </class>
         <class className="DBViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DBViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="labelModelsOnWarehouse" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelNewOrder" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelOrderList" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelRecievers" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

@@ -1,0 +1,48 @@
+/* 
+  Localize.strings
+  DBProject
+
+  Created by Aleksey Bodnya on 11/30/13.
+  Copyright (c) 2013 abodnya. All rights reserved.
+*/
+
+
+"Make Active" = "Make Active";
+"Archivate" = "Archivate";
+"Order to %@" = "Order to %@";
+
+"Deleting Order" = "Deleting Order";
+"Do you really want to delete this order?" = "Do you really want to delete this order?";
+"Delete" = "Delete";
+"Cancel" = "Cancel";
+
+"Model name" = "Model name";
+"Count" = "Count";
+"Total price" = "Total price";
+
+// Storyboard //
+"kStoryboardMainOrderList" = "Order list!!!";
+"kStoryboardMainRecieverList" = "List of Recievers";
+"kStoryboardMainModelList" = "Models on warehouse";
+"kStoryboardMainNewOrder" = "New Order";
+"Count: " = "Count: ";
+"Price: " = "Price: ";
+"Model ID: " = "Model ID: ";
+"Adress: " = "Adress: ";
+"Phone: " = "Phone: ";
+"Bank account: " = "Bank account: ";
+"Company ID: " = "Company ID: ";
+"Status" = "Status";
+"Date" = "Date";
+"Price" = "Price";
+"Reciever" = "Reciever";
+"Sort with " = "Sort with ";
+"Active" = "Active";
+"Archived" = "Archived";
+"Models:" = "Models:";
+"Choose..." = "Choose...";
+"Company: _________" = "Company: _________";
+"Reciever:  ________" = "Reciever:  ________";
+"Total: " = "Total: ";
+"Bank:" = "Bank:";
+"Order №" = "Order №";

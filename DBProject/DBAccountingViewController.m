@@ -16,6 +16,8 @@
 #import "DBOrderCell.h"
 
 @interface DBAccountingViewController ()
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *labelSortWith;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *labelStatus;
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonSortStatus;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonSortDate;
@@ -42,6 +44,17 @@
     self.buttonShowActive.tintColor = showActiveFlag     ? [UIColor blackColor] : [UIColor grayColor];
     BOOL showArchivedFlag = NSUserDefaults.standardUserDefaults.showArchivedOrders;
     self.buttonShowArchived.tintColor = showArchivedFlag ? [UIColor blackColor] : [UIColor grayColor];
+    
+    self.labelSortWith.title = kStoryboardOrderListLabelSort;
+    self.labelStatus.title = kStoryboardOrderListLabelShow;
+    
+    self.buttonSortStatus.title = kStoryboardOrderListSortStatus;
+    self.buttonSortDate.title = kStoryboardOrderListSortDate;
+    self.buttonSortPrice.title = kStoryboardOrderListSortPrice;
+    self.buttonSortReciever.title = kStoryboardOrderListSortReciever;
+    
+    self.buttonShowActive.title = kStoryboardOrderListShowActive;
+    self.buttonShowArchived.title = kStoryboardOrderListShowArchived;
 }
 
 - (void)dealloc
@@ -93,6 +106,9 @@
     cell.orderStatusLabel.text = order.status.integerValue == OrderActive ?
     NSLocalizedString(@"Active order", nil) : NSLocalizedString(@"In Archive", nil);
     cell.orderStatusLabel.textColor = order.status.integerValue == OrderActive ? [UIColor greenColor] : [UIColor grayColor];
+    
+    cell.labelModels.text = kStoryboardOrderListCellModels;
+    cell.labelReciever.text = kStoryboardOrderListCellReciever;
     
     return cell;
 }

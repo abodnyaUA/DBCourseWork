@@ -17,11 +17,6 @@
 		798A4EF2181F07C7002F845A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798A4EF1181F07C7002F845A /* Default@2x.png */; };
 		798A4EF4181F07C7002F845A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 798A4EF3181F07C7002F845A /* Default-568h@2x.png */; };
 		798A4EFA181F07C7002F845A /* DBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4EF9181F07C7002F845A /* DBViewController.m */; };
-		798A4F02181F07C7002F845A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A4F01181F07C7002F845A /* SenTestingKit.framework */; };
-		798A4F03181F07C7002F845A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A4EDD181F07C7002F845A /* UIKit.framework */; };
-		798A4F04181F07C7002F845A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A4EDF181F07C7002F845A /* Foundation.framework */; };
-		798A4F0C181F07C7002F845A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 798A4F0A181F07C7002F845A /* InfoPlist.strings */; };
-		798A4F0F181F07C7002F845A /* DBProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F0E181F07C7002F845A /* DBProjectTests.m */; };
 		798A4F1A181F0808002F845A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F18181F0808002F845A /* Model.xcdatamodeld */; };
 		798A4F1D181F0A4A002F845A /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F1C181F0A4A002F845A /* Order.m */; };
 		798A4F20181F0A4B002F845A /* Reciever.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F1F181F0A4B002F845A /* Reciever.m */; };
@@ -33,7 +28,6 @@
 		798A4F3C181F0E54002F845A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A4F3B181F0E54002F845A /* CoreData.framework */; };
 		798A4F3F181F0F7B002F845A /* DBCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F3E181F0F7B002F845A /* DBCoreDataManager.m */; };
 		798A4F42181F16C8002F845A /* DBAddModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798A4F41181F16C8002F845A /* DBAddModelViewController.m */; };
-		79AD6CEA181F25F500B3018D /* Storyboard_Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AD6CE9181F25F500B3018D /* Storyboard_Pad.storyboard */; };
 		CB3D39871840C52300965A64 /* DBRecieverDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39861840C52300965A64 /* DBRecieverDetailViewController.m */; };
 		CB3D398C1840CB3200965A64 /* DBModelDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D398B1840CB3200965A64 /* DBModelDetailViewController.m */; };
 		CB3D39961840D6AE00965A64 /* DBChooseRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39951840D6AD00965A64 /* DBChooseRecieverViewController.m */; };
@@ -43,6 +37,7 @@
 		CB3D39A21840F78600965A64 /* DBModelBought.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39A11840F78500965A64 /* DBModelBought.m */; };
 		CB3D39A51841021500965A64 /* DBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */; };
 		CB3D39B71841265700965A64 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3D39B61841265600965A64 /* QuartzCore.framework */; };
+		CB68ACAF184A577B00D16860 /* Storyboard_Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB68ACAE184A577B00D16860 /* Storyboard_Pad.storyboard */; };
 		CB95DA571849F238004A14E0 /* DBOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA561849F238004A14E0 /* DBOrderCell.m */; };
 		CB95DA5A1849F295004A14E0 /* NSUserDefaults+OrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA591849F295004A14E0 /* NSUserDefaults+OrderVC.m */; };
 		CB95DA5D1849F544004A14E0 /* DBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA5C1849F544004A14E0 /* DBConstants.m */; };
@@ -55,18 +50,9 @@
 		CB95DA6D184A26EC004A14E0 /* cart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB95DA6B184A26EC004A14E0 /* cart@2x.png */; };
 		CB95DA70184A2C21004A14E0 /* newOrder.png in Resources */ = {isa = PBXBuildFile; fileRef = CB95DA6E184A2C21004A14E0 /* newOrder.png */; };
 		CB95DA71184A2C21004A14E0 /* newOrder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB95DA6F184A2C21004A14E0 /* newOrder@2x.png */; };
+		CB95DA7F184A37D6004A14E0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB95DA81184A37D6004A14E0 /* Localizable.strings */; };
 		CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		798A4F05181F07C7002F845A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 798A4ED2181F07C7002F845A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 798A4ED9181F07C7002F845A;
-			remoteInfo = DBProject;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		798A4EDA181F07C7002F845A /* DBProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,9 +68,8 @@
 		798A4EEF181F07C7002F845A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		798A4EF1181F07C7002F845A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		798A4EF3181F07C7002F845A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		798A4EF8181F07C7002F845A /* DBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBViewController.h; sourceTree = "<group>"; };
+		798A4EF8181F07C7002F845A /* DBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBViewController.h; sourceTree = "<group>"; };
 		798A4EF9181F07C7002F845A /* DBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBViewController.m; sourceTree = "<group>"; };
-		798A4F00181F07C7002F845A /* DBProjectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBProjectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		798A4F01181F07C7002F845A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		798A4F09181F07C7002F845A /* DBProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DBProjectTests-Info.plist"; sourceTree = "<group>"; };
 		798A4F0B181F07C7002F845A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -110,7 +95,6 @@
 		798A4F3E181F0F7B002F845A /* DBCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBCoreDataManager.m; sourceTree = "<group>"; };
 		798A4F40181F16C8002F845A /* DBAddModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddModelViewController.h; sourceTree = "<group>"; };
 		798A4F41181F16C8002F845A /* DBAddModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddModelViewController.m; sourceTree = "<group>"; };
-		79AD6CE9181F25F500B3018D /* Storyboard_Pad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard_Pad.storyboard; path = ../Storyboard_Pad.storyboard; sourceTree = "<group>"; };
 		CB3D39851840C52300965A64 /* DBRecieverDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBRecieverDetailViewController.h; sourceTree = "<group>"; };
 		CB3D39861840C52300965A64 /* DBRecieverDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBRecieverDetailViewController.m; sourceTree = "<group>"; };
 		CB3D398A1840CB3200965A64 /* DBModelDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModelDetailViewController.h; sourceTree = "<group>"; };
@@ -128,6 +112,7 @@
 		CB3D39A31841021400965A64 /* DBOrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBOrderDetailViewController.h; sourceTree = "<group>"; };
 		CB3D39A41841021500965A64 /* DBOrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBOrderDetailViewController.m; sourceTree = "<group>"; };
 		CB3D39B61841265600965A64 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CB68ACAE184A577B00D16860 /* Storyboard_Pad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard_Pad.storyboard; path = DBProject/Storyboard_Pad.storyboard; sourceTree = SOURCE_ROOT; };
 		CB95DA551849F238004A14E0 /* DBOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBOrderCell.h; sourceTree = "<group>"; };
 		CB95DA561849F238004A14E0 /* DBOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBOrderCell.m; sourceTree = "<group>"; };
 		CB95DA581849F295004A14E0 /* NSUserDefaults+OrderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+OrderVC.h"; sourceTree = "<group>"; };
@@ -144,6 +129,10 @@
 		CB95DA6B184A26EC004A14E0 /* cart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart@2x.png"; sourceTree = "<group>"; };
 		CB95DA6E184A2C21004A14E0 /* newOrder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newOrder.png; sourceTree = "<group>"; };
 		CB95DA6F184A2C21004A14E0 /* newOrder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newOrder@2x.png"; sourceTree = "<group>"; };
+		CB95DA72184A31C6004A14E0 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB95DA73184A31C6004A14E0 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB95DA80184A37D6004A14E0 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CB95DA82184A37D9004A14E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddRecieverViewController.h; sourceTree = "<group>"; };
 		CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddRecieverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,16 +147,6 @@
 				798A4EDE181F07C7002F845A /* UIKit.framework in Frameworks */,
 				798A4EE0181F07C7002F845A /* Foundation.framework in Frameworks */,
 				798A4EE2181F07C7002F845A /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		798A4EFC181F07C7002F845A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				798A4F02181F07C7002F845A /* SenTestingKit.framework in Frameworks */,
-				798A4F03181F07C7002F845A /* UIKit.framework in Frameworks */,
-				798A4F04181F07C7002F845A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				798A4EDA181F07C7002F845A /* DBProject.app */,
-				798A4F00181F07C7002F845A /* DBProjectTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,15 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				CB95DA61184A2310004A14E0 /* Resources */,
-				798A4F2B181F0C4A002F845A /* VC */,
-				798A4EEC181F07C7002F845A /* DBAppDelegate.h */,
-				798A4EED181F07C7002F845A /* DBAppDelegate.m */,
-				79AD6CE9181F25F500B3018D /* Storyboard_Pad.storyboard */,
+				CBBC53D4184A39C0001C2A1C /* Sources */,
 				798A4EE4181F07C7002F845A /* Supporting Files */,
-				798A4F18181F0808002F845A /* Model.xcdatamodeld */,
-				798A4F2A181F0A51002F845A /* CoreData */,
-				CB95DA5B1849F544004A14E0 /* DBConstants.h */,
-				CB95DA5C1849F544004A14E0 /* DBConstants.m */,
 			);
 			path = DBProject;
 			sourceTree = "<group>";
@@ -233,6 +204,7 @@
 				798A4EEF181F07C7002F845A /* Default.png */,
 				798A4EF1181F07C7002F845A /* Default@2x.png */,
 				798A4EF3181F07C7002F845A /* Default-568h@2x.png */,
+				CB95DA81184A37D6004A14E0 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -341,6 +313,8 @@
 		CB95DA61184A2310004A14E0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB68ACAE184A577B00D16860 /* Storyboard_Pad.storyboard */,
+				798A4F18181F0808002F845A /* Model.xcdatamodeld */,
 				CB95DA62184A2311004A14E0 /* warehouseBig.png */,
 				CB95DA63184A2311004A14E0 /* warehouseBig@2x.png */,
 				CB95DA66184A2415004A14E0 /* people.png */,
@@ -351,6 +325,19 @@
 				CB95DA6F184A2C21004A14E0 /* newOrder@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CBBC53D4184A39C0001C2A1C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				798A4EEC181F07C7002F845A /* DBAppDelegate.h */,
+				798A4EED181F07C7002F845A /* DBAppDelegate.m */,
+				798A4F2B181F0C4A002F845A /* VC */,
+				798A4F2A181F0A51002F845A /* CoreData */,
+				CB95DA5B1849F544004A14E0 /* DBConstants.h */,
+				CB95DA5C1849F544004A14E0 /* DBConstants.m */,
+			);
+			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,25 +360,6 @@
 			productReference = 798A4EDA181F07C7002F845A /* DBProject.app */;
 			productType = "com.apple.product-type.application";
 		};
-		798A4EFF181F07C7002F845A /* DBProjectTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 798A4F15181F07C7002F845A /* Build configuration list for PBXNativeTarget "DBProjectTests" */;
-			buildPhases = (
-				798A4EFB181F07C7002F845A /* Sources */,
-				798A4EFC181F07C7002F845A /* Frameworks */,
-				798A4EFD181F07C7002F845A /* Resources */,
-				798A4EFE181F07C7002F845A /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				798A4F06181F07C7002F845A /* PBXTargetDependency */,
-			);
-			name = DBProjectTests;
-			productName = DBProjectTests;
-			productReference = 798A4F00181F07C7002F845A /* DBProjectTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -408,6 +376,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				uk,
+				Base,
 			);
 			mainGroup = 798A4ED1181F07C7002F845A;
 			productRefGroup = 798A4EDB181F07C7002F845A /* Products */;
@@ -415,7 +385,6 @@
 			projectRoot = "";
 			targets = (
 				798A4ED9181F07C7002F845A /* DBProject */,
-				798A4EFF181F07C7002F845A /* DBProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -429,7 +398,6 @@
 				798A4EF0181F07C7002F845A /* Default.png in Resources */,
 				798A4EF2181F07C7002F845A /* Default@2x.png in Resources */,
 				798A4EF4181F07C7002F845A /* Default-568h@2x.png in Resources */,
-				79AD6CEA181F25F500B3018D /* Storyboard_Pad.storyboard in Resources */,
 				CB95DA64184A2311004A14E0 /* warehouseBig.png in Resources */,
 				CB95DA65184A2311004A14E0 /* warehouseBig@2x.png in Resources */,
 				CB95DA68184A2415004A14E0 /* people.png in Resources */,
@@ -438,34 +406,12 @@
 				CB95DA6D184A26EC004A14E0 /* cart@2x.png in Resources */,
 				CB95DA70184A2C21004A14E0 /* newOrder.png in Resources */,
 				CB95DA71184A2C21004A14E0 /* newOrder@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		798A4EFD181F07C7002F845A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				798A4F0C181F07C7002F845A /* InfoPlist.strings in Resources */,
+				CB95DA7F184A37D6004A14E0 /* Localizable.strings in Resources */,
+				CB68ACAF184A577B00D16860 /* Storyboard_Pad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		798A4EFE181F07C7002F845A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		798A4ED6181F07C7002F845A /* Sources */ = {
@@ -501,29 +447,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		798A4EFB181F07C7002F845A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				798A4F0F181F07C7002F845A /* DBProjectTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		798A4F06181F07C7002F845A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 798A4ED9181F07C7002F845A /* DBProject */;
-			targetProxy = 798A4F05181F07C7002F845A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		798A4EE6181F07C7002F845A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				798A4EE7181F07C7002F845A /* en */,
+				CB95DA72184A31C6004A14E0 /* uk */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -532,8 +463,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				798A4F0B181F07C7002F845A /* en */,
+				CB95DA73184A31C6004A14E0 /* uk */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CB95DA81184A37D6004A14E0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB95DA80184A37D6004A14E0 /* uk */,
+				CB95DA82184A37D9004A14E0 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -621,40 +562,6 @@
 			};
 			name = Release;
 		};
-		798A4F16181F07C7002F845A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DBProject.app/DBProject";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DBProject/DBProject-Prefix.pch";
-				INFOPLIST_FILE = "DBProjectTests/DBProjectTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		798A4F17181F07C7002F845A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DBProject.app/DBProject";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DBProject/DBProject-Prefix.pch";
-				INFOPLIST_FILE = "DBProjectTests/DBProjectTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -676,15 +583,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		798A4F15181F07C7002F845A /* Build configuration list for PBXNativeTarget "DBProjectTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				798A4F16181F07C7002F845A /* Debug */,
-				798A4F17181F07C7002F845A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
@@ -694,7 +592,8 @@
 				798A4F19181F0808002F845A /* Model.xcdatamodel */,
 			);
 			currentVersion = 798A4F19181F0808002F845A /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

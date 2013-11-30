@@ -1,0 +1,49 @@
+/* 
+  Localize.strings
+  DBProject
+
+  Created by Aleksey Bodnya on 11/30/13.
+  Copyright (c) 2013 abodnya. All rights reserved.
+*/
+
+
+"Make Active" = "Зробити активним";
+"Archivate" = "Відправити в архів";
+"Order to %@" = "Замовлення на %@";
+
+"Deleting Order" = "Видалити Замовлення";
+"Do you really want to delete this order?" = "Ви справді хочете видалити замовлення?";
+"Delete" = "Видалити";
+"Cancel" = "Скасувати";
+
+"Model name" = "Назва товару";
+"Count" = "Кількість";
+"Total price" = "Сумма";
+
+// Storyboard //
+"kStoryboardMainOrderList" = "Список замовлень";
+"kStoryboardMainRecieverList" = "Список замовників";
+"kStoryboardMainModelList" = "Товари на складі";
+"kStoryboardMainNewOrder" = "Нове замовлення";
+"Count: " = "К-сть: ";
+"Price: " = "Ціна: ";
+"Model ID: " = "№ Товару: ";
+"Adress: " = "Адреса: ";
+"Phone: " = "Телефон: ";
+"Bank account: " = "Рахунок: ";
+"Company ID: " = "№ Замовника: ";
+"Status" = "Статус";
+"Date" = "Дата";
+"Price" = "Ціна: ";
+"Reciever" = "Замовник";
+"Sort with " = "Сортувати за ";
+"Active" = "Активні";
+"Archived" = "В архіві";
+"Models:" = "Товари:";
+"Choose..." = "Обрати...";
+"Company: _________" = "Постачальник: _________";
+"Reciever:  ________" = "Отримувач:  ________";
+"Total: " = "Всього: ";
+"Bank:" = "Рахунок:";
+"Order №" = "Замовлення №";
+

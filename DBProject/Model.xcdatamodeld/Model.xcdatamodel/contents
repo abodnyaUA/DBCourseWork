@@ -10,8 +10,8 @@
         <attribute name="orderDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="orderId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="model" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Model" syncable="YES"/>
-        <relationship name="reciever" optional="YES" minCount="1" maxCount="1" deletionRule="No Action" destinationEntity="Reciever" syncable="YES"/>
+        <relationship name="model" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Model" syncable="YES"/>
+        <relationship name="reciever" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Reciever" syncable="YES"/>
     </entity>
     <entity name="Reciever" representedClassName="Reciever" syncable="YES">
         <attribute name="account" optional="YES" attributeType="String" syncable="YES"/>
@@ -22,7 +22,7 @@
     </entity>
     <entity name="Warhouse" representedClassName="Warhouse" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="models" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Model" syncable="YES"/>
+        <relationship name="models" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Model" syncable="YES"/>
     </entity>
     <elements>
         <element name="Model" positionX="187" positionY="-7" width="128" height="105"/>

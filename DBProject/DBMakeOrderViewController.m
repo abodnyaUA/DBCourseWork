@@ -12,8 +12,11 @@
 #import "DBChooseRecieverViewController.h"
 #import "DBCoreDataManager.h"
 #import "DBModelBought.h"
+#import "DBConstants.h"
 
 @interface DBMakeOrderViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *labelModels;
+@property (strong, nonatomic) IBOutlet UILabel *labelReciever;
 
 @property (strong, nonatomic) IBOutlet UIButton *chooseRecieverButton;
 @property (strong, nonatomic) IBOutlet UIButton *chooseModelsButton;
@@ -38,6 +41,11 @@
     [super viewDidLoad];
     [self setUpPopovers];
     self.modelsListTextView.contentInset = UIEdgeInsetsMake(-4,-4,0,0);
+    
+    self.labelModels.text = kStoryboardMakeOrderModels;
+    self.labelReciever.text = kStoryboardMakeOrderReciever;
+    self.chooseRecieverButton.titleLabel.text = kStoryboardMakeOrderChooseReciever;
+    self.chooseModelsButton.titleLabel.text = kStoryboardMakeOrderChooseModels;
 }
 
 - (void)setUpPopovers

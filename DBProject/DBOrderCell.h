@@ -10,6 +10,9 @@
 
 @interface DBOrderCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UILabel *labelReciever;
+@property (strong, nonatomic) IBOutlet UILabel *labelModels;
+
 @property (strong, nonatomic) IBOutlet UILabel *orderDateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *recieverLabel;
 @property (strong, nonatomic) IBOutlet UILabel *modelsListLabel;

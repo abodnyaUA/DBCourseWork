@@ -16,6 +16,15 @@
 
 
 @interface DBOrderDetailViewController ()
+@property (strong, nonatomic) IBOutlet UILabel *labelCompany__;
+@property (strong, nonatomic) IBOutlet UILabel *labelReciever__;
+@property (strong, nonatomic) IBOutlet UILabel *labelTotal;
+@property (strong, nonatomic) IBOutlet UILabel *labelModels;
+@property (strong, nonatomic) IBOutlet UILabel *labelBank;
+@property (strong, nonatomic) IBOutlet UILabel *labelPhone;
+@property (strong, nonatomic) IBOutlet UILabel *labelAdress;
+@property (strong, nonatomic) IBOutlet UILabel *labelReciever;
+@property (strong, nonatomic) IBOutlet UILabel *labelOrderNumber;
 
 @property (strong, nonatomic) IBOutlet UILabel *orderIDLabel;
 @property (strong, nonatomic) IBOutlet UILabel *orderDateLabel;
@@ -50,6 +59,16 @@
     
     self.modelsListTableView.delegate = self;
     self.modelsListTableView.dataSource = self;
+    
+    self.labelCompany__.text = kStoryboardOrderDetailCompany__;
+    self.labelReciever__.text = kStoryboardOrderDetailReciever__;
+    self.labelTotal.text = kStoryboardOrderDetailTotal;
+    self.labelModels.text = kStoryboardOrderDetailModels;
+    self.labelBank.text = kStoryboardOrderDetailBank;
+    self.labelPhone.text = kStoryboardOrderDetailPhone;
+    self.labelAdress.text = kStoryboardOrderDetailAdress;
+    self.labelReciever.text = kStoryboardOrderDetailReciever;
+    self.labelOrderNumber.text = kStoryboardOrderDetailOrderNumber;
 }
 
 - (BOOL)shouldAutorotate
