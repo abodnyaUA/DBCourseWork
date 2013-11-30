@@ -47,6 +47,14 @@
 		CB95DA5A1849F295004A14E0 /* NSUserDefaults+OrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA591849F295004A14E0 /* NSUserDefaults+OrderVC.m */; };
 		CB95DA5D1849F544004A14E0 /* DBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA5C1849F544004A14E0 /* DBConstants.m */; };
 		CB95DA60184A11F4004A14E0 /* DBModelOnOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA5F184A11F3004A14E0 /* DBModelOnOrderCell.m */; };
+		CB95DA64184A2311004A14E0 /* warehouseBig.png in Resources */ = {isa = PBXBuildFile; fileRef = CB95DA62184A2311004A14E0 /* warehouseBig.png */; };
+		CB95DA65184A2311004A14E0 /* warehouseBig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB95DA63184A2311004A14E0 /* warehouseBig@2x.png */; };
+		CB95DA68184A2415004A14E0 /* people.png in Resources */ = {isa = PBXBuildFile; fileRef = CB95DA66184A2415004A14E0 /* people.png */; };
+		CB95DA69184A2415004A14E0 /* people@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB95DA67184A2415004A14E0 /* people@2x.png */; };
+		CB95DA6C184A26EC004A14E0 /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = CB95DA6A184A26EC004A14E0 /* cart.png */; };
+		CB95DA6D184A26EC004A14E0 /* cart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB95DA6B184A26EC004A14E0 /* cart@2x.png */; };
+		CB95DA70184A2C21004A14E0 /* newOrder.png in Resources */ = {isa = PBXBuildFile; fileRef = CB95DA6E184A2C21004A14E0 /* newOrder.png */; };
+		CB95DA71184A2C21004A14E0 /* newOrder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB95DA6F184A2C21004A14E0 /* newOrder@2x.png */; };
 		CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +136,14 @@
 		CB95DA5C1849F544004A14E0 /* DBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConstants.m; sourceTree = "<group>"; };
 		CB95DA5E184A11F3004A14E0 /* DBModelOnOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModelOnOrderCell.h; sourceTree = "<group>"; };
 		CB95DA5F184A11F3004A14E0 /* DBModelOnOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModelOnOrderCell.m; sourceTree = "<group>"; };
+		CB95DA62184A2311004A14E0 /* warehouseBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warehouseBig.png; sourceTree = "<group>"; };
+		CB95DA63184A2311004A14E0 /* warehouseBig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warehouseBig@2x.png"; sourceTree = "<group>"; };
+		CB95DA66184A2415004A14E0 /* people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = people.png; sourceTree = "<group>"; };
+		CB95DA67184A2415004A14E0 /* people@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "people@2x.png"; sourceTree = "<group>"; };
+		CB95DA6A184A26EC004A14E0 /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
+		CB95DA6B184A26EC004A14E0 /* cart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart@2x.png"; sourceTree = "<group>"; };
+		CB95DA6E184A2C21004A14E0 /* newOrder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newOrder.png; sourceTree = "<group>"; };
+		CB95DA6F184A2C21004A14E0 /* newOrder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newOrder@2x.png"; sourceTree = "<group>"; };
 		CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddRecieverViewController.h; sourceTree = "<group>"; };
 		CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddRecieverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +209,7 @@
 		798A4EE3181F07C7002F845A /* DBProject */ = {
 			isa = PBXGroup;
 			children = (
+				CB95DA61184A2310004A14E0 /* Resources */,
 				798A4F2B181F0C4A002F845A /* VC */,
 				798A4EEC181F07C7002F845A /* DBAppDelegate.h */,
 				798A4EED181F07C7002F845A /* DBAppDelegate.m */,
@@ -321,6 +338,21 @@
 			name = Orders;
 			sourceTree = "<group>";
 		};
+		CB95DA61184A2310004A14E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CB95DA62184A2311004A14E0 /* warehouseBig.png */,
+				CB95DA63184A2311004A14E0 /* warehouseBig@2x.png */,
+				CB95DA66184A2415004A14E0 /* people.png */,
+				CB95DA67184A2415004A14E0 /* people@2x.png */,
+				CB95DA6A184A26EC004A14E0 /* cart.png */,
+				CB95DA6B184A26EC004A14E0 /* cart@2x.png */,
+				CB95DA6E184A2C21004A14E0 /* newOrder.png */,
+				CB95DA6F184A2C21004A14E0 /* newOrder@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -398,6 +430,14 @@
 				798A4EF2181F07C7002F845A /* Default@2x.png in Resources */,
 				798A4EF4181F07C7002F845A /* Default-568h@2x.png in Resources */,
 				79AD6CEA181F25F500B3018D /* Storyboard_Pad.storyboard in Resources */,
+				CB95DA64184A2311004A14E0 /* warehouseBig.png in Resources */,
+				CB95DA65184A2311004A14E0 /* warehouseBig@2x.png in Resources */,
+				CB95DA68184A2415004A14E0 /* people.png in Resources */,
+				CB95DA69184A2415004A14E0 /* people@2x.png in Resources */,
+				CB95DA6C184A26EC004A14E0 /* cart.png in Resources */,
+				CB95DA6D184A26EC004A14E0 /* cart@2x.png in Resources */,
+				CB95DA70184A2C21004A14E0 /* newOrder.png in Resources */,
+				CB95DA71184A2C21004A14E0 /* newOrder@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

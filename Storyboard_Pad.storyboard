@@ -266,8 +266,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJD-aT-oZV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="279" id="Nko-a2-Nls"/>
+                                    <constraint firstAttribute="width" constant="280" type="user" id="O2J-9y-121"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Orders">
+                                <state key="normal" image="cart.png">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -279,8 +283,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-9y-4l1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" type="user" id="Cxj-se-Kqo"/>
+                                    <constraint firstAttribute="height" constant="279" id="ZzI-HS-5ML"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="New Order">
+                                <state key="normal" image="newOrder.png">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -291,9 +299,12 @@
                                     <segue destination="84z-FJ-x6s" kind="push" id="atf-qU-jb7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yek-3R-GAZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yek-3R-GAZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="279" id="kz8-lO-KHR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Models on warehouse">
+                                <state key="normal" image="warehouseBig.png">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -305,8 +316,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OA-mb-U6k">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="279" id="8Jk-gj-giR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Recievers in list">
+                                <state key="normal" image="people.png">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -317,17 +331,52 @@
                                     <segue destination="3CN-sB-bZE" kind="push" id="WlQ-kB-eIh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Models on warehouse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKf-gK-2ej">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Recievers in list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71A-DL-HRX">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Orders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWJ-ca-pPu">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="New Order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ry6-rb-noU">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9OA-mb-U6k" firstAttribute="leading" secondItem="Yek-3R-GAZ" secondAttribute="leading" type="default" id="CI9-Aa-UdS"/>
-                            <constraint firstItem="Yek-3R-GAZ" firstAttribute="leading" secondItem="H4c-9y-4l1" secondAttribute="leading" type="default" id="J0v-xf-g8v"/>
-                            <constraint firstItem="H4c-9y-4l1" firstAttribute="centerY" secondItem="lZ8-bK-1W3" secondAttribute="centerY" type="default" id="JeG-9N-vjd"/>
-                            <constraint firstItem="H4c-9y-4l1" firstAttribute="leading" secondItem="aJD-aT-oZV" secondAttribute="leading" type="default" id="KBj-PL-mUa"/>
-                            <constraint firstItem="aJD-aT-oZV" firstAttribute="leading" secondItem="lZ8-bK-1W3" secondAttribute="leading" constant="370" id="Yrp-6G-eaC"/>
-                            <constraint firstItem="9OA-mb-U6k" firstAttribute="top" secondItem="Yek-3R-GAZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="heX-Ke-8FU"/>
-                            <constraint firstItem="aJD-aT-oZV" firstAttribute="top" secondItem="lZ8-bK-1W3" secondAttribute="top" constant="229" id="mzr-iS-5uI"/>
-                            <constraint firstItem="Yek-3R-GAZ" firstAttribute="top" secondItem="H4c-9y-4l1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tIl-Hs-O79"/>
+                            <constraint firstItem="71A-DL-HRX" firstAttribute="top" secondItem="9OA-mb-U6k" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="0zB-HR-LAY"/>
+                            <constraint firstItem="Yek-3R-GAZ" firstAttribute="top" secondItem="lZ8-bK-1W3" secondAttribute="top" constant="344" id="13E-Yt-pCy"/>
+                            <constraint firstItem="71A-DL-HRX" firstAttribute="leading" secondItem="lZ8-bK-1W3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3Od-Nu-vgz"/>
+                            <constraint firstItem="UKf-gK-2ej" firstAttribute="leading" secondItem="Yek-3R-GAZ" secondAttribute="leading" type="default" id="83c-H9-7Je"/>
+                            <constraint firstItem="aJD-aT-oZV" firstAttribute="leading" secondItem="lZ8-bK-1W3" secondAttribute="leading" priority="500" constant="195" type="user" id="9ak-gS-Psh"/>
+                            <constraint firstAttribute="trailing" secondItem="Yek-3R-GAZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="G8M-Zn-sdO"/>
+                            <constraint firstAttribute="trailing" secondItem="Ry6-rb-noU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="P2b-EF-8SL"/>
+                            <constraint firstItem="aWJ-ca-pPu" firstAttribute="leading" secondItem="lZ8-bK-1W3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PcQ-Ql-Jp9"/>
+                            <constraint firstAttribute="trailing" secondItem="H4c-9y-4l1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UQt-jx-s80"/>
+                            <constraint firstItem="9OA-mb-U6k" firstAttribute="top" secondItem="lZ8-bK-1W3" secondAttribute="top" constant="339" id="Ysq-Sj-2ij"/>
+                            <constraint firstAttribute="trailing" secondItem="H4c-9y-4l1" secondAttribute="trailing" priority="500" constant="171" type="user" id="bgR-ol-e5v"/>
+                            <constraint firstItem="H4c-9y-4l1" firstAttribute="top" secondItem="lZ8-bK-1W3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="fLS-uP-ujz"/>
+                            <constraint firstItem="aWJ-ca-pPu" firstAttribute="trailing" secondItem="9OA-mb-U6k" secondAttribute="trailing" type="default" id="ggQ-Jn-N5r"/>
+                            <constraint firstItem="aWJ-ca-pPu" firstAttribute="top" secondItem="aJD-aT-oZV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gzK-Jd-qCU"/>
+                            <constraint firstItem="Ry6-rb-noU" firstAttribute="leading" secondItem="H4c-9y-4l1" secondAttribute="leading" type="default" id="j11-Ak-JeK"/>
+                            <constraint firstItem="Ry6-rb-noU" firstAttribute="top" secondItem="H4c-9y-4l1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="n0R-EY-ZcF"/>
+                            <constraint firstItem="71A-DL-HRX" firstAttribute="trailing" secondItem="9OA-mb-U6k" secondAttribute="trailing" type="default" id="pl8-JT-MFp"/>
+                            <constraint firstItem="aWJ-ca-pPu" firstAttribute="trailing" secondItem="aJD-aT-oZV" secondAttribute="trailing" type="default" id="qn8-Ul-jwd"/>
+                            <constraint firstItem="aJD-aT-oZV" firstAttribute="top" secondItem="lZ8-bK-1W3" secondAttribute="top" constant="15" id="sMU-kX-0je"/>
+                            <constraint firstAttribute="trailing" secondItem="UKf-gK-2ej" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="vej-GC-EXx"/>
+                            <constraint firstItem="UKf-gK-2ej" firstAttribute="top" secondItem="Yek-3R-GAZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xmA-p3-ivR"/>
+                            <constraint firstItem="9OA-mb-U6k" firstAttribute="leading" secondItem="lZ8-bK-1W3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yaB-mk-ezx"/>
+                            <constraint firstItem="aJD-aT-oZV" firstAttribute="leading" secondItem="lZ8-bK-1W3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="zqM-BK-JXU"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -1242,6 +1291,12 @@
             <point key="canvasLocation" x="-42" y="-248"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cart.png" width="300" height="300"/>
+        <image name="newOrder.png" width="256" height="256"/>
+        <image name="people.png" width="240" height="218"/>
+        <image name="warehouseBig.png" width="256" height="256"/>
+    </resources>
     <classes>
         <class className="DBAccountingViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAccountingViewController.h"/>
@@ -1368,6 +1423,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="NAy-Q1-cEp"/>
+        <segue reference="atf-qU-jb7"/>
     </inferredMetricsTieBreakers>
 </document>
