@@ -26,9 +26,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.title = kStoryboardNewModel;
+    self.navigationItem.title = kStoryboardNewModel;
     self.labelCount.text = kStoryboardAddModelCount;
     self.labelPrice.text = kStoryboardAddModelPrice;
+    
+    self.nameTextField.placeholder = kStoryboardAddModelNamePlaceholder;
+    self.priceTextField.placeholder = kStoryboardAddModelCountPlaceholder;
+    self.countTextField.placeholder = kStoryboardAddModelPricePlaceholder;
 }
 
 - (IBAction)doneClicked:(id)sender

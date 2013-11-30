@@ -7,18 +7,25 @@
 */
 
 
-"Make Active" = "Make Active";
-"Archivate" = "Archivate";
-"Order to %@" = "Order to %@";
+"kMakeActiveOrderString" = "Make Active";
+"kMoveInArchiveOrderString" = "Archivate";
+"kNavigationBarTitleOrder" = "Order to %@";
 
-"Deleting Order" = "Deleting Order";
-"Do you really want to delete this order?" = "Do you really want to delete this order?";
-"Delete" = "Delete";
-"Cancel" = "Cancel";
+"kOrderModelNameTableColomn" = "Model name";
+"kOrderModelCountTableColomn" = "Count";
+"kOrderModelPriceTableColomn" = "Total price";
 
-"Model name" = "Model name";
-"Count" = "Count";
-"Total price" = "Total price";
+"kAlertDeleteOrderTitle" = "Deleting Order";
+"kAlertDeleteOrderText" = "Do you really want to delete this order?";
+"kAlertButtonDelete" = "Delete";
+"kAlertButtonCancel" = "Cancel";
+
+"kAlertMissedModelsTitle" = "Missed Models";
+"kAlertMissedModelsText" = "You haven't select any model";
+"kAlertMissedRecieverTitle" = "Missed Reciever";
+"kAlertMissedRecieverText" = "Reciever field is empty";
+"kAlertFailOrderContinueButton" = "Continue Fill";
+"kAlertFailOrderCancelButton" = "Cancel Order";
 
 // Storyboard //
 "kStoryboardMainTitle" = "Course Work of Bodnya Alexey (TV-11)";
@@ -28,28 +35,60 @@
 "kStoryboardRecieversListTitle" = "Recievers";
 "kStoryboardNewModel" = "New Model";
 "kStoryboardModelsListTitle" = "Models";
+
 "kStoryboardMainOrderList" = "Order list!!!";
 "kStoryboardMainRecieverList" = "List of Recievers";
 "kStoryboardMainModelList" = "Models on warehouse";
 "kStoryboardMainNewOrder" = "New Order";
-"Count: " = "Count: ";
-"Price: " = "Price: ";
-"Model ID: " = "Model ID: ";
-"Adress: " = "Adress: ";
-"Phone: " = "Phone: ";
-"Bank account: " = "Bank account: ";
-"Company ID: " = "Company ID: ";
-"Status" = "Status";
-"Date" = "Date";
-"Price" = "Price";
-"Reciever" = "Reciever";
-"Sort with " = "Sort with ";
-"Active" = "Active";
-"Archived" = "Archived";
-"Models:" = "Models:";
-"Choose..." = "Choose...";
-"Company: _________" = "Company: _________";
-"Reciever:  ________" = "Reciever:  ________";
-"Total: " = "Total: ";
-"Bank:" = "Bank:";
-"Order №" = "Order №";
+
+"kStoryboardAddModelCount" = "Count: ";
+"kStoryboardAddModelPrice" = "Price: ";
+"kStoryboardAddModelNamePlaceholder" = "Model Name";
+"kStoryboardAddModelCountPlaceholder" = "Count";
+"kStoryboardAddModelPricePlaceholder" = "Price in $";
+
+"kStoryboardModelDetailCount" = "Count: ";
+"kStoryboardModelDetailPrice" = "Price: ";
+"kStoryboardModelDetailID" = "Model ID: ";
+
+"kStoryboardAddRecieverAdress" = "Adress: ";
+"kStoryboardAddRecieverPhone" = "Phone: ";
+"kStoryboardAddRecieverBank" = "Bank account: ";
+"kStoryboardAddRecieverNamePlaceholder" = "Company Name";
+"kStoryboardAddRecieverAdressPlaceholder" = "Ukraine, city Kiev, Politekhnichna st. 8";
+"kStoryboardAddRecieverPhonePlaceholder" = "+38 (093) 123-45-67";
+"kStoryboardAddRecieverBankPlaceholder" = "example: 5243-5223-2111-2456";
+
+"kStoryboardRecieverDetailID" = "Company ID: ";
+"kStoryboardRecieverDetailAdress" = "Adress: ";
+"kStoryboardRecieverDetailPhone" = "Phone: ";
+"kStoryboardRecieverDetailBank" = "Bank account: ";
+
+"kStoryboardOrderListSortStatus" = "Status";
+"kStoryboardOrderListSortDate" = "Date";
+"kStoryboardOrderListSortPrice" = "Price";
+"kStoryboardOrderListSortReciever" = "Reciever";
+"kStoryboardOrderListLabelSort" = "Sort with ";
+"kStoryboardOrderListShowActive" = "Active";
+"kStoryboardOrderListShowArchived" = "Archived";
+"kStoryboardOrderListLabelShow" = "Status";
+
+"kStoryboardOrderListCellReciever" = "Reciever:";
+"kStoryboardOrderListCellModels" = "Models:";
+"kStoryboardOrderListCellArchive" = "In Archive";
+"kStoryboardOrderListCellActive" = "Active order";
+
+"kStoryboardMakeOrderModels" = "Models:";
+"kStoryboardMakeOrderReciever" = "Reciever:";
+"kStoryboardMakeOrderChooseModels" = "Choose...";
+"kStoryboardMakeOrderChooseReciever" = "Choose...";
+
+"kStoryboardOrderDetailCompany__" = "Company: _________";
+"kStoryboardOrderDetailReciever__" = "Reciever:  ________";
+"kStoryboardOrderDetailTotal" = "Total: ";
+"kStoryboardOrderDetailModels" = "Models:";
+"kStoryboardOrderDetailBank" = "Bank:";
+"kStoryboardOrderDetailPhone" = "Phone:";
+"kStoryboardOrderDetailAdress" = "Adress:";
+"kStoryboardOrderDetailReciever" = "Reciever:";
+"kStoryboardOrderDetailOrderNumber" = "Order №";

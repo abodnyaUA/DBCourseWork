@@ -18,6 +18,7 @@
     self.formatter = [NSDateFormatter new];
     [self.formatter setDateStyle:NSDateFormatterLongStyle];
     [self.formatter setTimeStyle:NSDateFormatterShortStyle];
+    [self.formatter setLocale:[NSLocale currentLocale]];
     return YES;
 }
 							

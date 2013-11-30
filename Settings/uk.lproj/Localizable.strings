@@ -7,50 +7,91 @@
 */
 
 
-"Make Active" = "Зробити активним";
-"Archivate" = "Відправити в архів";
-"Order to %@" = "Замовлення на %@";
+"kMakeActiveOrderString" = "Зробити активним";
+"kMoveInArchiveOrderString" = "Відправити в архів";
+"kNavigationBarTitleOrder" = "Замовлення на %@";
 
-"Deleting Order" = "Видалити Замовлення";
-"Do you really want to delete this order?" = "Ви справді хочете видалити замовлення?";
-"Delete" = "Видалити";
-"Cancel" = "Скасувати";
+"kOrderModelNameTableColomn" = "Назва товару";
+"kOrderModelCountTableColomn" = "Кількість";
+"kOrderModelPriceTableColomn" = "Сумма";
 
-"Model name" = "Назва товару";
-"Count" = "Кількість";
-"Total price" = "Сумма";
+"kAlertDeleteOrderTitle" = "Видалити Замовлення";
+"kAlertDeleteOrderText" = "Ви справді хочете видалити замовлення?";
+"kAlertButtonDelete" = "Видалити";
+"kAlertButtonCancel" = "Скасувати";
+
+"kAlertMissedModelsTitle" = "Не Вказаний Товар";
+"kAlertMissedModelsText" = "Ви не вказали жодного товару";
+"kAlertMissedRecieverTitle" = "Не Вказаний Отримувач";
+"kAlertMissedRecieverText" = "Ви не вказали отримувача";
+"kAlertFailOrderContinueButton" = "Заповнити";
+"kAlertFailOrderCancelButton" = "Скасувати";
 
 // Storyboard //
+
 "kStoryboardMainTitle" = "Курсова робота Бодні Олексія (ТВ-11)";
 "kStoryboardNewOrder" = "Нове замовлення";
 "kStoryboardOrderListTitle" = "Замовлення";
-"kStoryboardNewReciever" = "Новий замовний";
+"kStoryboardNewReciever" = "Новий замовник";
 "kStoryboardRecieversListTitle" = "Замовники";
 "kStoryboardNewModel" = "Новий товар";
 "kStoryboardModelsListTitle" = "Товари на складі";
+
 "kStoryboardMainOrderList" = "Список замовлень";
 "kStoryboardMainRecieverList" = "Список замовників";
 "kStoryboardMainModelList" = "Товари на складі";
 "kStoryboardMainNewOrder" = "Нове замовлення";
-"Count: " = "К-сть: ";
-"Price: " = "Ціна: ";
-"Model ID: " = "№ Товару: ";
-"Adress: " = "Адреса: ";
-"Phone: " = "Телефон: ";
-"Bank account: " = "Рахунок: ";
-"Company ID: " = "№ Замовника: ";
-"Status" = "Статус";
-"Date" = "Дата";
-"Price" = "Ціна: ";
-"Reciever" = "Замовник";
-"Sort with " = "Сортувати за ";
-"Active" = "Активні";
-"Archived" = "В архіві";
-"Models:" = "Товари:";
-"Choose..." = "Обрати...";
-"Company: _________" = "Постачальник: _________";
-"Reciever:  ________" = "Отримувач:  ________";
-"Total: " = "Всього: ";
-"Bank:" = "Рахунок:";
-"Order №" = "Замовлення №";
+
+"kStoryboardAddModelCount" = "К-сть: ";
+"kStoryboardAddModelPrice" = "Ціна: ";
+"kStoryboardAddModelNamePlaceholder" = "Назва товару";
+"kStoryboardAddModelCountPlaceholder" = "Кількість товару";
+"kStoryboardAddModelPricePlaceholder" = "Ціна в доларах";
+
+"kStoryboardModelDetailCount" = "К-сть: ";
+"kStoryboardModelDetailPrice" = "Ціна: ";
+"kStoryboardModelDetailID" = "№ Товару: ";
+
+"kStoryboardAddRecieverAdress" = "Адреса: ";
+"kStoryboardAddRecieverPhone" = "Тел.: ";
+"kStoryboardAddRecieverBank" = "Рахунок: ";
+
+"kStoryboardAddRecieverNamePlaceholder" = "Ім’я та Прізвище замовника або назва компанії";
+"kStoryboardAddRecieverAdressPlaceholder" = "Україна, м.Київ, вул. Політехнічна 8";
+"kStoryboardAddRecieverPhonePlaceholder" = "+38 (093) 123-45-67";
+"kStoryboardAddRecieverBankPlaceholder" = "приклад: 5243-5223-2111-2456";
+
+"kStoryboardRecieverDetailID" = "№ Замовника: ";
+"kStoryboardRecieverDetailAdress" = "Адреса: ";
+"kStoryboardRecieverDetailPhone" = "Тел.: ";
+"kStoryboardRecieverDetailBank" = "Рахунок:";
+
+"kStoryboardOrderListSortStatus" = "Статус";
+"kStoryboardOrderListSortDate" = "Дата";
+"kStoryboardOrderListSortPrice" = "Ціна";
+"kStoryboardOrderListSortReciever" = "Замовник";
+"kStoryboardOrderListLabelSort" = "Сортувати за ";
+"kStoryboardOrderListShowActive" = "Активні";
+"kStoryboardOrderListShowArchived" = "В архіві";
+"kStoryboardOrderListLabelShow" = "Статус";
+
+"kStoryboardOrderListCellReciever" = "Отримувач:";
+"kStoryboardOrderListCellModels" = "Товари:";
+"kStoryboardOrderListCellArchive" = "В архіві";
+"kStoryboardOrderListCellActive" = "Активне";
+
+"kStoryboardMakeOrderModels" = "Товари:";
+"kStoryboardMakeOrderReciever" = "Отримувач:";
+"kStoryboardMakeOrderChooseModels" = "Обрати...";
+"kStoryboardMakeOrderChooseReciever" = "Обрати...";
+
+"kStoryboardOrderDetailCompany__" = "Постачальник: _____";
+"kStoryboardOrderDetailReciever__" = "Отримувач:  ______";
+"kStoryboardOrderDetailTotal" = "Всього: ";
+"kStoryboardOrderDetailModels" = "Товари:";
+"kStoryboardOrderDetailBank" = "Рахунок:";
+"kStoryboardOrderDetailPhone" = "Тел.:";
+"kStoryboardOrderDetailAdress" = "Адреса:";
+"kStoryboardOrderDetailReciever" = "Отримувач:";
+"kStoryboardOrderDetailOrderNumber" = "Замовлення №";
 

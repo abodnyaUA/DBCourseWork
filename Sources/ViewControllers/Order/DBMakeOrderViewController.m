@@ -42,7 +42,7 @@
     [self setUpPopovers];
     self.modelsListTextView.contentInset = UIEdgeInsetsMake(-4,-4,0,0);
     
-    self.navigationController.title = kStoryboardNewOrder;
+    self.navigationItem.title = kStoryboardNewOrder;
     self.labelModels.text = kStoryboardMakeOrderModels;
     self.labelReciever.text = kStoryboardMakeOrderReciever;
     self.chooseRecieverButton.titleLabel.text = kStoryboardMakeOrderChooseReciever;
@@ -117,11 +117,11 @@
     
     if (modelsBought.count == 0)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missed Models", nil)
-                                                        message:NSLocalizedString(@"You haven't select any model",nil)
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kAlertMissedModelsTitle
+                                                        message:kAlertMissedModelsText
                                                        delegate:self
-                                              cancelButtonTitle:NSLocalizedString(@"Continue Fill",nil)
-                                              otherButtonTitles:NSLocalizedString(@"Cancel Order",nil), nil];
+                                              cancelButtonTitle:kAlertFailOrderContinueButton
+                                              otherButtonTitles:kAlertFailOrderCancelButton, nil];
         [alert show];
         return;
     }
@@ -137,11 +137,11 @@
     
     if (NSNotFound == recieverNumber)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missed Reciever", nil)
-                                                        message:NSLocalizedString(@"Reciever field is empty",nil)
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kAlertMissedRecieverTitle
+                                                        message:kAlertMissedRecieverText
                                                        delegate:self
-                                              cancelButtonTitle:NSLocalizedString(@"Continue Fill",nil)
-                                              otherButtonTitles:NSLocalizedString(@"Cancel Order",nil), nil];
+                                              cancelButtonTitle:kAlertFailOrderContinueButton
+                                              otherButtonTitles:kAlertFailOrderCancelButton, nil];
         [alert show];
         return;
     }

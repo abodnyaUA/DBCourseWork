@@ -22,7 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.title = kStoryboardRecieversListTitle;
+    self.navigationItem.title = kStoryboardRecieversListTitle;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateViewWithSource)
                                                  name:DBUpdateRecieversListNotification

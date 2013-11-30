@@ -29,10 +29,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.title = kStoryboardNewReciever;
+    self.navigationItem.title = kStoryboardNewReciever;
     self.labelBank.text = kStoryboardAddRecieverBank;
     self.labelPhone.text = kStoryboardAddRecieverPhone;
     self.labelAdress.text = kStoryboardAddRecieverAdress;
+    
+    self.nameTextField.placeholder = kStoryboardAddRecieverNamePlaceholder;
+    self.adressTextField.placeholder = kStoryboardAddRecieverAdressPlaceholder;
+    self.phoneTextField.placeholder = kStoryboardAddRecieverPhonePlaceholder;
+    self.bankAccountTextField.placeholder = kStoryboardAddRecieverBankPlaceholder;
 }
 
 - (IBAction)doneClicked:(id)sender

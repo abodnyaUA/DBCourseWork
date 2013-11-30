@@ -19,19 +19,30 @@ extern NSString * const DBUpdateModelsListNotification;
 extern NSString * const DBUpdateRecieversListNotification;
 extern NSString * const DBUpdateOrdersListNotification;
 
-// Localized strings //
-#define kMakeActiveOrderString              NSLocalizedString(@"Make Active", nil)
-#define kMoveInArchiveOrderString           NSLocalizedString(@"Archivate", nil)
-#define kNavigationBarTitleOrder            NSLocalizedString(@"Order to %@",nil)
+/////// Localized strings /////////
 
-#define kAlertDeleteOrderTitle              NSLocalizedString(@"Deleting Order",nil)
-#define kAlertDeleteOrderText               NSLocalizedString(@"Do you really want to delete this order?", nil)
-#define kAlertButtonDelete                  NSLocalizedString(@"Delete",nil)
-#define kAlertButtonCancel                  NSLocalizedString(@"Cancel",nil)
+// Simple Strings //
+#define kMakeActiveOrderString              NSLocalizedString(@"kMakeActiveOrderString", nil)
+#define kMoveInArchiveOrderString           NSLocalizedString(@"kMoveInArchiveOrderString", nil)
+#define kNavigationBarTitleOrder            NSLocalizedString(@"kNavigationBarTitleOrder",nil)
 
-#define kOrderModelNameTableColomn          NSLocalizedString(@"Model name",nil)
-#define kOrderModelCountTableColomn         NSLocalizedString(@"Count",nil)
-#define kOrderModelPriceTableColomn         NSLocalizedString(@"Total price",nil)
+#define kOrderModelNameTableColomn          NSLocalizedString(@"kOrderModelNameTableColomn",nil)
+#define kOrderModelCountTableColomn         NSLocalizedString(@"kOrderModelCountTableColomn",nil)
+#define kOrderModelPriceTableColomn         NSLocalizedString(@"kOrderModelPriceTableColomn",nil)
+
+// Alerts //
+
+#define kAlertDeleteOrderTitle              NSLocalizedString(@"kAlertDeleteOrderTitle",nil)
+#define kAlertDeleteOrderText               NSLocalizedString(@"kAlertDeleteOrderText", nil)
+#define kAlertButtonDelete                  NSLocalizedString(@"kAlertButtonDelete",nil)
+#define kAlertButtonCancel                  NSLocalizedString(@"kAlertButtonCancel",nil)
+
+#define kAlertMissedModelsTitle             NSLocalizedString(@"kAlertMissedModelsTitle", nil)
+#define kAlertMissedModelsText              NSLocalizedString(@"kAlertMissedModelsText",nil)
+#define kAlertMissedRecieverTitle           NSLocalizedString(@"kAlertMissedRecieverTitle", nil)
+#define kAlertMissedRecieverText            NSLocalizedString(@"kAlertMissedRecieverText",nil)
+#define kAlertFailOrderContinueButton       NSLocalizedString(@"kAlertFailOrderContinueButton",nil)
+#define kAlertFailOrderCancelButton         NSLocalizedString(@"kAlertFailOrderCancelButton",nil)
 
 // Storyboard //
 
@@ -48,48 +59,57 @@ extern NSString * const DBUpdateOrdersListNotification;
 #define kStoryboardMainModelList            NSLocalizedString(@"kStoryboardMainModelList",nil)
 #define kStoryboardMainNewOrder             NSLocalizedString(@"kStoryboardMainNewOrder",nil)
 
-#define kStoryboardAddModelCount            NSLocalizedString(@"Count: ",nil)
-#define kStoryboardAddModelPrice            NSLocalizedString(@"Price: ",nil)
+#define kStoryboardAddModelCount            NSLocalizedString(@"kStoryboardAddModelCount",nil)
+#define kStoryboardAddModelPrice            NSLocalizedString(@"kStoryboardAddModelPrice",nil)
+#define kStoryboardAddModelNamePlaceholder  NSLocalizedString(@"kStoryboardAddModelNamePlaceholder",nil)
+#define kStoryboardAddModelCountPlaceholder NSLocalizedString(@"kStoryboardAddModelCountPlaceholder",nil)
+#define kStoryboardAddModelPricePlaceholder NSLocalizedString(@"kStoryboardAddModelPricePlaceholder",nil)
 
-#define kStoryboardModelDetailCount         NSLocalizedString(@"Count: ",nil)
-#define kStoryboardModelDetailPrice         NSLocalizedString(@"Price: ",nil)
-#define kStoryboardModelDetailID            NSLocalizedString(@"Model ID: ",nil)
+#define kStoryboardModelDetailCount         NSLocalizedString(@"kStoryboardModelDetailCount",nil)
+#define kStoryboardModelDetailPrice         NSLocalizedString(@"kStoryboardModelDetailPrice",nil)
+#define kStoryboardModelDetailID            NSLocalizedString(@"kStoryboardModelDetailID",nil)
 
-#define kStoryboardAddRecieverAdress        NSLocalizedString(@"Adress: ",nil)
-#define kStoryboardAddRecieverPhone         NSLocalizedString(@"Phone: ",nil)
-#define kStoryboardAddRecieverBank          NSLocalizedString(@"Bank account: ",nil)
+#define kStoryboardAddRecieverAdress        NSLocalizedString(@"kStoryboardAddRecieverAdress",nil)
+#define kStoryboardAddRecieverPhone         NSLocalizedString(@"kStoryboardAddRecieverPhone",nil)
+#define kStoryboardAddRecieverBank          NSLocalizedString(@"kStoryboardAddRecieverBank",nil)
+#define kStoryboardAddRecieverNamePlaceholder  NSLocalizedString(@"kStoryboardAddRecieverNamePlaceholder",nil)
+#define kStoryboardAddRecieverAdressPlaceholder NSLocalizedString(@"kStoryboardAddRecieverAdressPlaceholder",nil)
+#define kStoryboardAddRecieverPhonePlaceholder NSLocalizedString(@"kStoryboardAddRecieverPhonePlaceholder",nil)
+#define kStoryboardAddRecieverBankPlaceholder NSLocalizedString(@"kStoryboardAddRecieverBankPlaceholder",nil)
 
-#define kStoryboardRecieverDetailID         NSLocalizedString(@"Company ID: ",nil)
-#define kStoryboardRecieverDetailAdress     NSLocalizedString(@"Adress: ",nil)
-#define kStoryboardRecieverDetailPhone      NSLocalizedString(@"Phone: ",nil)
-#define kStoryboardRecieverDetailBank       NSLocalizedString(@"Bank account: ",nil)
+#define kStoryboardRecieverDetailID         NSLocalizedString(@"kStoryboardRecieverDetailID",nil)
+#define kStoryboardRecieverDetailAdress     NSLocalizedString(@"kStoryboardRecieverDetailAdress",nil)
+#define kStoryboardRecieverDetailPhone      NSLocalizedString(@"kStoryboardRecieverDetailPhone",nil)
+#define kStoryboardRecieverDetailBank       NSLocalizedString(@"kStoryboardRecieverDetailBank",nil)
 
-#define kStoryboardOrderListSortStatus      NSLocalizedString(@"Status",nil)
-#define kStoryboardOrderListSortDate        NSLocalizedString(@"Date",nil)
-#define kStoryboardOrderListSortPrice       NSLocalizedString(@"Price",nil)
-#define kStoryboardOrderListSortReciever    NSLocalizedString(@"Reciever",nil)
-#define kStoryboardOrderListLabelSort       NSLocalizedString(@"Sort with ",nil)
-#define kStoryboardOrderListShowActive      NSLocalizedString(@"Active",nil)
-#define kStoryboardOrderListShowArchived    NSLocalizedString(@"Archived",nil)
-#define kStoryboardOrderListLabelShow       NSLocalizedString(@"Status",nil)
+#define kStoryboardOrderListSortStatus      NSLocalizedString(@"kStoryboardOrderListSortStatus",nil)
+#define kStoryboardOrderListSortDate        NSLocalizedString(@"kStoryboardOrderListSortDate",nil)
+#define kStoryboardOrderListSortPrice       NSLocalizedString(@"kStoryboardOrderListSortPrice",nil)
+#define kStoryboardOrderListSortReciever    NSLocalizedString(@"kStoryboardOrderListSortReciever",nil)
+#define kStoryboardOrderListLabelSort       NSLocalizedString(@"kStoryboardOrderListLabelSort",nil)
+#define kStoryboardOrderListShowActive      NSLocalizedString(@"kStoryboardOrderListShowActive",nil)
+#define kStoryboardOrderListShowArchived    NSLocalizedString(@"kStoryboardOrderListShowArchived",nil)
+#define kStoryboardOrderListLabelShow       NSLocalizedString(@"kStoryboardOrderListLabelShow",nil)
 
-#define kStoryboardOrderListCellReciever    NSLocalizedString(@"Reciever:",nil)
-#define kStoryboardOrderListCellModels      NSLocalizedString(@"Models:",nil)
+#define kStoryboardOrderListCellReciever    NSLocalizedString(@"kStoryboardOrderListCellReciever",nil)
+#define kStoryboardOrderListCellModels      NSLocalizedString(@"kStoryboardOrderListCellModels",nil)
+#define kStoryboardOrderListCellArchive     NSLocalizedString(@"kStoryboardOrderListCellArchive", nil)
+#define kStoryboardOrderListCellActive      NSLocalizedString(@"kStoryboardOrderListCellActive", nil)
 
-#define kStoryboardMakeOrderModels          NSLocalizedString(@"Models: ",nil)
-#define kStoryboardMakeOrderReciever        NSLocalizedString(@"Reciever: ",nil)
-#define kStoryboardMakeOrderChooseModels    NSLocalizedString(@"Choose...",nil)
-#define kStoryboardMakeOrderChooseReciever  NSLocalizedString(@"Choose...",nil)
+#define kStoryboardMakeOrderModels          NSLocalizedString(@"kStoryboardMakeOrderModels",nil)
+#define kStoryboardMakeOrderReciever        NSLocalizedString(@"kStoryboardMakeOrderReciever",nil)
+#define kStoryboardMakeOrderChooseModels    NSLocalizedString(@"kStoryboardMakeOrderChooseModels",nil)
+#define kStoryboardMakeOrderChooseReciever  NSLocalizedString(@"kStoryboardMakeOrderChooseReciever",nil)
 
-#define kStoryboardOrderDetailCompany__     NSLocalizedString(@"Company: _________",nil)
-#define kStoryboardOrderDetailReciever__    NSLocalizedString(@"Reciever:  ________",nil)
-#define kStoryboardOrderDetailTotal         NSLocalizedString(@"Total: ",nil)
-#define kStoryboardOrderDetailModels        NSLocalizedString(@"Models:",nil)
-#define kStoryboardOrderDetailBank          NSLocalizedString(@"Bank:",nil)
-#define kStoryboardOrderDetailPhone         NSLocalizedString(@"Phone:",nil)
-#define kStoryboardOrderDetailAdress        NSLocalizedString(@"Adress: ",nil)
-#define kStoryboardOrderDetailReciever      NSLocalizedString(@"Reciever:",nil)
-#define kStoryboardOrderDetailOrderNumber   NSLocalizedString(@"Order №",nil)
+#define kStoryboardOrderDetailCompany__     NSLocalizedString(@"kStoryboardOrderDetailCompany__",nil)
+#define kStoryboardOrderDetailReciever__    NSLocalizedString(@"kStoryboardOrderDetailReciever__",nil)
+#define kStoryboardOrderDetailTotal         NSLocalizedString(@"kStoryboardOrderDetailTotal",nil)
+#define kStoryboardOrderDetailModels        NSLocalizedString(@"kStoryboardOrderDetailModels",nil)
+#define kStoryboardOrderDetailBank          NSLocalizedString(@"kStoryboardOrderDetailBank",nil)
+#define kStoryboardOrderDetailPhone         NSLocalizedString(@"kStoryboardOrderDetailPhone",nil)
+#define kStoryboardOrderDetailAdress        NSLocalizedString(@"kStoryboardOrderDetailAdress",nil)
+#define kStoryboardOrderDetailReciever      NSLocalizedString(@"kStoryboardOrderDetailReciever",nil)
+#define kStoryboardOrderDetailOrderNumber   NSLocalizedString(@"kStoryboardOrderDetailOrderNumber",nil)
 
 
 

@@ -40,7 +40,7 @@
                                                object:nil];
     
     self.navigationController.toolbarHidden = NO;
-    self.navigationController.title = kStoryboardOrderListTitle;
+    self.navigationItem.title = kStoryboardOrderListTitle;
     BOOL showActiveFlag = NSUserDefaults.standardUserDefaults.showActiveOrders;
     self.buttonShowActive.tintColor = showActiveFlag     ? [UIColor blackColor] : [UIColor grayColor];
     BOOL showArchivedFlag = NSUserDefaults.standardUserDefaults.showArchivedOrders;
@@ -104,9 +104,8 @@
     }
     cell.modelsListLabel.text = [modelsList substringToIndex:modelsList.length-2];
     cell.totalPriceLabel.text = [NSString stringWithFormat:@"%d $",order.totalPrice];
-    cell.orderStatusLabel.text = order.status.integerValue == OrderActive ?
-    NSLocalizedString(@"Active order", nil) : NSLocalizedString(@"In Archive", nil);
-    cell.orderStatusLabel.textColor = order.status.integerValue == OrderActive ? [UIColor greenColor] : [UIColor grayColor];
+    cell.orderStatusLabel.text = order.status.integerValue == OrderActive ? kStoryboardOrderListCellActive : kStoryboardOrderListCellArchive;
+    cell.orderStatusLabel.textColor = order.status.integerValue == OrderActive ? [UIColor redColor] : [UIColor grayColor];
     
     cell.labelModels.text = kStoryboardOrderListCellModels;
     cell.labelReciever.text = kStoryboardOrderListCellReciever;

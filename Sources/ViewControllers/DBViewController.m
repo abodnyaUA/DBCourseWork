@@ -29,11 +29,11 @@
 {
     [super viewDidLoad];
     self.navigationController.toolbarHidden = YES;
-    self.navigationController.title = kStoryboardMainTitle;
+    self.navigationItem.title = kStoryboardMainTitle;
     self.labelOrderList.text = kStoryboardMainOrderList;
-    self.labelNewOrder.text = kStoryboardMainRecieverList;
-    self.labelRecievers.text = kStoryboardMainModelList;
-    self.labelModelsOnWarehouse.text = kStoryboardMainNewOrder;
+    self.labelNewOrder.text = kStoryboardMainNewOrder;
+    self.labelRecievers.text = kStoryboardMainRecieverList;
+    self.labelModelsOnWarehouse.text = kStoryboardMainModelList;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
