@@ -10,6 +10,10 @@
 #import "Model.h"
 #import "Reciever.h"
 #import "DBAppDelegate.h"
+#import "DBConstants.h"
+#import "DBModelOnOrderCell.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface DBOrderDetailViewController ()
 
@@ -21,6 +25,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *recieverPhoneLabel;
 @property (strong, nonatomic) IBOutlet UILabel *recieverAdressLabel;
 @property (strong, nonatomic) IBOutlet UITextView *modelsTextView;
+
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonChangeStatus;
+@property (strong, nonatomic) IBOutlet UITableView *modelsListTableView;
 
 @end
 
@@ -35,18 +42,24 @@
     self.recieverPhoneLabel.text = self.order.reciever.phone;
     self.recieverAdressLabel.text = self.order.reciever.adress;
     self.recieverAccountLabel.text = self.order.reciever.account;
-    NSString *modelsList = @"";
-    for (Model *model in self.order.model)
-    {
-        NSUInteger price = model.count.integerValue * model.price.integerValue;
-        modelsList = [modelsList stringByAppendingFormat:@"%@ - %d (%d $)\n",
-                      model.name,model.count.integerValue,price];
-    }
-    self.modelsTextView.text = modelsList;
-    self.modelsTextView.contentInset = UIEdgeInsetsMake(-4,-4,0,0);
     self.orderDateLabel.text = [DBAppDelegate.sharedInstance.formatter stringFromDate:self.order.orderDate];
     
-    self.navigationItem.title = [NSString stringWithFormat:@"Order to %@",self.order.reciever.name];
+    self.navigationItem.title = [NSString stringWithFormat:kNavigationBarTitleOrder,self.order.reciever.name];
+    
+    self.buttonChangeStatus.title = self.order.status.integerValue == OrderActive ? kMoveInArchiveOrderString : kMakeActiveOrderString;
+    
+    self.modelsListTableView.delegate = self;
+    self.modelsListTableView.dataSource = self;
+}
+
+- (BOOL)shouldAutorotate
+{
+    return NO;
+}
+
+- (BOOL)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 - (IBAction)share:(id)sender
@@ -59,5 +72,67 @@
     
     [self presentViewController:activityPublisher animated:YES completion:nil];
 }
+
+- (IBAction)deleteOrder:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:kAlertDeleteOrderTitle
+                                                    message:kAlertDeleteOrderText
+                                                   delegate:self
+                                          cancelButtonTitle:kAlertButtonDelete
+                                          otherButtonTitles:kAlertButtonCancel, nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        [DBCoreDataManager.sharedManager removeObject:self.order];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DBUpdateOrdersListNotification object:nil];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+- (IBAction)changeOrderStatus:(id)sender
+{
+    NSUInteger newStatus = self.order.status.integerValue == OrderActive ? OrderInArchive : OrderActive;
+    self.order.status = [NSNumber numberWithInt:newStatus];
+    self.buttonChangeStatus.title = newStatus == OrderActive ? kMoveInArchiveOrderString : kMakeActiveOrderString;
+    [[NSNotificationCenter defaultCenter] postNotificationName:DBUpdateOrdersListNotification object:nil];
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.order.model.count+1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"modelCell";
+    DBModelOnOrderCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.layer.borderWidth = 1.0;
+    
+    if (indexPath.row == 0)
+    {
+        cell.modelName.text = kOrderModelNameTableColomn;
+        cell.modelCount.text = kOrderModelCountTableColomn;
+        cell.modelPrice.text = kOrderModelPriceTableColomn;
+        cell.modelName.font = [UIFont boldSystemFontOfSize:17.0];
+        cell.modelCount.font = [UIFont boldSystemFontOfSize:17.0];
+        cell.modelPrice.font = [UIFont boldSystemFontOfSize:17.0];
+    }
+    else
+    {
+        Model *model = [self.order.model.allObjects objectAtIndex:indexPath.row-1];
+        cell.modelName.text = model.name;
+        cell.modelPrice.text = [NSString stringWithFormat:@"%d $",model.price.integerValue];
+        cell.modelCount.text = [NSString stringWithFormat:@"%d",model.count.integerValue];
+    }
+    return cell;
+}
+
+
 
 @end

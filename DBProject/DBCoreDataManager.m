@@ -11,13 +11,6 @@
 #import "DBAppDelegate.h"
 #import "DBConstants.h"
 
-
-NSString * const DBModelWasAddedNotification = @"DBModelWasAddedNotification";
-NSString * const DBRecieverWasAddedNotification = @"DBRecieverWasAddedNotification";
-NSString * const DBOrderWasAddedNotification = @"DBOrderWasAddedNotification";
-NSString * const DBOrderWasArchivedNotification = @"DBOrderWasArchivedNotification";
-NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotification";
-
 @interface DBCoreDataManager ()
 
 @property (strong, nonatomic) NSManagedObjectContext       *managedObjectContext;
@@ -129,7 +122,7 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
     [order addModel:[NSSet setWithArray:models]];
 
     [self updateSorce];
-    [[NSNotificationCenter defaultCenter] postNotificationName:DBOrderWasAddedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DBUpdateOrdersListNotification object:nil];
     return order;
 }
 
@@ -243,12 +236,6 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
     return [planOrders copy];
 }
 
-- (void)archivateOrder:(Order *)anOrder
-{
-    anOrder.status = [NSNumber numberWithInt:OrderInArchive];
-    [self updateSorce];
-}
-
 #pragma mark - Models
 
 - (NSArray *)modelsOnWarhouse
@@ -268,7 +255,7 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
     model.count = [NSNumber numberWithInt:aCount];
     [self.warhouse addModelsObject:model];
     [self updateSorce];
-    [[NSNotificationCenter defaultCenter] postNotificationName:DBModelWasAddedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DBUpdateModelsListNotification object:nil];
     return model;
 }
 
@@ -307,7 +294,7 @@ NSString * const DBYearPlanWasAddedNotification = @"DBYearPlanWasAddedNotificati
     reciever.phone = phone;
     reciever.account = account;
     [self updateSorce];
-    [[NSNotificationCenter defaultCenter] postNotificationName:DBRecieverWasAddedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DBUpdateRecieversListNotification object:nil];
     return reciever;
 }
 

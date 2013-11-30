@@ -46,6 +46,7 @@
 		CB95DA571849F238004A14E0 /* DBOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA561849F238004A14E0 /* DBOrderCell.m */; };
 		CB95DA5A1849F295004A14E0 /* NSUserDefaults+OrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA591849F295004A14E0 /* NSUserDefaults+OrderVC.m */; };
 		CB95DA5D1849F544004A14E0 /* DBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA5C1849F544004A14E0 /* DBConstants.m */; };
+		CB95DA60184A11F4004A14E0 /* DBModelOnOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA5F184A11F3004A14E0 /* DBModelOnOrderCell.m */; };
 		CBF528C91840BA2700888139 /* DBAddRecieverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,8 @@
 		CB95DA591849F295004A14E0 /* NSUserDefaults+OrderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+OrderVC.m"; sourceTree = "<group>"; };
 		CB95DA5B1849F544004A14E0 /* DBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBConstants.h; sourceTree = "<group>"; };
 		CB95DA5C1849F544004A14E0 /* DBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBConstants.m; sourceTree = "<group>"; };
+		CB95DA5E184A11F3004A14E0 /* DBModelOnOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModelOnOrderCell.h; sourceTree = "<group>"; };
+		CB95DA5F184A11F3004A14E0 /* DBModelOnOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModelOnOrderCell.m; sourceTree = "<group>"; };
 		CBF528C71840BA2700888139 /* DBAddRecieverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAddRecieverViewController.h; sourceTree = "<group>"; };
 		CBF528C81840BA2700888139 /* DBAddRecieverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAddRecieverViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -312,6 +315,8 @@
 				CB95DA561849F238004A14E0 /* DBOrderCell.m */,
 				CB95DA581849F295004A14E0 /* NSUserDefaults+OrderVC.h */,
 				CB95DA591849F295004A14E0 /* NSUserDefaults+OrderVC.m */,
+				CB95DA5E184A11F3004A14E0 /* DBModelOnOrderCell.h */,
+				CB95DA5F184A11F3004A14E0 /* DBModelOnOrderCell.m */,
 			);
 			name = Orders;
 			sourceTree = "<group>";
@@ -452,6 +457,7 @@
 				CB95DA571849F238004A14E0 /* DBOrderCell.m in Sources */,
 				CB95DA5A1849F295004A14E0 /* NSUserDefaults+OrderVC.m in Sources */,
 				CB95DA5D1849F544004A14E0 /* DBConstants.m in Sources */,
+				CB95DA60184A11F4004A14E0 /* DBModelOnOrderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

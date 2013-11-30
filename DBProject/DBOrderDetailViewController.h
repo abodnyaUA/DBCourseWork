@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Order.h"
 
-@interface DBOrderDetailViewController : UIViewController
+@interface DBOrderDetailViewController : UIViewController <UIAlertViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) Order *order;
 

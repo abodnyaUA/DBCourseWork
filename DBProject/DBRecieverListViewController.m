@@ -10,6 +10,7 @@
 
 #import "DBRecieverDetailViewController.h"
 #import "DBCoreDataManager.h"
+#import "DBConstants.h"
 
 
 @interface DBRecieverListViewController ()
@@ -23,13 +24,13 @@
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateViewWithSource)
-                                                 name:DBRecieverWasAddedNotification
+                                                 name:DBUpdateRecieversListNotification
                                                object:nil];
 }
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:DBRecieverWasAddedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DBUpdateRecieversListNotification object:nil];
 }
 
 - (void)updateViewWithSource

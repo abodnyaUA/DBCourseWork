@@ -13,12 +13,6 @@
 #import "Model.h"
 #import "Warhouse.h"
 
-
-extern NSString * const DBModelWasAddedNotification;
-extern NSString * const DBRecieverWasAddedNotification;
-extern NSString * const DBOrderWasAddedNotification;
-extern NSString * const DBYearPlanWasAddedNotification;
-
 @interface DBCoreDataManager : NSObject
 
 + (id)sharedManager;

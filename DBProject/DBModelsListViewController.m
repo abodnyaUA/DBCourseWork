@@ -10,6 +10,7 @@
 
 #import "DBModelDetailViewController.h"
 #import "DBCoreDataManager.h"
+#import "DBConstants.h"
 
 
 @interface DBModelsListViewController ()
@@ -23,13 +24,13 @@
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateViewWithSource)
-                                                 name:DBModelWasAddedNotification
+                                                 name:DBUpdateModelsListNotification
                                                object:nil];
 }
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:DBModelWasAddedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DBUpdateModelsListNotification object:nil];
 }
 
 - (void)updateViewWithSource

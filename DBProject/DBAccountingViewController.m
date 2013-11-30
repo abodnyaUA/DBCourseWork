@@ -13,6 +13,7 @@
 #import "DBAppDelegate.h"
 #import "NSUserDefaults+OrderVC.h"
 #import "DBConstants.h"
+#import "DBOrderCell.h"
 
 @interface DBAccountingViewController ()
 
@@ -33,18 +34,19 @@
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateViewWithSource)
-                                                 name:DBOrderWasAddedNotification
+                                                 name:DBUpdateOrdersListNotification
                                                object:nil];
+    
     self.navigationController.toolbarHidden = NO;
     BOOL showActiveFlag = NSUserDefaults.standardUserDefaults.showActiveOrders;
-    self.buttonShowActive.tintColor = showActiveFlag ? [UIColor blackColor] : [UIColor grayColor];
+    self.buttonShowActive.tintColor = showActiveFlag     ? [UIColor blackColor] : [UIColor grayColor];
     BOOL showArchivedFlag = NSUserDefaults.standardUserDefaults.showArchivedOrders;
     self.buttonShowArchived.tintColor = showArchivedFlag ? [UIColor blackColor] : [UIColor grayColor];
 }
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:DBOrderWasAddedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DBUpdateOrdersListNotification object:nil];
 }
 
 - (void)updateViewWithSource
@@ -75,17 +77,22 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"orderCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    DBOrderCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    Order * obj = [self.dataSource objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"[%@] %@",[DBAppDelegate.sharedInstance.formatter stringFromDate:obj.orderDate],((Reciever *)obj.reciever).name];
-    NSString *detailText = @"";
-    for (Model *model in obj.model)
+    Order *order = [self.dataSource objectAtIndex:indexPath.row];
+    cell.orderDateLabel.text = [DBAppDelegate.sharedInstance.formatter stringFromDate:order.orderDate];
+    cell.recieverLabel.text = order.reciever.name;
+    NSString *modelsList = @"";
+    for (Model *model in order.model)
     {
-        detailText = [detailText stringByAppendingString:model.name];
-        detailText = [detailText stringByAppendingString:@", "];
+        modelsList = [modelsList stringByAppendingString:model.name];
+        modelsList = [modelsList stringByAppendingString:@", "];
     }
-    cell.detailTextLabel.text = [detailText substringToIndex:detailText.length-2];
+    cell.modelsListLabel.text = [modelsList substringToIndex:modelsList.length-2];
+    cell.totalPriceLabel.text = [NSString stringWithFormat:@"%d $",order.totalPrice];
+    cell.orderStatusLabel.text = order.status.integerValue == OrderActive ?
+    NSLocalizedString(@"Active order", nil) : NSLocalizedString(@"In Archive", nil);
+    cell.orderStatusLabel.textColor = order.status.integerValue == OrderActive ? [UIColor greenColor] : [UIColor grayColor];
     
     return cell;
 }
