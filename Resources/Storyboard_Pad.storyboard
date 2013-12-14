@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="G0U-pm-ddw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="G0U-pm-ddw">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Add Reciever View Controller - New Reciever-->
@@ -15,7 +15,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Adress:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udS-5w-iTM">
-                                <rect key="frame" x="20" y="94" width="71" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="HRR-A3-XnM"/>
                                 </constraints>
@@ -24,13 +23,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Phone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAf-n4-fV5">
-                                <rect key="frame" x="20" y="132" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bank account:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tt-og-105">
-                                <rect key="frame" x="20" y="166" width="113" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="113" id="lBS-Pr-rAO"/>
                                 </constraints>
@@ -39,7 +36,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Company Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Vb-Mj-Nb6">
-                                <rect key="frame" x="20" y="20" width="984" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="cM3-SX-q3v"/>
                                 </constraints>
@@ -47,7 +43,6 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ukraine, city Kiev, Politekhnichna st. 8" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yIT-VX-1z1">
-                                <rect key="frame" x="99" y="90" width="905" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CVD-bx-wDz"/>
                                 </constraints>
@@ -55,12 +50,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+38 (093) 123-45-67" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eXM-rQ-Jy9">
-                                <rect key="frame" x="99" y="128" width="905" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="example: 5243-5223-2111-2456" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JUI-Sf-a42">
-                                <rect key="frame" x="20" y="195" width="984" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
@@ -121,7 +114,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Company Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJn-Fp-kzp">
-                                <rect key="frame" x="20" y="20" width="984" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="4bV-JQ-xKA"/>
                                 </constraints>
@@ -130,19 +122,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Adress>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b6-DX-e0x">
-                                <rect key="frame" x="99" y="90" width="905" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Phone>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wY-4u-w4l">
-                                <rect key="frame" x="99" y="119" width="905" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Adress:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-Tx-nCU">
-                                <rect key="frame" x="20" y="90" width="71" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="glx-V4-zqN"/>
                                 </constraints>
@@ -151,13 +140,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Phone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdd-Yb-QCz">
-                                <rect key="frame" x="20" y="119" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bank account:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNh-gi-f4f">
-                                <rect key="frame" x="20" y="148" width="113" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="113" id="mQS-pA-CX4"/>
                                 </constraints>
@@ -166,19 +153,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sts-wV-4bl">
-                                <rect key="frame" x="20" y="177" width="984" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lj4-hH-YCH">
-                                <rect key="frame" x="20" y="235" width="984" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Company ID:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBM-d8-qDE">
-                                <rect key="frame" x="20" y="206" width="101" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -249,13 +233,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd8-EC-v5n">
-                                            <rect key="frame" x="10" y="16" width="36" height="22"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PG-ci-eaF">
-                                            <rect key="frame" x="10" y="38" width="37" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -292,7 +274,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJD-aT-oZV">
-                                <rect key="frame" x="20" y="15" width="280" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="279" id="Nko-a2-Nls"/>
                                     <constraint firstAttribute="width" constant="280" type="user" id="O2J-9y-121"/>
@@ -310,7 +291,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4c-9y-4l1">
-                                <rect key="frame" x="724" y="20" width="280" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" type="user" id="Cxj-se-Kqo"/>
                                     <constraint firstAttribute="height" constant="279" id="ZzI-HS-5ML"/>
@@ -328,7 +308,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yek-3R-GAZ">
-                                <rect key="frame" x="724" y="344" width="280" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="279" id="kz8-lO-KHR"/>
                                 </constraints>
@@ -345,7 +324,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OA-mb-U6k">
-                                <rect key="frame" x="20" y="339" width="280" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="279" id="8Jk-gj-giR"/>
                                 </constraints>
@@ -362,25 +340,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Models on warehouse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKf-gK-2ej">
-                                <rect key="frame" x="724" y="631" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="List of recievers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71A-DL-HRX">
-                                <rect key="frame" x="20" y="626" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Order List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWJ-ca-pPu">
-                                <rect key="frame" x="20" y="302" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="New order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ry6-rb-noU">
-                                <rect key="frame" x="724" y="307" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -445,13 +419,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csk-qR-Mkk">
-                                            <rect key="frame" x="10" y="23" width="36" height="22"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwQ-kw-DHz">
-                                            <rect key="frame" x="10" y="45" width="50" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -488,7 +460,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-bk-Vnc">
-                                <rect key="frame" x="20" y="94" width="71" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="uVQ-ld-FlM"/>
                                 </constraints>
@@ -497,13 +468,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Count:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddb-yD-cw8">
-                                <rect key="frame" x="20" y="132" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Model Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jx4-xK-gdU">
-                                <rect key="frame" x="20" y="20" width="984" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="GDY-7I-J56"/>
                                 </constraints>
@@ -511,12 +480,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price in $" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NAw-A1-kYW">
-                                <rect key="frame" x="99" y="90" width="905" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Count" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EyC-Bp-Q8o">
-                                <rect key="frame" x="99" y="128" width="905" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
@@ -569,7 +536,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Model Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOi-EK-jrs">
-                                <rect key="frame" x="20" y="20" width="984" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="W0O-IF-EMz"/>
                                 </constraints>
@@ -578,19 +544,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Price>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FR-Qg-y0h">
-                                <rect key="frame" x="99" y="90" width="905" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Count>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nX-wU-jJa">
-                                <rect key="frame" x="99" y="119" width="905" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZe-aG-ogU">
-                                <rect key="frame" x="20" y="90" width="71" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="3Oq-9v-6zm"/>
                                 </constraints>
@@ -599,19 +562,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Count:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weM-cA-PLh">
-                                <rect key="frame" x="20" y="119" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjx-Yc-bUR">
-                                <rect key="frame" x="20" y="177" width="984" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Model ID:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCa-Ru-nLj">
-                                <rect key="frame" x="20" y="148" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -806,13 +766,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="November 15. 2013 5:42 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6G-Z1-Yzn">
-                                            <rect key="frame" x="20" y="9" width="220" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Reciever:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX3-xJ-qmh">
-                                            <rect key="frame" x="20" y="38" width="91" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="5Z8-vc-3iL"/>
                                                 <constraint firstAttribute="width" constant="91" id="rYO-zs-ku1"/>
@@ -822,7 +780,6 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAz-AP-YIK">
-                                            <rect key="frame" x="119" y="38" width="142" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="142" id="vde-4K-09y"/>
                                             </constraints>
@@ -831,7 +788,6 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Models:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uG8-fE-0Ug">
-                                            <rect key="frame" x="269" y="38" width="67" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="67" id="AUu-Xz-1wx"/>
                                             </constraints>
@@ -840,7 +796,6 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPb-yR-kkc">
-                                            <rect key="frame" x="344" y="38" width="457" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="457" id="W3R-yD-GSk"/>
                                             </constraints>
@@ -849,7 +804,6 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Active" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-KP-KGz">
-                                            <rect key="frame" x="830" y="14" width="174" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="174" id="KGM-Gx-lOm"/>
                                             </constraints>
@@ -858,7 +812,6 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="255 $" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhZ-OG-JLp">
-                                            <rect key="frame" x="830" y="33" width="174" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -903,7 +856,11 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem title="Sort" id="Unl-mS-7Wr"/>
+                        <barButtonItem title="Sort" id="Unl-mS-7Wr">
+                            <connections>
+                                <action selector="changeSortKey:" destination="qwf-Zo-eOm" id="7Gz-BS-VQ6"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem title="Date" id="cXw-Hd-Nzq">
                             <connections>
                                 <action selector="sortWithDate:" destination="qwf-Zo-eOm" id="2kX-Pi-sOH"/>
@@ -911,12 +868,12 @@
                         </barButtonItem>
                         <barButtonItem title="Models" id="c47-2l-mFS">
                             <connections>
-                                <action selector="sortWithTotalPrice:" destination="qwf-Zo-eOm" id="0mh-zn-Ker"/>
+                                <action selector="changeModelsInList:" destination="qwf-Zo-eOm" id="FWA-f7-Nb5"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem title="Reciever" id="RcX-ba-naI">
                             <connections>
-                                <action selector="sortWithReciever:" destination="qwf-Zo-eOm" id="QR1-Mn-q49"/>
+                                <action selector="changeRecieversInList:" destination="qwf-Zo-eOm" id="bxE-uy-qwT"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="g0R-QL-LKC"/>
@@ -944,11 +901,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="buttonModels" destination="c47-2l-mFS" id="Pqr-Jg-5bf"/>
+                        <outlet property="buttonReciever" destination="RcX-ba-naI" id="QLE-xC-x21"/>
                         <outlet property="buttonShowActive" destination="eXF-EJ-wOc" id="vmI-Up-Qei"/>
                         <outlet property="buttonShowArchived" destination="3MJ-7B-VWN" id="oTY-o1-Mdz"/>
-                        <outlet property="buttonSortDate" destination="cXw-Hd-Nzq" id="Gc8-H3-No5"/>
-                        <outlet property="buttonSortPrice" destination="c47-2l-mFS" id="Nem-HC-npi"/>
-                        <outlet property="buttonSortReciever" destination="RcX-ba-naI" id="P9t-uv-ARS"/>
+                        <outlet property="buttonSort" destination="Unl-mS-7Wr" id="sjj-Jt-OAA"/>
                         <outlet property="labelStatus" destination="P8z-JV-kCu" id="rrc-wv-UjV"/>
                     </connections>
                 </tableViewController>
@@ -965,7 +922,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Reciever" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwT-cy-zzc">
-                                <rect key="frame" x="20" y="20" width="141" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="141" id="5es-fY-o7e"/>
                                 </constraints>
@@ -974,13 +930,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Models" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZG-ak-qcz">
-                                <rect key="frame" x="20" y="122" width="141" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-1s-q4l">
-                                <rect key="frame" x="20" y="71" width="984" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="QfN-KU-p0L"/>
                                 </constraints>
@@ -989,7 +943,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCt-y7-lbQ">
-                                <rect key="frame" x="169" y="20" width="112" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="112" id="0n2-Z3-hQ4"/>
                                 </constraints>
@@ -1006,7 +959,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdo-9K-CqM">
-                                <rect key="frame" x="169" y="122" width="112" height="44"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Choose...">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
@@ -1020,7 +972,6 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ1-gL-K5T">
-                                <rect key="frame" x="20" y="173" width="984" height="128"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Sry-CM-lwK"/>
@@ -1029,7 +980,6 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0 $" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS3-PE-3e6">
-                                <rect key="frame" x="762" y="20" width="242" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="242" id="IDZ-yb-28f"/>
                                 </constraints>
@@ -1106,7 +1056,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sil-Ji-1AH">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1146,13 +1095,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd1-1v-d4L">
-                                            <rect key="frame" x="20" y="11" width="178" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCx-h5-Cth">
-                                            <rect key="frame" x="20" y="40" width="178" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="O9T-LL-Ywr"/>
                                             </constraints>
@@ -1161,7 +1108,6 @@
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="heo-Vy-qeC">
-                                            <rect key="frame" x="206" y="11" width="94" height="27"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="94" id="9kF-Sq-tQH"/>
                                             </constraints>
@@ -1170,7 +1116,6 @@
                                             </connections>
                                         </stepper>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="175 of 1228" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnK-sx-X67">
-                                            <rect key="frame" x="206" y="40" width="94" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1221,7 +1166,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Order №" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELd-YJ-BIt">
-                                <rect key="frame" x="20" y="20" width="177" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="177" id="8uv-DE-K3w"/>
                                     <constraint firstAttribute="height" constant="62" id="f73-FX-oeh"/>
@@ -1231,25 +1175,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="550e8400-e29b-41d4-a716-446655440000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBr-ij-TJT">
-                                <rect key="frame" x="205" y="20" width="799" height="62"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Reciever name>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAE-ql-IyL">
-                                <rect key="frame" x="139" y="90" width="865" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Reciever adress>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBc-EK-wnN">
-                                <rect key="frame" x="234" y="119" width="770" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Reciever:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRD-63-7sJ">
-                                <rect key="frame" x="20" y="90" width="111" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="111" id="Yhe-OS-mhs"/>
                                 </constraints>
@@ -1258,7 +1198,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Adress: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkx-D1-C0v">
-                                <rect key="frame" x="139" y="119" width="87" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="87" id="yaB-l1-SnS"/>
                                 </constraints>
@@ -1267,37 +1206,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Reciever phone>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2u-tJ-Bfy">
-                                <rect key="frame" x="234" y="148" width="770" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Phone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d50-EA-wbX">
-                                <rect key="frame" x="139" y="148" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt;Reciever account>" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zca-KI-miO">
-                                <rect key="frame" x="234" y="177" width="770" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bank:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1h-Mm-SZR">
-                                <rect key="frame" x="139" y="177" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Models:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFB-VS-fLA">
-                                <rect key="frame" x="20" y="206" width="984" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="15 November 2013 12:15:20 +2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzS-Qu-z2E">
-                                <rect key="frame" x="20" y="619" width="253" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="253" id="cdZ-Cs-jmn"/>
                                 </constraints>
@@ -1306,7 +1239,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bb3-BF-CqD">
-                                <rect key="frame" x="888" y="561" width="116" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="116" id="Wt1-GF-VSi"/>
                                 </constraints>
@@ -1315,13 +1247,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1245333 $" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKQ-Wi-54x">
-                                <rect key="frame" x="888" y="590" width="116" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Reciever:  ________" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVJ-VM-Uvd">
-                                <rect key="frame" x="657" y="619" width="167" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="167" id="EZV-jr-BWk"/>
                                 </constraints>
@@ -1330,7 +1260,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Company: _________" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WG-Wz-hiE">
-                                <rect key="frame" x="832" y="619" width="172" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="172" id="xpH-pn-ckz"/>
                                 </constraints>
@@ -1339,7 +1268,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sjW-ax-5KS">
-                                <rect key="frame" x="20" y="235" width="860" height="376"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="modelCell" id="5Qn-mi-Xmt" customClass="DBModelOnOrderCell">
@@ -1350,15 +1278,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X02-7w-bTo">
-                                                    <rect key="frame" x="609" y="0.0" width="1" height="44"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNB-Fs-TEm">
-                                                    <rect key="frame" x="722" y="0.0" width="1" height="44"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Super Global Machine With UseCase Diagram Ololo I'm A dog" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TP-gt-2bQ">
-                                                    <rect key="frame" x="20" y="12" width="573" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="573" id="uTU-6L-xYT"/>
                                                     </constraints>
@@ -1367,7 +1292,6 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Count this" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8r-Wq-UqE">
-                                                    <rect key="frame" x="618" y="12" width="96" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="96" id="Gim-Si-WKF"/>
                                                     </constraints>
@@ -1376,7 +1300,6 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIh-Xh-5Fq">
-                                                    <rect key="frame" x="731" y="12" width="109" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="109" id="GDU-Q2-zQ4"/>
                                                     </constraints>
@@ -1536,6 +1459,174 @@
         <image name="people.png" width="240" height="218"/>
         <image name="warehouseBig.png" width="256" height="256"/>
     </resources>
+    <classes>
+        <class className="DBAccountingViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAccountingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changeModelsInList:"/>
+                <relationship kind="action" name="changeRecieversInList:"/>
+                <relationship kind="action" name="changeSortKey:"/>
+                <relationship kind="action" name="showActive:"/>
+                <relationship kind="action" name="showArchived:"/>
+                <relationship kind="action" name="sortWithReciever:"/>
+                <relationship kind="outlet" name="buttonModels" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="buttonReciever" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="buttonShowActive" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="buttonShowArchived" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="buttonSort" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="labelSortWith" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="labelStatus" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="DBAddModelViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAddModelViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="countTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="labelCount" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelPrice" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="priceTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="DBAddRecieverViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBAddRecieverViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneClicked:"/>
+                <relationship kind="outlet" name="adressTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="bankAccountTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="labelAdress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelBank" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelPhone" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="phoneTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="DBChooseModelsCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseModelsCell.h"/>
+            <relationships>
+                <relationship kind="action" name="changeCount:"/>
+                <relationship kind="outlet" name="countLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="countStepper" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="detailTextLabelOutlet" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="textLabelOutlet" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DBChooseModelsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseModelsViewController.h"/>
+        </class>
+        <class className="DBChooseRecieverViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBChooseRecieverViewController.h"/>
+        </class>
+        <class className="DBMakeOrderViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBMakeOrderViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="chooseModelsButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="chooseRecieverButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="labelModels" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelReciever" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="modelsListTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="orderPricelabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recieverLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DBModelDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBModelDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="countTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelCount" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelModelID" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelPrice" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="modelIDTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="priceTextLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DBModelOnOrderCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBModelOnOrderCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="modelCount" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="modelName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="modelPrice" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DBModelsInDisplayListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBModelsInDisplayListViewController.h"/>
+        </class>
+        <class className="DBModelsListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBModelsListViewController.h"/>
+        </class>
+        <class className="DBOrderCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBOrderCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="labelModels" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelReciever" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="modelsListLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="orderDateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="orderStatusLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recieverLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalPriceLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DBOrderDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBOrderDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="buttonChangeStatus" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="labelAdress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelBank" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelCompany__" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelModels" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelOrderNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelPhone" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelReciever" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelReciever__" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelTotal" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="modelsListTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="modelsTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="orderDateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="orderIDLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recieverAccountLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recieverAdressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recieverNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recieverPhoneLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="totalPriceLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DBRecieverDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBRecieverDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="adressTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="bankAccountTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelAdress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelBank" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelCompany" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelPhone" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="phoneTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recieverIDTextLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DBRecieverListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBRecieverListViewController.h"/>
+        </class>
+        <class className="DBRecieversInDisplayListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBRecieversInDisplayListViewController.h"/>
+        </class>
+        <class className="DBSortDisplayListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBSortDisplayListViewController.h"/>
+        </class>
+        <class className="DBViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DBViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="labelModelsOnWarehouse" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelNewOrder" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelOrderList" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelRecievers" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

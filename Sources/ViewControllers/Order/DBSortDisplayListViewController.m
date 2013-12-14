@@ -94,6 +94,7 @@ const NSUInteger kSortTableViewSectionAscDesc = 1;
         UITableViewCell *currentKeyCell = [tableView cellForRowAtIndexPath:
                                            [NSIndexPath indexPathForItem:self.sortRow inSection:kSortTableViewSectionCategory]];
         currentKeyCell.accessoryType = UITableViewCellAccessoryNone;
+        self.sortRow = indexPath.row;
         [[NSUserDefaults standardUserDefaults] setOrderFetchSortKey:[self.sortList valueForKey:[self.sortList.allKeys objectAtIndex:indexPath.row]]];
     }
     else

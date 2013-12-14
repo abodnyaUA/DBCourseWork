@@ -68,6 +68,7 @@
     
     self.buttonShowActive.title = kStoryboardOrderListShowActive;
     self.buttonShowArchived.title = kStoryboardOrderListShowArchived;
+    [self setUpPopovers];
 }
 
 - (void)dealloc
