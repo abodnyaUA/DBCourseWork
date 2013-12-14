@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Model" representedClassName="Model" syncable="YES">
+        <attribute name="archived" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="modelId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -16,6 +17,7 @@
     <entity name="Reciever" representedClassName="Reciever" syncable="YES">
         <attribute name="account" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="adress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="archived" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="companyID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,9 +27,9 @@
         <relationship name="models" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Model" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Model" positionX="187" positionY="-7" width="128" height="105"/>
+        <element name="Model" positionX="187" positionY="-7" width="128" height="120"/>
         <element name="Order" positionX="7" positionY="-112" width="128" height="118"/>
-        <element name="Reciever" positionX="-144" positionY="-9" width="128" height="118"/>
+        <element name="Reciever" positionX="-144" positionY="-9" width="128" height="135"/>
         <element name="Warhouse" positionX="160" positionY="192" width="128" height="73"/>
     </elements>
 </model>

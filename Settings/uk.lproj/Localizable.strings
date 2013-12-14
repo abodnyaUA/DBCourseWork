@@ -15,7 +15,7 @@
 "kOrderModelCountTableColomn" = "Кількість";
 "kOrderModelPriceTableColomn" = "Сумма";
 
-"kAlertDeleteOrderTitle" = "Видалити Замовлення";
+"kAlertDeleteOrderTitle" = "Видалення Замовлення";
 "kAlertDeleteOrderText" = "Ви справді хочете видалити замовлення?";
 "kAlertButtonDelete" = "Видалити";
 "kAlertButtonCancel" = "Скасувати";
@@ -26,6 +26,13 @@
 "kAlertMissedRecieverText" = "Ви не вказали отримувача";
 "kAlertFailOrderContinueButton" = "Заповнити";
 "kAlertFailOrderCancelButton" = "Скасувати";
+
+"kAlertDeleteRecieverTitle" = "Видалення Отримувача";
+"kAlertDeleteRecieverText" = "Отримувач вказаний в декількох замовленнях. Видалити ці замовлення?";
+"kAlertDeleteModelTitle" = "Видалення Товару";
+"kAlertDeleteModelText" = "Товар вказаний в декількох замовленнях. Видалити ці замовлення?";
+"kAlertButtonArchivate" = "Залишити";
+"kAlertButtonRemoveOrders" = "Видалити";
 
 // Storyboard //
 

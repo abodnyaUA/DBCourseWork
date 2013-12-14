@@ -16,5 +16,9 @@
 @property (nonatomic, retain) NSNumber * price;
 @property (nonatomic, retain) NSString * modelId;
 @property (nonatomic, retain) NSNumber * count;
+@property (nonatomic, retain) NSNumber * archived;
+
+- (NSArray *)ordersWithModel;
+- (BOOL)useInOrders;
 
 @end

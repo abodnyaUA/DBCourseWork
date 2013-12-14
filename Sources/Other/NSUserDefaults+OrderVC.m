@@ -8,12 +8,17 @@
 
 #import "NSUserDefaults+OrderVC.h"
 #import "DBConstants.h"
+#import "Reciever.h"
+#import "Model.h"
 
 
 NSString * const kUserDefaultsSortOrderKey  = @"OrderSortKey";
 NSString * const kUserDefaultsSortOrderAscendingFlag  = @"OrderSortAscendingFlag";
 NSString * const kUserDefaultsShowActiveOrders  = @"ShowActiveOrders";
 NSString * const kUserDefaultsShowArchivedOrders  = @"ShowArchivedOrders";
+
+NSString * const kUserDefaultsRecieversInDisplayList  = @"RecieversInDisplayList";
+NSString * const kUserDefaultsModelsInDisplayList  = @"ModelsInDisplayList";
 
 @implementation NSUserDefaults (OrderVC)
 
@@ -88,6 +93,74 @@ NSString * const kUserDefaultsShowArchivedOrders  = @"ShowArchivedOrders";
 - (void)setShowArchivedOrders:(BOOL)aFlag
 {
     [self setBool:aFlag forKey:kUserDefaultsShowArchivedOrders];
+}
+
+#pragma mark -
+
+- (NSSet *)recieversInDisplayList
+{
+    NSSet * recievers = [self valueForKey:kUserDefaultsRecieversInDisplayList];
+    if (nil == recievers)
+    {
+        recievers = self.recieversInDisplayList = [NSSet new];
+    }
+    return recievers;
+}
+
+- (void)setRecieversInDisplayList:(NSSet *)aRecieversList
+{
+    if (nil != aRecieversList)
+    {
+        [self setValue:aRecieversList forKey:kUserDefaultsRecieversInDisplayList];
+    }
+}
+
+- (void)removeRecieverFromDisplayList:(Reciever *)aReciever
+{
+    NSMutableSet *mutable = [self.recieversInDisplayList mutableCopy];
+    [mutable removeObject:aReciever.companyID];
+    self.recieversInDisplayList = [mutable copy];
+}
+
+- (void)addRecieverToDisplayList:(Reciever *)aReciever
+{
+    NSMutableSet *mutable = [self.recieversInDisplayList mutableCopy];
+    [mutable addObject:aReciever.companyID];
+    self.recieversInDisplayList = [mutable copy];
+}
+
+#pragma mark -
+
+- (NSSet *)modelsInDisplayList
+{
+    NSSet * models = [self valueForKey:kUserDefaultsModelsInDisplayList];
+    if (nil == models)
+    {
+        models = self.modelsInDisplayList = [NSSet new];
+    }
+    return models;
+}
+
+- (void)setModelsInDisplayList:(NSSet *)aModelsList
+{
+    if (nil != aModelsList)
+    {
+        [self setValue:aModelsList forKey:kUserDefaultsModelsInDisplayList];
+    }
+}
+
+- (void)removeModelFromDisplayList:(Model *)aModel
+{
+    NSMutableSet *mutable = [self.modelsInDisplayList mutableCopy];
+    [mutable removeObject:aModel.modelId];
+    self.modelsInDisplayList = [mutable copy];
+}
+
+- (void)addModelToDisplayList:(Model *)aModel
+{
+    NSMutableSet *mutable = [self.modelsInDisplayList mutableCopy];
+    [mutable addObject:aModel.modelId];
+    self.modelsInDisplayList = [mutable copy];    
 }
 
 @end

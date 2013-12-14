@@ -70,14 +70,42 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete)
+    NSArray * data = [DBCoreDataManager.sharedManager modelsOnWarhouse];
+    Model * model = [data objectAtIndex:indexPath.row];
+    if (model.useInOrders)
     {
-        NSArray * data = [[DBCoreDataManager.sharedManager models] copy];
-        Model * model = [data objectAtIndex:indexPath.row];
-        [DBCoreDataManager.sharedManager removeObject:model];
-        [self.tableView reloadData];
+        if (editingStyle == UITableViewCellEditingStyleDelete)
+        {
+            UIAlertView *deleteAlert = [[UIAlertView alloc] initWithTitle:kAlertDeleteModelTitle
+                                                                  message:kAlertDeleteModelText
+                                                                 delegate:self
+                                                        cancelButtonTitle:kAlertButtonCancel
+                                                        otherButtonTitles:kAlertButtonArchivate,kAlertButtonRemoveOrders, nil];
+            deleteAlert.tag = indexPath.row;
+            [deleteAlert show];
+        }
+    }
+    else
+    {
+        [DBCoreDataManager.sharedManager removeModel:model archivateModel:NO];
+        [self.tableView reloadData];        
     }
 }
+
+#pragma mark - Alert view delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        return;
+    }
+    NSArray * data = [DBCoreDataManager.sharedManager modelsOnWarhouse];
+    Model * model = [data objectAtIndex:alertView.tag];
+    [DBCoreDataManager.sharedManager removeModel:model archivateModel:(buttonIndex == 1)];
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

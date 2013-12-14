@@ -10,6 +10,7 @@
 
 #import "DBAppDelegate.h"
 #import "DBConstants.h"
+#import "NSUserDefaults+OrderVC.h"
 
 @interface DBCoreDataManager ()
 
@@ -141,6 +142,12 @@
     return model;
 }
 
+- (void)removeOrder:(Order *)anOrder
+{
+    [self.managedObjectContext deleteObject:anOrder];
+    [self updateSorce];
+}
+
 #pragma mark - Fetch Orders (Plan && Accounting)
 
 - (NSArray *)ordersSortedWithKey:(NSString *)aKey ascending:(BOOL)anAscending
@@ -240,7 +247,11 @@
 
 - (NSArray *)modelsOnWarhouse
 {
-    return [self.warhouse.models allObjects];
+    return [[self.warhouse.models allObjects] filteredArrayUsingPredicate:
+            [NSPredicate predicateWithBlock:^BOOL(Model * evaluatedObject, NSDictionary *bindings)
+             {
+                 return !evaluatedObject.archived.integerValue;
+             }]];
 }
 
 - (Model *)addModelToWarhouseWithName:(NSString *)name andCost:(NSInteger)cost count:(NSUInteger)aCount
@@ -253,10 +264,32 @@
     model.name = name;
     model.modelId = [[NSUUID UUID] UUIDString];
     model.count = [NSNumber numberWithInt:aCount];
+    model.archived = [NSNumber numberWithBool:NO];
+    [[NSUserDefaults standardUserDefaults] addModelToDisplayList:model];
     [self.warhouse addModelsObject:model];
     [self updateSorce];
     [[NSNotificationCenter defaultCenter] postNotificationName:DBUpdateModelsListNotification object:nil];
     return model;
+}
+
+
+- (void)removeModel:(Model *)aModel archivateModel:(BOOL)archivate
+{
+    [self.warhouse removeModelsObject:aModel];
+    if (archivate)
+    {
+        aModel.archived = [NSNumber numberWithBool:YES];
+    }
+    else
+    {
+        NSArray *ordersToDelete = aModel.ordersWithModel;
+        for (Order *order in ordersToDelete)
+        {
+            [self.managedObjectContext deleteObject:order];
+        }
+        [self.managedObjectContext deleteObject:aModel];
+    }
+    [self updateSorce];
 }
 
 #pragma mark - Recievers
@@ -272,8 +305,13 @@
                               initWithKey:@"name" ascending:YES];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];
     
+    
     NSError * error = nil;
     NSArray *recordsArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    [recordsArray filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(Reciever * evaluatedObject, NSDictionary *bindings)
+        {
+            return !evaluatedObject.archived.integerValue;
+        }]];
     
     if (nil != error)
     {
@@ -293,11 +331,31 @@
     reciever.adress = adress;
     reciever.phone = phone;
     reciever.account = account;
+    reciever.archived = [NSNumber numberWithBool:NO];
+    [[NSUserDefaults standardUserDefaults] addRecieverToDisplayList:reciever];
     [self updateSorce];
     [[NSNotificationCenter defaultCenter] postNotificationName:DBUpdateRecieversListNotification object:nil];
     return reciever;
 }
 
+- (void)removeReciever:(Reciever *)aReciever archivateReciever:(BOOL)archivate
+{
+    if (archivate)
+    {
+        aReciever.archived = [NSNumber numberWithBool:YES];
+    }
+    else
+    {
+        NSArray *ordersToDelete = aReciever.ordersWithReciever;
+    
+        for (Order *order in ordersToDelete)
+        {
+            [self.managedObjectContext deleteObject:order];
+        }
+        [self.managedObjectContext deleteObject:aReciever];
+    }
+    [self updateSorce];
+}
 
 
 @end

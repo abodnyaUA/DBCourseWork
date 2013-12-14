@@ -71,13 +71,40 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete)
+    NSArray * data = [[DBCoreDataManager.sharedManager recievers] copy];
+    Reciever * reciever = [data objectAtIndex:indexPath.row];
+    if (reciever.useInOrders)
     {
-        NSArray * data = [[DBCoreDataManager.sharedManager recievers] copy];
-        Model * model = [data objectAtIndex:indexPath.row];
-        [DBCoreDataManager.sharedManager removeObject:model];
-        [self.tableView reloadData];
+        if (editingStyle == UITableViewCellEditingStyleDelete)
+        {
+            UIAlertView *deleteAlert = [[UIAlertView alloc] initWithTitle:kAlertDeleteRecieverTitle
+                                                                  message:kAlertDeleteRecieverText
+                                                                 delegate:self
+                                                        cancelButtonTitle:kAlertButtonCancel
+                                                        otherButtonTitles:kAlertButtonArchivate,kAlertButtonRemoveOrders, nil];
+            deleteAlert.tag = indexPath.row;
+            [deleteAlert show];
+        }
     }
+    else
+    {
+        [DBCoreDataManager.sharedManager removeReciever:reciever archivateReciever:NO];
+        [self.tableView reloadData];        
+    }
+}
+
+#pragma mark - Alert view delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        return;
+    }
+    NSArray * data = [[DBCoreDataManager.sharedManager recievers] copy];
+    Reciever * reciever = [data objectAtIndex:alertView.tag];
+    [DBCoreDataManager.sharedManager removeReciever:reciever archivateReciever:(buttonIndex == 0)];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view delegate

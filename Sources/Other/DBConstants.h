@@ -37,10 +37,19 @@ extern NSString * const DBUpdateOrdersListNotification;
 #define kAlertButtonDelete                  NSLocalizedString(@"kAlertButtonDelete",nil)
 #define kAlertButtonCancel                  NSLocalizedString(@"kAlertButtonCancel",nil)
 
+#define kAlertDeleteRecieverTitle           NSLocalizedString(@"kAlertDeleteRecieverTitle",nil)
+#define kAlertDeleteRecieverText            NSLocalizedString(@"kAlertDeleteRecieverText", nil)
+#define kAlertDeleteModelTitle              NSLocalizedString(@"kAlertDeleteModelTitle",nil)
+#define kAlertDeleteModelText               NSLocalizedString(@"kAlertDeleteModelText", nil)
+#define kAlertButtonArchivate               NSLocalizedString(@"kAlertButtonArchivate",nil)
+#define kAlertButtonRemoveOrders            NSLocalizedString(@"kAlertButtonRemoveOrders",nil)
+
 #define kAlertMissedModelsTitle             NSLocalizedString(@"kAlertMissedModelsTitle", nil)
 #define kAlertMissedModelsText              NSLocalizedString(@"kAlertMissedModelsText",nil)
+#define kAlertMissedModelsWithOrderText     NSLocalizedString(@"kAlertMissedModelsWithOrderText",nil)
 #define kAlertMissedRecieverTitle           NSLocalizedString(@"kAlertMissedRecieverTitle", nil)
 #define kAlertMissedRecieverText            NSLocalizedString(@"kAlertMissedRecieverText",nil)
+#define kAlertMissedRecieverWithOrderText   NSLocalizedString(@"kAlertMissedRecieverWithOrderText",nil)
 #define kAlertFailOrderContinueButton       NSLocalizedString(@"kAlertFailOrderContinueButton",nil)
 #define kAlertFailOrderCancelButton         NSLocalizedString(@"kAlertFailOrderCancelButton",nil)
 

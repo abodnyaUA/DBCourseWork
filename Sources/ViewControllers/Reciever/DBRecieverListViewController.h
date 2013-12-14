@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DBRecieverListViewController : UITableViewController
+@interface DBRecieverListViewController : UITableViewController <UIAlertViewDelegate>
 
 @end

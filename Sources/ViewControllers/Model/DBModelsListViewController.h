@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DBModelsListViewController : UITableViewController
+@interface DBModelsListViewController : UITableViewController <UIAlertViewDelegate>
 
 @end

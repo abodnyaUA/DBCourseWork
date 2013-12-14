@@ -18,9 +18,11 @@
 + (id)sharedManager;
 - (void)removeObject:(NSManagedObject *)model;
 
+- (void)removeModel:(Model *)aModel archivateModel:(BOOL)archivate;
 - (NSArray *)modelsOnWarhouse;
 - (Model *)addModelToWarhouseWithName:(NSString *)name andCost:(NSInteger)cost count:(NSUInteger)aCount;
 
+- (void)removeReciever:(Reciever *)aReciever archivateReciever:(BOOL)archivate;
 - (NSArray *)recievers;
 - (Reciever *)addRecieverWithName:(NSString *)name adress:(NSString *)adress phone:(NSString *)phone account:(NSString *)account;
 
@@ -30,5 +32,6 @@
            includeArchivedOrders:(BOOL)anArchivedFlag;
 - (Order *)addOrderWithReciever:(Reciever *)aReciever andModels:(NSArray *)models;
 - (Model *)retainModel:(Model *)aModel withCount:(NSUInteger)aCount;
+- (void)removeOrder:(Order *)anOrder;
 
 @end

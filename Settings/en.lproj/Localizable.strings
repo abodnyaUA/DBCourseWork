@@ -27,6 +27,13 @@
 "kAlertFailOrderContinueButton" = "Continue Fill";
 "kAlertFailOrderCancelButton" = "Cancel Order";
 
+"kAlertDeleteRecieverTitle" = "Deleting Reciever";
+"kAlertDeleteRecieverText" = "There are some orders with this reciever. Delete these orders?";
+"kAlertDeleteModelTitle" = "Deleting Model";
+"kAlertDeleteModelText" = "There are some orders with this model. Delete these orders?";
+"kAlertButtonArchivate" = "Leave";
+"kAlertButtonRemoveOrders" = "Delete";
+
 // Storyboard //
 "kStoryboardMainTitle" = "Course Work of Bodnya Alexey (TV-11)";
 "kStoryboardNewOrder" = "New Order";
@@ -36,7 +43,7 @@
 "kStoryboardNewModel" = "New Model";
 "kStoryboardModelsListTitle" = "Models";
 
-"kStoryboardMainOrderList" = "Order list!!!";
+"kStoryboardMainOrderList" = "Order list";
 "kStoryboardMainRecieverList" = "List of Recievers";
 "kStoryboardMainModelList" = "Models on warehouse";
 "kStoryboardMainNewOrder" = "New Order";

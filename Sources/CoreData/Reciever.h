@@ -17,5 +17,9 @@
 @property (nonatomic, retain) NSString * phone;
 @property (nonatomic, retain) NSString * account;
 @property (nonatomic, retain) NSString * adress;
+@property (nonatomic, retain) NSNumber * archived;
 
+- (NSArray *)ordersWithReciever;
+- (BOOL)useInOrders;
+    
 @end
