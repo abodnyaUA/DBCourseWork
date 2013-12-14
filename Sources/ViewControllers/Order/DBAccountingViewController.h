@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface DBAccountingViewController : UITableViewController
+@interface DBAccountingViewController : UITableViewController <UIPopoverControllerDelegate>
 
 @end

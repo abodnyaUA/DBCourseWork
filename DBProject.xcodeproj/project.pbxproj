@@ -38,6 +38,9 @@
 		CB3D39B71841265700965A64 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3D39B61841265600965A64 /* QuartzCore.framework */; };
 		CB68ACAF184A577B00D16860 /* Storyboard_Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB68ACAE184A577B00D16860 /* Storyboard_Pad.storyboard */; };
 		CB68ACB2184A602B00D16860 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB68ACB0184A602B00D16860 /* Model.xcdatamodeld */; };
+		CB7A818F185C55520095D3CB /* DBModelsInDisplayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7A818E185C55520095D3CB /* DBModelsInDisplayListViewController.m */; };
+		CB7A8192185C556C0095D3CB /* DBRecieversInDisplayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7A8191185C556C0095D3CB /* DBRecieversInDisplayListViewController.m */; };
+		CB7A8195185C558C0095D3CB /* DBSortDisplayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7A8194185C558C0095D3CB /* DBSortDisplayListViewController.m */; };
 		CB95DA571849F238004A14E0 /* DBOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA561849F238004A14E0 /* DBOrderCell.m */; };
 		CB95DA5A1849F295004A14E0 /* NSUserDefaults+OrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA591849F295004A14E0 /* NSUserDefaults+OrderVC.m */; };
 		CB95DA5D1849F544004A14E0 /* DBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95DA5C1849F544004A14E0 /* DBConstants.m */; };
@@ -109,6 +112,12 @@
 		CB3D39B61841265600965A64 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CB68ACAE184A577B00D16860 /* Storyboard_Pad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard_Pad.storyboard; path = Resources/Storyboard_Pad.storyboard; sourceTree = SOURCE_ROOT; };
 		CB68ACB1184A602B00D16860 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CB7A818D185C55520095D3CB /* DBModelsInDisplayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBModelsInDisplayListViewController.h; sourceTree = "<group>"; };
+		CB7A818E185C55520095D3CB /* DBModelsInDisplayListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBModelsInDisplayListViewController.m; sourceTree = "<group>"; };
+		CB7A8190185C556C0095D3CB /* DBRecieversInDisplayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBRecieversInDisplayListViewController.h; sourceTree = "<group>"; };
+		CB7A8191185C556C0095D3CB /* DBRecieversInDisplayListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBRecieversInDisplayListViewController.m; sourceTree = "<group>"; };
+		CB7A8193185C558C0095D3CB /* DBSortDisplayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBSortDisplayListViewController.h; sourceTree = "<group>"; };
+		CB7A8194185C558C0095D3CB /* DBSortDisplayListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBSortDisplayListViewController.m; sourceTree = "<group>"; };
 		CB95DA551849F238004A14E0 /* DBOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBOrderCell.h; sourceTree = "<group>"; };
 		CB95DA561849F238004A14E0 /* DBOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBOrderCell.m; sourceTree = "<group>"; };
 		CB95DA581849F295004A14E0 /* NSUserDefaults+OrderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+OrderVC.h"; path = "../../Other/NSUserDefaults+OrderVC.h"; sourceTree = "<group>"; };
@@ -253,6 +262,7 @@
 		CB3D398D1840D1DD00965A64 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
+				CB7A818C185C55070095D3CB /* FetchTables */,
 				798A4F32181F0CB3002F845A /* DBAccountingViewController.h */,
 				798A4F33181F0CB3002F845A /* DBAccountingViewController.m */,
 				798A4F38181F0CE2002F845A /* DBMakeOrderViewController.h */,
@@ -276,6 +286,19 @@
 			);
 			name = Orders;
 			path = Order;
+			sourceTree = "<group>";
+		};
+		CB7A818C185C55070095D3CB /* FetchTables */ = {
+			isa = PBXGroup;
+			children = (
+				CB7A818D185C55520095D3CB /* DBModelsInDisplayListViewController.h */,
+				CB7A818E185C55520095D3CB /* DBModelsInDisplayListViewController.m */,
+				CB7A8190185C556C0095D3CB /* DBRecieversInDisplayListViewController.h */,
+				CB7A8191185C556C0095D3CB /* DBRecieversInDisplayListViewController.m */,
+				CB7A8193185C558C0095D3CB /* DBSortDisplayListViewController.h */,
+				CB7A8194185C558C0095D3CB /* DBSortDisplayListViewController.m */,
+			);
+			name = FetchTables;
 			sourceTree = "<group>";
 		};
 		CB95DA61184A2310004A14E0 /* Resources */ = {
@@ -415,6 +438,9 @@
 				CB95DA5D1849F544004A14E0 /* DBConstants.m in Sources */,
 				CB95DA60184A11F4004A14E0 /* DBModelOnOrderCell.m in Sources */,
 				CB68ACB2184A602B00D16860 /* Model.xcdatamodeld in Sources */,
+				CB7A818F185C55520095D3CB /* DBModelsInDisplayListViewController.m in Sources */,
+				CB7A8192185C556C0095D3CB /* DBRecieversInDisplayListViewController.m in Sources */,
+				CB7A8195185C558C0095D3CB /* DBSortDisplayListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

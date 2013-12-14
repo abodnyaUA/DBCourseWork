@@ -250,8 +250,13 @@
     return [[self.warhouse.models allObjects] filteredArrayUsingPredicate:
             [NSPredicate predicateWithBlock:^BOOL(Model * evaluatedObject, NSDictionary *bindings)
              {
-                 return !evaluatedObject.archived.integerValue;
+                 return (NO == evaluatedObject.archived.boolValue);
              }]];
+}
+    
+- (NSArray *)allModels
+{
+    return [self.warhouse.models allObjects];
 }
 
 - (Model *)addModelToWarhouseWithName:(NSString *)name andCost:(NSInteger)cost count:(NSUInteger)aCount
@@ -275,13 +280,13 @@
 
 - (void)removeModel:(Model *)aModel archivateModel:(BOOL)archivate
 {
-    [self.warhouse removeModelsObject:aModel];
     if (archivate)
     {
         aModel.archived = [NSNumber numberWithBool:YES];
     }
     else
     {
+        [self.warhouse removeModelsObject:aModel];
         NSArray *ordersToDelete = aModel.ordersWithModel;
         for (Order *order in ordersToDelete)
         {

@@ -20,6 +20,7 @@
 
 - (void)removeModel:(Model *)aModel archivateModel:(BOOL)archivate;
 - (NSArray *)modelsOnWarhouse;
+- (NSArray *)allModels;
 - (Model *)addModelToWarhouseWithName:(NSString *)name andCost:(NSInteger)cost count:(NSUInteger)aCount;
 
 - (void)removeReciever:(Reciever *)aReciever archivateReciever:(BOOL)archivate;

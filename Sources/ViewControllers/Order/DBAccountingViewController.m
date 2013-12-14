@@ -15,18 +15,30 @@
 #import "DBConstants.h"
 #import "DBOrderCell.h"
 
+#import "DBRecieversInDisplayListViewController.h"
+#import "DBModelsInDisplayListViewController.h"
+#import "DBSortDisplayListViewController.h"
+
 @interface DBAccountingViewController ()
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *labelSortWith;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *labelStatus;
 
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonSortStatus;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonSortDate;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonSortPrice;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonSortReciever;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonSort;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonReciever;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonModels;
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonShowActive;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonShowArchived;
 
+    
+@property (strong, nonatomic) UIPopoverController *chooseRecieversPopover;
+@property (strong, nonatomic) UIPopoverController *chooseModelsPopover;
+@property (strong, nonatomic) UIPopoverController *changeSortKeyPopover;
+
+@property (strong, nonatomic) DBRecieversInDisplayListViewController *chooseRecieversVC;
+@property (strong, nonatomic) DBModelsInDisplayListViewController *chooseModelsVC;
+@property (strong, nonatomic) DBSortDisplayListViewController *changeSortKeyVC;
+    
 @end
 
 @implementation DBAccountingViewController
@@ -49,10 +61,10 @@
     self.labelSortWith.title = kStoryboardOrderListLabelSort;
     self.labelStatus.title = kStoryboardOrderListLabelShow;
     
-    self.buttonSortStatus.title = kStoryboardOrderListSortStatus;
-    self.buttonSortDate.title = kStoryboardOrderListSortDate;
-    self.buttonSortPrice.title = kStoryboardOrderListSortPrice;
-    self.buttonSortReciever.title = kStoryboardOrderListSortReciever;
+//    self.buttonSortStatus.title = kStoryboardOrderListSortStatus;
+//    self.buttonSortDate.title = kStoryboardOrderListSortDate;
+//    self.buttonSortPrice.title = kStoryboardOrderListSortPrice;
+//    self.buttonSortReciever.title = kStoryboardOrderListSortReciever;
     
     self.buttonShowActive.title = kStoryboardOrderListShowActive;
     self.buttonShowArchived.title = kStoryboardOrderListShowArchived;
@@ -81,6 +93,37 @@
                                           includeArchivedOrders:NSUserDefaults.standardUserDefaults.showArchivedOrders];
 }
 
+#pragma mark -
+    
+- (void)setUpPopovers
+{
+    //
+    self.chooseRecieversVC = [[UIStoryboard storyboardWithName:@"Storyboard_Pad" bundle:nil] instantiateViewControllerWithIdentifier:@"RecieversInDisplayListViewController"];
+    
+    self.chooseRecieversPopover = [[UIPopoverController alloc] initWithContentViewController:self.chooseRecieversVC];
+    self.chooseRecieversPopover.delegate = self;
+    
+    //
+    self.chooseModelsVC = [[UIStoryboard storyboardWithName:@"Storyboard_Pad" bundle:nil] instantiateViewControllerWithIdentifier:@"ModelsInDisplayListViewController"];
+    
+    self.chooseModelsPopover = [[UIPopoverController alloc] initWithContentViewController:self.chooseModelsVC];
+    self.chooseModelsPopover.delegate = self;
+    
+    //
+    self.changeSortKeyVC = [[UIStoryboard storyboardWithName:@"Storyboard_Pad" bundle:nil] instantiateViewControllerWithIdentifier:@"SortDisplayListViewController"];
+    
+    self.changeSortKeyPopover = [[UIPopoverController alloc] initWithContentViewController:self.changeSortKeyVC];
+    self.changeSortKeyPopover.delegate = self;
+}
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+    [self.tableView reloadData];
+//    if (popoverController == self.changeSortKeyPopover)
+//    {
+//    }
+}
+    
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -122,21 +165,22 @@
 
 #pragma mark -
 
-- (IBAction)sortWithStatus:(id)sender
+- (IBAction)changeSortKey:(id)sender
 {
-    [NSUserDefaults.standardUserDefaults setOrderFetchSortKey:kSortOrderKeyStatus];
-    [self.tableView reloadData];
+    [self.changeSortKeyPopover presentPopoverFromRect:self.navigationController.toolbar.frame
+                                                inView:self.view
+                              permittedArrowDirections:UIPopoverArrowDirectionUp
+                                              animated:YES];
 }
 
-- (IBAction)sortWithDate:(id)sender
+- (IBAction)changeModelsInList:(id)sender
 {
     [NSUserDefaults.standardUserDefaults setOrderFetchSortKey:kSortOrderKeyDate];
     [self.tableView reloadData];
 }
 
-- (IBAction)sortWithTotalPrice:(id)sender
+- (IBAction)changeRecieversInList:(id)sender
 {
-    [NSUserDefaults.standardUserDefaults setOrderFetchSortKey:kSortOrderKeyTotalPrice];
     [self.tableView reloadData];
 }
 

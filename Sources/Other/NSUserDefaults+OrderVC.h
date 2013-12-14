@@ -23,11 +23,13 @@
 - (void)setRecieversInDisplayList:(NSSet *)aRecieversList;
 - (void)removeRecieverFromDisplayList:(Reciever *)aReciever;
 - (void)addRecieverToDisplayList:(Reciever *)aReciever;
+- (BOOL)isRecieverInDisplayList:(Reciever *)aReciever;
 
 - (NSSet *)modelsInDisplayList;
 - (void)setModelsInDisplayList:(NSSet *)aModelsList;
 - (void)removeModelFromDisplayList:(Model *)aModel;
 - (void)addModelToDisplayList:(Model *)aModel;
+- (BOOL)isModelInDisplayList:(Model *)aModel;
 
 - (void)setShowArchivedOrders:(BOOL)aFlag;
 - (BOOL)showArchivedOrders;

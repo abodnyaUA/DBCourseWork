@@ -128,6 +128,20 @@ NSString * const kUserDefaultsModelsInDisplayList  = @"ModelsInDisplayList";
     [mutable addObject:aReciever.companyID];
     self.recieversInDisplayList = [mutable copy];
 }
+    
+- (BOOL)isRecieverInDisplayList:(Reciever *)aReciever
+{
+    __block BOOL exist = NO;
+    [self.recieversInDisplayList enumerateObjectsUsingBlock:^(Reciever * obj, BOOL *stop)
+    {
+        if ([obj.companyID isEqualToString:aReciever.companyID])
+        {
+            exist = YES;
+            *stop = YES;
+        }
+    }];
+    return exist;
+}
 
 #pragma mark -
 
@@ -162,5 +176,19 @@ NSString * const kUserDefaultsModelsInDisplayList  = @"ModelsInDisplayList";
     [mutable addObject:aModel.modelId];
     self.modelsInDisplayList = [mutable copy];    
 }
+    
+- (BOOL)isModelInDisplayList:(Model *)aModel
+    {
+        __block BOOL exist = NO;
+        [self.modelsInDisplayList enumerateObjectsUsingBlock:^(Model * obj, BOOL *stop)
+         {
+             if ([obj.modelId isEqualToString:aModel.modelId])
+             {
+                 exist = YES;
+                 *stop = YES;
+             }
+         }];
+        return exist;
+    }
 
 @end
