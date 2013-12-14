@@ -27,6 +27,13 @@
 - (NSArray *)recievers;
 - (Reciever *)addRecieverWithName:(NSString *)name adress:(NSString *)adress phone:(NSString *)phone account:(NSString *)account;
 
+
+- (NSArray *)ordersSortedWithKey:(NSString *)aKey
+                       ascending:(BOOL)anAscending
+             includeActiveOrders:(BOOL)anActiveFlag
+           includeArchivedOrders:(BOOL)anArchivedFlag
+                   withRecievers:(NSArray *)recieverIDs
+                      withModels:(NSArray *)modelIDs;
 - (NSArray *)ordersSortedWithKey:(NSString *)aKey
                        ascending:(BOOL)anAscending
              includeActiveOrders:(BOOL)anActiveFlag

@@ -91,7 +91,9 @@
     return [DBCoreDataManager.sharedManager ordersSortedWithKey:NSUserDefaults.standardUserDefaults.orderFetchSortKey
                                                       ascending:NSUserDefaults.standardUserDefaults.orderFetchAscendingFlag
                                             includeActiveOrders:NSUserDefaults.standardUserDefaults.showActiveOrders
-                                          includeArchivedOrders:NSUserDefaults.standardUserDefaults.showArchivedOrders];
+                                          includeArchivedOrders:NSUserDefaults.standardUserDefaults.showArchivedOrders
+                                                  withRecievers:NSUserDefaults.standardUserDefaults.recieversInDisplayList
+                                                     withModels:NSUserDefaults.standardUserDefaults.modelsInDisplayList];
 }
 
 #pragma mark -
@@ -176,20 +178,20 @@
 
 - (IBAction)changeModelsInList:(id)sender
 {
-    [NSUserDefaults.standardUserDefaults setOrderFetchSortKey:kSortOrderKeyDate];
-    [self.tableView reloadData];
+    [self.chooseModelsPopover presentPopoverFromRect:self.navigationController.toolbar.frame
+                                               inView:self.view
+                             permittedArrowDirections:UIPopoverArrowDirectionUp
+                                             animated:YES];
 }
 
 - (IBAction)changeRecieversInList:(id)sender
 {
-    [self.tableView reloadData];
+    [self.chooseRecieversPopover presentPopoverFromRect:self.navigationController.toolbar.frame
+                                               inView:self.view
+                             permittedArrowDirections:UIPopoverArrowDirectionUp
+                                             animated:YES];
 }
 
-- (IBAction)sortWithReciever:(id)sender
-{
-    [NSUserDefaults.standardUserDefaults setOrderFetchSortKey:kSortOrderKeyReciever];
-    [self.tableView reloadData];
-}
 
 - (IBAction)showActive:(id)sender
 {

@@ -199,6 +199,50 @@
                        ascending:(BOOL)anAscending
              includeActiveOrders:(BOOL)anActiveFlag
            includeArchivedOrders:(BOOL)anArchivedFlag
+                   withRecievers:(NSArray *)recieverIDs
+                      withModels:(NSArray *)modelIDs
+{
+    NSArray *sortedArray = [self ordersSortedWithKey:aKey
+                                           ascending:anAscending
+                                 includeActiveOrders:anActiveFlag
+                               includeArchivedOrders:anArchivedFlag];
+    NSArray *filteredArray = [sortedArray filteredArrayUsingPredicate:
+                              [NSPredicate predicateWithBlock:^BOOL(Order * evaluatedObject, NSDictionary *bindings)
+    {
+        BOOL found = NO;
+        for (NSString *recieverID in recieverIDs)
+        {
+            if ([recieverID isEqualToString:evaluatedObject.reciever.companyID])
+            {
+                found = YES;
+            }
+        }
+        if (!found)
+        {
+            return false;
+        }
+        
+        found = NO;
+        for (Model *model in evaluatedObject.model)
+        {
+            for (NSString * modelID in modelIDs)
+            {
+                if ([modelID isEqualToString:model.modelId])
+                {
+                    found = YES;
+                }
+            }
+        }
+        return found;
+    }]];
+    return filteredArray;
+}
+
+
+- (NSArray *)ordersSortedWithKey:(NSString *)aKey
+                       ascending:(BOOL)anAscending
+             includeActiveOrders:(BOOL)anActiveFlag
+           includeArchivedOrders:(BOOL)anArchivedFlag
 {
     NSArray *recordsArray = [self ordersSortedWithKey:aKey ascending:anAscending];
 

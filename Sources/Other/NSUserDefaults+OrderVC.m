@@ -97,17 +97,17 @@ NSString * const kUserDefaultsModelsInDisplayList  = @"ModelsInDisplayList";
 
 #pragma mark -
 
-- (NSSet *)recieversInDisplayList
+- (NSArray *)recieversInDisplayList
 {
-    NSSet * recievers = [self valueForKey:kUserDefaultsRecieversInDisplayList];
+    NSArray * recievers = [self valueForKey:kUserDefaultsRecieversInDisplayList];
     if (nil == recievers)
     {
-        recievers = self.recieversInDisplayList = [NSSet new];
+        recievers = self.recieversInDisplayList = [NSArray new];
     }
     return recievers;
 }
 
-- (void)setRecieversInDisplayList:(NSSet *)aRecieversList
+- (void)setRecieversInDisplayList:(NSArray *)aRecieversList
 {
     if (nil != aRecieversList)
     {
@@ -117,14 +117,14 @@ NSString * const kUserDefaultsModelsInDisplayList  = @"ModelsInDisplayList";
 
 - (void)removeRecieverFromDisplayList:(Reciever *)aReciever
 {
-    NSMutableSet *mutable = [self.recieversInDisplayList mutableCopy];
+    NSMutableArray *mutable = [self.recieversInDisplayList mutableCopy];
     [mutable removeObject:aReciever.companyID];
     self.recieversInDisplayList = [mutable copy];
 }
 
 - (void)addRecieverToDisplayList:(Reciever *)aReciever
 {
-    NSMutableSet *mutable = [self.recieversInDisplayList mutableCopy];
+    NSMutableArray *mutable = [self.recieversInDisplayList mutableCopy];
     [mutable addObject:aReciever.companyID];
     self.recieversInDisplayList = [mutable copy];
 }
@@ -132,7 +132,7 @@ NSString * const kUserDefaultsModelsInDisplayList  = @"ModelsInDisplayList";
 - (BOOL)isRecieverInDisplayList:(Reciever *)aReciever
 {
     __block BOOL exist = NO;
-    [self.recieversInDisplayList enumerateObjectsUsingBlock:^(Reciever * obj, BOOL *stop)
+    [self.recieversInDisplayList enumerateObjectsUsingBlock:^(Reciever * obj, NSUInteger idx, BOOL *stop)
     {
         if ([obj.companyID isEqualToString:aReciever.companyID])
         {
@@ -145,17 +145,17 @@ NSString * const kUserDefaultsModelsInDisplayList  = @"ModelsInDisplayList";
 
 #pragma mark -
 
-- (NSSet *)modelsInDisplayList
+- (NSArray *)modelsInDisplayList
 {
-    NSSet * models = [self valueForKey:kUserDefaultsModelsInDisplayList];
+    NSArray * models = [self valueForKey:kUserDefaultsModelsInDisplayList];
     if (nil == models)
     {
-        models = self.modelsInDisplayList = [NSSet new];
+        models = self.modelsInDisplayList = [NSArray new];
     }
     return models;
 }
 
-- (void)setModelsInDisplayList:(NSSet *)aModelsList
+- (void)setModelsInDisplayList:(NSArray *)aModelsList
 {
     if (nil != aModelsList)
     {
@@ -165,14 +165,14 @@ NSString * const kUserDefaultsModelsInDisplayList  = @"ModelsInDisplayList";
 
 - (void)removeModelFromDisplayList:(Model *)aModel
 {
-    NSMutableSet *mutable = [self.modelsInDisplayList mutableCopy];
+    NSMutableArray *mutable = [self.modelsInDisplayList mutableCopy];
     [mutable removeObject:aModel.modelId];
     self.modelsInDisplayList = [mutable copy];
 }
 
 - (void)addModelToDisplayList:(Model *)aModel
 {
-    NSMutableSet *mutable = [self.modelsInDisplayList mutableCopy];
+    NSMutableArray *mutable = [self.modelsInDisplayList mutableCopy];
     [mutable addObject:aModel.modelId];
     self.modelsInDisplayList = [mutable copy];    
 }
@@ -180,7 +180,7 @@ NSString * const kUserDefaultsModelsInDisplayList  = @"ModelsInDisplayList";
 - (BOOL)isModelInDisplayList:(Model *)aModel
     {
         __block BOOL exist = NO;
-        [self.modelsInDisplayList enumerateObjectsUsingBlock:^(Model * obj, BOOL *stop)
+        [self.modelsInDisplayList enumerateObjectsUsingBlock:^(Model * obj, NSUInteger idx, BOOL *stop)
          {
              if ([obj.modelId isEqualToString:aModel.modelId])
              {

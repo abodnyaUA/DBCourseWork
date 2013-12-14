@@ -19,14 +19,14 @@
 - (BOOL)orderFetchAscendingFlag;
 - (void)setOrderFetchAscendingFlag:(BOOL)aFlag;
 
-- (NSSet *)recieversInDisplayList;
-- (void)setRecieversInDisplayList:(NSSet *)aRecieversList;
+- (NSArray *)recieversInDisplayList;
+- (void)setRecieversInDisplayList:(NSArray *)aRecieversList;
 - (void)removeRecieverFromDisplayList:(Reciever *)aReciever;
 - (void)addRecieverToDisplayList:(Reciever *)aReciever;
 - (BOOL)isRecieverInDisplayList:(Reciever *)aReciever;
 
-- (NSSet *)modelsInDisplayList;
-- (void)setModelsInDisplayList:(NSSet *)aModelsList;
+- (NSArray *)modelsInDisplayList;
+- (void)setModelsInDisplayList:(NSArray *)aModelsList;
 - (void)removeModelFromDisplayList:(Model *)aModel;
 - (void)addModelToDisplayList:(Model *)aModel;
 - (BOOL)isModelInDisplayList:(Model *)aModel;
